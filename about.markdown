@@ -4,15 +4,11 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+This course material is collected, curated, maintained and structured by PhD students and faculty from the [KTH Royal Institute of Technology](https://www.kth.se/en) in Stockholm, Sweden
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+- [Deepika Tiwari](https://deee92.github.io/)
+- [César Soto-Valero](https://www.cesarsotovalero.net/)
+- [Konstantinos Kalogiannis](https://www.kth.se/profile/konkal/)
+- [Panagiotis Papadimitratos](https://www.kth.se/profile/papadim/)
+- [Benoit Baudry](https://softwarediversity.eu/)
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
