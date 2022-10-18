@@ -27,7 +27,10 @@ A majority of open-source projects today use a distributed versioning system cal
 Git itself resides in a [GitHub repository](https://github.com/git/git), where we can observe the project, including the [latest commits](https://github.com/git/git/commits/master) to its main development branch. As a rule of thumb, more actively developed and maintained open-source projects have more frequent and recent commits.
 
 ## Licenses, agreements    
+
 ## Versioning, commit message    
+It is important to keep track of a software project as it evolves with time. This is achieved by assigning __versions__ to the state of the project at a certain point in time. If a developer fixes an important [bug](https://en.wikipedia.org/wiki/Software_bug) or implements a new feature, a new [version](https://semver.org/) of the software is released. It is good practice to [document the changes](https://keepachangelog.com/en/1.0.0/) included within a new version, so that users of the software are aware of them. (TODO: mention SHAs) 
+
 ## Beginner, Normal, Expert Level    
 ## Industry Use Cases    
 ## Test Questions / Areas / Learning Goal   
