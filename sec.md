@@ -27,3 +27,14 @@ PKI ensures that the public keys used to communicate with a server, a company, o
 The PKI also facilitates the use of assymetric encryption, known also as public key encryption (PKE). In this scheme, each user has two distinct keys; one is public, the other must always remain private. The public key can be freely distributed to the world and is required to `verify` that a piece of software was `signed` (or encrypted) by the corresponding private key. This, highlights the importance of keeping the private key secure; leaking this key would allow anyone to impersonate its actual holder. 
 
 In the context of code infrastructure security, a compromised private key would allow anyone to `push` to a specific branch, `sign` the code to appear to originate from someone else, e.g., Linus Torvald, and ultimately introduce malicious code into the supply chain.
+
+## Static analysis
+`TODO: add static analysis`
+## Binary analysis
+`TODO: add binary analysis`
+
+## Beginner, Normal, Expert Level
+## Industry Use Cases
+## Test Questions / Areas / Learning Goal
+## References
+
