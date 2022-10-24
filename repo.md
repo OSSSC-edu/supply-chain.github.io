@@ -17,7 +17,7 @@ As an example, let us consider the [widely-used](https://xkcd.com/1823/), open-s
 Regardless of the specific platform where an open-source project is hosted, browsing through its repository can be an informative and rather fun exercise. It allows us to gain insights into how the project has evolved with time, issues and bugs that have been discovered, those that have been resolved, as well as code contributions made by the open-source community. Moreover, we also learn about other open-source technologies that power the project, which opens up more avenues for [exploration](https://github.com/explore).
 
 ## Contributors (number, origin, leadership)
-A software project typically has multiple contributors. There are various ways in which an individual may contribute to a software project, such as with the implementation of a new feature, to fix a bug, with a new test that verifies an untested behavior, or to improve the documentation. The open-source movement <a name="ref_1">thrives</a> as a direct consequence of the contributions made by enthusiasts, users, and developers, who have diverse backgrounds and areas of expertise, and come from different geographical regions.
+A software project typically has multiple contributors. There are various ways in which an individual may contribute to a software project, such as with the implementation of a new feature, to fix a bug, with a new test that verifies an untested behavior, or to improve the documentation. The open-source movement [thrives](#ref_1) as a direct consequence of the contributions made by enthusiasts, users, and developers, who have diverse backgrounds and areas of expertise, and come from different geographical regions.
 
 Open-source software projects maintain a list of individuals who have contributed to them. An individual becomes a contributor to a software project when a submission made by them is adopted into the code-base of the project. The number of contributors of a software project can be useful to guage the [maturity](https://en.wikipedia.org/wiki/Linus%27s_law) of an open-source software project. For example, the [node](https://github.com/nodejs/node) project repository lives on GitHub, and has more than three thousand individual contributors. Incoming contributions to the project are presented on the the [pull requests tab](https://github.com/nodejs/node/pulls). We can also investigate the history of contributions more deeply through the [contributors page](https://github.com/nodejs/node/graphs/contributors), which indicates the developers most actively involved in the project. 
 
@@ -41,7 +41,7 @@ It is important to keep track of a software project as it evolves with time. Thi
 ## Test Questions / Areas / Learning Goal   
  
 ## References
-1. [Pots of Gold at the End of the Rainbow: What is Success for Open Source Contributors?](#ref_1)
+1. <a name="ref_1">Pots of Gold at the End of the Rainbow: What is Success for Open Source Contributors?</a> 
 2. [The Git Book](https://git-scm.com/book/en/v2)
 3. [Learn Git Branching](https://learngitbranching.js.org/)
 
