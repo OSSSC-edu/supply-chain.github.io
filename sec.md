@@ -52,6 +52,20 @@ The first step in securing a code repository, is to make sure that the users tha
 Apart from restricting access to the code base, github also provides protection rules that can be applied in order to restrict the possible actions, e.g., pull request, merge, etc. For example, it allows repository administrators to require pull requests for all branches that contain the word `release` in their name; or, that pull requests that affect other peoples' code must be first approved by the code owner. 
 [Branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
 
+## Credential Management
+We already touched upon it in the first section, but improper credential management is one of the leading causes of security compromises [citation]. 
+
+The simplest steps for credential management can be summarized as:
+- Private keys must always remain secret
+- 
+
+`TODO: alternative to web of trust`
+
+### Web of Trust
+PKI is not necessarily needed  for attesting code and infrastructure. A user can distribute its public key and sign his code/work with a private key. The public key can then be used to verify the owner of the relevant code/work. 
+
+`TODO: web of trust specifics`
+
 
 ## Beginner, Normal, Expert Level
 ## Industry Use Cases
