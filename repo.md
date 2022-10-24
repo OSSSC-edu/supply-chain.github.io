@@ -17,12 +17,12 @@ As an example, let us consider the [widely-used](https://xkcd.com/1823/), open-s
 Regardless of the specific platform where an open-source project is hosted, browsing through its repository can be an informative and rather fun exercise. It allows us to gain insights into how the project has evolved with time, issues and bugs that have been discovered, those that have been resolved, as well as code contributions made by the open-source community. Moreover, we also learn about other open-source technologies that power the project, which opens up more avenues for [exploration](https://github.com/explore).
 
 ## Contributors (number, origin, leadership)
-A software project typically has multiple contributors. There are various ways in which an individual may contribute to a software project, such as with the implementation of a new feature, to fix a bug, with a new test that verifies an untested behavior, or to improve the documentation. The open-source movement thrives ([see ref. 1](#ref_1)) as a direct consequence of the contributions made by enthusiasts, users, and developers, who have diverse backgrounds and areas of expertise, and come from different geographical regions.
+A software project typically has multiple contributors. There are various ways in which an individual may contribute to a software project, such as with the implementation of a new feature, to fix a bug, with a new test that verifies an untested behavior, or to improve the documentation. The open-source movement thrives (see reference [1](#ref_1)) as a direct consequence of the contributions made by enthusiasts, users, and developers, who have diverse backgrounds and areas of expertise, and come from different geographical regions.
 
 Open-source software projects maintain a list of individuals who have contributed to them. An individual becomes a contributor to a software project when a submission made by them is adopted into the code-base of the project. The number of contributors of a software project can be useful to guage the [maturity](https://en.wikipedia.org/wiki/Linus%27s_law) of an open-source software project. For example, the [node](https://github.com/nodejs/node) project repository lives on GitHub, and has more than three thousand individual contributors. Incoming contributions to the project are presented on the the [pull requests tab](https://github.com/nodejs/node/pulls). We can also investigate the history of contributions more deeply through the [contributors page](https://github.com/nodejs/node/graphs/contributors), which indicates the developers most actively involved in the project. 
 
 ## Activity (last commit)  
-A majority of open-source projects today use a distributed versioning system called [Git](https://en.wikipedia.org/wiki/Git), including all the projects hosted on prominent platforms such as GitHub and GitLab. Git is a handy tool with many features that facilitate efficient collaboration among the contributors of a software project. A developer can submit changes to a project incrementally via __commits__, which are atomic units of contribution in the Git workflow. Git is an essential prerequisite to understanding and contributing to open-source projects. Many excellent resources exist online that introduce its foundations, as well as more advanced usage (see references 2 and 3).
+A majority of open-source projects today use a distributed versioning system called [Git](https://en.wikipedia.org/wiki/Git), including all the projects hosted on prominent platforms such as GitHub and GitLab. Git is a handy tool with many features that facilitate efficient collaboration among the contributors of a software project. A developer can submit changes to a project incrementally via __commits__, which are atomic units of contribution in the Git workflow. Git is an essential prerequisite to understanding and contributing to open-source projects. Many excellent resources exist online that introduce its foundations, as well as more advanced usage (see references [2](#ref_2) and [3](#ref_3)).
 
 Git itself resides in a [GitHub repository](https://github.com/git/git), where we can observe the project, including the [latest commits](https://github.com/git/git/commits/master) to its main development branch. As a rule of thumb, more actively developed and maintained open-source projects have more frequent and recent commits.
 
@@ -42,8 +42,8 @@ It is important to keep track of a software project as it evolves with time. Thi
  
 ## References
 1. <a name="ref_1">[Pots of Gold at the End of the Rainbow: What is Success for Open Source Contributors?](https://ieeexplore.ieee.org/document/9524493)</a>
-2. [The Git Book](https://git-scm.com/book/en/v2)
-3. [Learn Git Branching](https://learngitbranching.js.org/)
+2. <a name="ref_2">[The Git Book](https://git-scm.com/book/en/v2)</a>
+3. <a name="ref_3">[Learn Git Branching](https://learngitbranching.js.org/)</a>
 
 
 
