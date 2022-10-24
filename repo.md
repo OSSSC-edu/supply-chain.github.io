@@ -41,7 +41,7 @@ It is important to keep track of a software project as it evolves with time. Thi
 ## Test Questions / Areas / Learning Goal   
  
 ## References
-1. [Pots of Gold at the End of the Rainbow: What is Success for Open Source Contributors?](ref_1)
+1. [Pots of Gold at the End of the Rainbow: What is Success for Open Source Contributors?](#ref_1)
 2. [The Git Book](https://git-scm.com/book/en/v2)
 3. [Learn Git Branching](https://learngitbranching.js.org/)
 
