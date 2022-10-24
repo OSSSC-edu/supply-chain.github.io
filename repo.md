@@ -45,7 +45,7 @@ In order to keep track of incremental changes in a software project repository, 
 
 ## Test Questions / Areas / Learning Goal   
 Find two open-source projects, and report the following data for them:
-### Repo novice 👾
+### _Novice_ 👾
 - Name
 - Organisation
 - Domain
@@ -55,7 +55,7 @@ Find two open-source projects, and report the following data for them:
 - Latest release
 - License
 - Other interesting statistics / information (recent activity, contributors, stars, ...)
-### Repo expert 💯
+### _Expert_ 💯
 - A bug report
 - A file with source code
 - A file with test code
