@@ -17,7 +17,7 @@ As an example, let us consider the [widely-used](https://xkcd.com/1823/), open-s
 Regardless of the specific platform where an open-source project is hosted, browsing through its repository can be an informative and rather fun exercise. It allows us to gain insights into how the project has evolved with time, issues and bugs that have been discovered, those that have been resolved, as well as code contributions made by the open-source community. Moreover, we also learn about other open-source technologies that power the project, which opens up more avenues for [exploration](https://github.com/explore).
 
 ## Contributors (number, origin, leadership)
-A software project typically has multiple contributors. There are various ways in which an individual may contribute to a software project, such as with the implementation of a new feature, to fix a bug, with a new test that verifies an untested behavior, or to improve the documentation. The open-source movement thrives (see reference [1](#ref_1)) as a direct consequence of the contributions made by enthusiasts, users, and developers, who have diverse backgrounds and areas of expertise, and come from different geographical regions.
+A software project typically has multiple contributors. There are various ways in which an individual may contribute to a software project, such as with the implementation of a new feature, to fix a bug, with a new test that verifies an untested behavior, or to improve the documentation, including [translations](https://github.com/chrislgarry/Apollo-11) to spoken languages. The open-source movement thrives (see reference [1](#ref_1)) as a direct consequence of the contributions made by enthusiasts, users, and developers, who have diverse backgrounds and areas of expertise, and come from different geographical regions.
 
 Open-source software projects maintain a list of individuals who have contributed to them. An individual becomes a contributor to a software project when a submission made by them is adopted into the code-base of the project. The number of contributors of a software project can be useful to guage the [maturity](https://en.wikipedia.org/wiki/Linus%27s_law) of an open-source software project. For example, the [node](https://github.com/nodejs/node) project repository lives on GitHub, and has more than three thousand individual contributors. Incoming contributions to the project are presented on the the [pull requests tab](https://github.com/nodejs/node/pulls). We can also investigate the history of contributions more deeply through the [contributors page](https://github.com/nodejs/node/graphs/contributors), which indicates the developers most actively involved in the project. 
 
@@ -27,7 +27,9 @@ A majority of open-source projects today use a distributed versioning system cal
 Git itself resides in a [GitHub repository](https://github.com/git/git), where we can observe the project, including the [latest commits](https://github.com/git/git/commits/master) to its main development branch. As a rule of thumb, more actively developed and maintained open-source projects have more frequent and recent commits.
 
 ## Licenses, agreements    
-TODO: see
+Most open-source projects include a license, which is a legal document that defines the terms in which the software may be used. The license is usually specified in a file called `LICENSE`, as in the case of the [NASA worldview](https://github.com/nasa-gibs/worldview/blob/main/LICENSE.md) project.
+
+Common open-source licenses include - TODO: see
 - [Software license](https://en.wikipedia.org/wiki/Software_license)
 - [Open-source license](https://en.wikipedia.org/wiki/Open-source_license)
 - [FOSS licenses](https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses)
@@ -40,12 +42,28 @@ In order to keep track of incremental changes in a software project repository, 
 
 ## Beginner, Normal, Expert Level    
 ## Industry Use Cases    
+
 ## Test Questions / Areas / Learning Goal   
- 
+Find two open-source projects, and report the following data for them:
+### Repo novice 👾
+- Name
+- Organisation
+- Domain
+- Link to the project repository
+- Main programming language(s)
+- Number of commits
+- Latest release
+- License
+- Other interesting statistics / information (recent activity, contributors, stars, ...)
+### Repo expert 💯
+- A bug report
+- A file with source code
+- A file with test code
+- Personal experiences using / working with the project
+- Mentions on Wikipedia / in the press
+- Project website
+
 ## References
 1. <a name="ref_1">[Pots of Gold at the End of the Rainbow: What is Success for Open Source Contributors?](https://ieeexplore.ieee.org/document/9524493)</a>
 2. <a name="ref_2">[The Git Book](https://git-scm.com/book/en/v2)</a>
 3. <a name="ref_3">[Learn Git Branching](https://learngitbranching.js.org/)</a>
-
-
-
