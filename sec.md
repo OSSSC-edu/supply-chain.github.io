@@ -32,6 +32,26 @@ In the context of code infrastructure security, a compromised private key would 
 `TODO: add static analysis`
 ## Binary analysis
 `TODO: add binary analysis`
+## Access control - 2FA - on the repo
+The first step in securing a code repository, is to make sure that the users that can `push` changes to it are authorized to do so. 
+
+`TODO: Generate Keys - Sign commits`
+
+[Signing Commits (github)](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits)
+
+[hide email](https://stackoverflow.com/questions/43863522/error-your-push-would-publish-a-private-email-address)
+
+### VSCode example
+[vscode-example](https://dev.to/devmount/signed-git-commits-in-vs-code-36do)
+
+- `git config commit.gpgsign true`
+- `git config user.signingkey "public_key"`
+
+`TODO: 2FA in github`
+
+Apart from restricting access to the code base, github also provides protection rules that can be applied in order to restrict the possible actions, e.g., pull request, merge, etc. For example, it allows repository administrators to require pull requests for all branches that contain the word `release` in their name; or, that pull requests that affect other peoples' code must be first approved by the code owner. 
+[Branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
+
 
 ## Beginner, Normal, Expert Level
 ## Industry Use Cases
