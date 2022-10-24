@@ -72,3 +72,5 @@ PKI is not necessarily needed  for attesting code and infrastructure. A user can
 ## Test Questions / Areas / Learning Goal
 ## References
 
+1. [Static analysis for security. Brian Chess, Gary McGraw](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1366126)
+2. [Countering trusting trust through diverse double-compiling. David A. Wheeler, 2005.](https://ieeexplore.ieee.org/document/1565233)
