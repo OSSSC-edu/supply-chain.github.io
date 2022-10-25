@@ -35,10 +35,9 @@ Common open-source licenses include - TODO: see
 - [FOSS licenses](https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses)
 
 ## Versioning, commit message    
-It is important to keep track of a software project as it evolves with time. This is achieved by assigning __versions__ to the state of the project at a certain point in time. If a developer fixes an important [bug](https://en.wikipedia.org/wiki/Software_bug) or implements a new feature, a new [version](https://semver.org/) of the software is released. It is good practice to [document the changes](https://keepachangelog.com/en/1.0.0/) included within a new version, so that users of the software are aware of them.
-
 In order to keep track of incremental changes in a software project repository, Git assigns unique identifiers to a snapshot of the state of the project at each commit. For example, [astropy](https://github.com/astropy/astropy) is a library that provides tools to work with astronomical data in the [Python language](https://en.wikipedia.org/wiki/Python_(programming_language)). Each [commit](https://github.com/astropy/astropy/commits/main) in astropy has its own __commit id__, as well as a brief description, or __commit message__, of the changes it includes.
 
+Developers mark important milestones in their software project as it evolves with time. This is achieved by assigning __versions__ to the state of the project at a certain point in time. If a developer fixes an important [bug](https://en.wikipedia.org/wiki/Software_bug) or implements a new feature, a new [version](https://semver.org/) of the software is released. A new version is the culmination of smaller changes, such as multiple commits. It is good practice to [document the changes](https://keepachangelog.com/en/1.0.0/) included within a new version, so that users of the software are aware of them.
 
 ## Beginner, Normal, Expert Level    
 ## Industry Use Cases    
@@ -57,6 +56,7 @@ Find two open-source projects, and report the following data for them:
 - Other interesting statistics / information (recent activity, contributors, stars, ...)
 ### _Expert_ 💯
 - A bug report
+- A contribution accepted into the project
 - A file with source code
 - A file with test code
 - Personal experiences using / working with the project
