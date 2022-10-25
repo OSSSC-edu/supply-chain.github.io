@@ -23,6 +23,18 @@ email: your-email@example.com
 description: Introduction to the software supply chain and related security solutions.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://osssc-edu.github.io/supply-chain.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+
+
+# Output options (more information on Jekyll's site)
+encoding: utf-8
+timezone: "America/Vancouver"
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+highlighter: rouge
+
 #twitter_username: jekyllrb
 #github_username:  jekyll
 permalink: pretty
@@ -34,6 +46,8 @@ plugins:
 # Enable or disable the site search
 # Supports true (default) or false
 search_enabled: true
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
