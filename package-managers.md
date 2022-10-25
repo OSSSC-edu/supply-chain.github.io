@@ -74,8 +74,17 @@ And the software project is the software project that uses the package manager t
 | [GitHub Container Registry]()                        | TODO                                                                                                                                                                                                     |
 
 
-
 # Dependencies
+
+The dependency code constitutes your dependencies. 
+It shouldn’t be mutated during the lifetime of your application, and should be accessible by your project code in memory when it’s needed.
+
+## Dependency Resolution Mechanism
+
+
+## Direct and Transitive Dependencies
+
+https://www.freecodecamp.org/news/javascript-package-managers-101-9afd926add0a#.hu6knvct3
 
 # Software ecosystem
 
