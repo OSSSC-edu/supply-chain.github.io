@@ -55,18 +55,24 @@ More information on the proccess of signing commits can be found in the [signing
 
 
 ## Credential Management
-We already touched upon it in the first section, but improper credential management is one of the leading causes of security compromises [citation]. 
+We already touched upon it in the first section, but improper credential management can lead to serious damage.
 
 The simplest steps for credential management can be summarized as:
 - Private keys must always remain secret
+- When possible 2FA should be used
 - 
 
-`TODO: alternative to web of trust`
+`TODO: Finish Credential Management`
 
 ### Web of Trust
-PKI is not necessarily needed  for attesting code and infrastructure. A user can distribute its public key and sign his code/work with a private key. The public key can then be used to verify the owner of the relevant code/work. 
+PKI is not necessarily needed  for attesting code and infrastructure. A user can distribute its public key and sign his code/work with a private key. The public key can then be used to verify that the code was submitted using the corresponding private key.
 
-`TODO: web of trust specifics`
+This, however, does not link the public key with an individual; when PKI is not used, the alternative is to create a `web of trust`. In simple words, in this `decentralized` model, each user can endorse the association between a public key and a person; this way indirect trust can be achieved. The following image illustrates this:
+
+ ![](./figures/400px-Web_of_Trust-en.svg.png)|
+|:--:|
+| *Image source: https://en.wikipedia.org/wiki/Web_of_trust*
+
 
 
 ## Beginner, Normal, Expert Level
