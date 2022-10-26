@@ -17,11 +17,11 @@ managing digital certificates; this includes, their generation, storage, distrib
 
 The following is a schematic of the PKI when a webpage needs to be accessed from the user's browser:
 
- ![](https://www.thesslstore.com/blog/wp-content/uploads/2020/07/how-pki-works-overview.png)|
+ ![](./figures/how-pki-works-overview.png)|
 |:--:|
 | *Image source: https://www.thesslstore.com/blog/how-pki-works/*
 
-PKI ensures that the public keys used to communicate with a server, a company, or an individual, belongs to the actual owner. As long as the certificate authority is trusted, a user can be sure that the communication happens with the intended recipient. To bring it to the context of supply chains: PKI helps ensure that the downloaded software was produced by a specific entity; it can ensure that the code has not been changed during the lifetime of the supply chain; it can also be used to connect published code to a specific individual.  
+PKI ensures that the `public` keys used to communicate with a server, a company, or an individual, belongs to the actual owner. As long as the certificate authority is trusted, a user can be sure that the communication happens with the intended recipient. To bring it to the context of supply chains: PKI helps ensure that the downloaded software was produced by a specific entity; it can also ensure that the code has not been changed during the lifetime of the supply chain (if signing/verification happens at each step); it can also be used to connect published code to a specific individual.  
 
 ### Public Key Encryption
 The PKI also facilitates the use of assymetric encryption, known also as public key encryption (PKE). In this scheme, each user has two distinct keys; one is public, the other must always remain private. The public key can be freely distributed to the world and is required to `verify` that a piece of software was `signed` (or encrypted) by the corresponding private key. This, highlights the importance of keeping the private key secure; leaking this key would allow anyone to impersonate its actual holder. 
