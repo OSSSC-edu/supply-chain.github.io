@@ -69,7 +69,7 @@ PKI is not necessarily needed  for attesting code and infrastructure. A user can
 
 This, however, does not link the public key with an individual; when PKI is not used, the alternative is to create a `web of trust`. In simple words, in this `decentralized` model, each user can endorse the association between a public key and a person; this way indirect trust can be achieved. The following image illustrates this:
 
- ![](./figures/1920px-Web_of_Trust-en.svg.png)|
+ ![](./figures/Web_of_Trust.png)|
 |:--:|
 | *Image source: https://en.wikipedia.org/wiki/Web_of_trust*
 
