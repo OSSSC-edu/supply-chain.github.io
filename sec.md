@@ -82,3 +82,9 @@ This, however, does not link the public key with an individual; when PKI is not 
 
 1. [Static analysis for security. Brian Chess, Gary McGraw](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1366126)
 2. [Countering trusting trust through diverse double-compiling. David A. Wheeler, 2005.](https://ieeexplore.ieee.org/document/1565233)
+3. [Github docs](https://docs.github.com/en)
+4. [How PKI works](https://www.thesslstore.com/blog/how-pki-works/)
+5. [Git access control examples](https://wincent.com/wiki/Git_repository_access_control)
+
+
+<!-- [hide email](https://stackoverflow.com/questions/43863522/error-your-push-would-publish-a-private-email-address) -->
