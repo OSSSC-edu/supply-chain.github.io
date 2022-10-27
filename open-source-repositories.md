@@ -18,24 +18,24 @@ Regardless of the specific platform where an open-source project is hosted, brow
 
 ### _Outline_ 📋
 In this chapter, we learn about
-- How individuals contribute to open-source projects
-- How we can guage the activity and popularity of open-source projects
-- Open-source licenses
-- Versioning in open-source software systems
-- Use cases for open-source software in the industry
-We also encourage you to explore the links throughout the text, the Do-It-Yourself tasks, as well as the resources listed in the references. 
+- How individuals [contribute](#contributors) to open-source projects
+- How we can guage the [activity and popularity](#activity_popularity) of open-source projects
+- Open-source [licenses](#licenses)
+- [Versioning](#versioning) in open-source software systems
+- [Use cases](#use_cases) for open-source software in the industry
+We also encourage you to explore the links throughout the text, the [Do-It-Yourself](#diy) tasks, as well as the resources listed in the [references](#references). 
 
-## Contributors
+## <a name="contributors">Contributors</a>
 A software project typically has multiple contributors. There are various ways in which an individual may contribute to a software project, such as with the implementation of a new feature, to fix a bug, with a new test that verifies an untested behavior, or to improve the documentation, including [translations](https://github.com/chrislgarry/Apollo-11) to spoken languages. The open-source movement thrives (see reference [1](#ref_1)) as a direct consequence of the contributions made by enthusiasts, users, and developers, who have diverse backgrounds and areas of expertise, and come from different geographical regions.
 
 Open-source software projects maintain a list of individuals who have contributed to them. An individual becomes a contributor to a software project when a submission made by them is adopted into the code-base of the project. The number of contributors of a software project can be useful to guage the [maturity](https://en.wikipedia.org/wiki/Linus%27s_law) of an open-source software project. For example, the [node](https://github.com/nodejs/node) project repository lives on GitHub, and has more than three thousand individual contributors. Incoming contributions to the project are presented on the the [pull requests tab](https://github.com/nodejs/node/pulls). We can also investigate the history of contributions more deeply through the [contributors page](https://github.com/nodejs/node/graphs/contributors), which indicates the developers most actively involved in the project. 
 
-## Activity
+## <a name="activity_popularity">Activity and Popularity</a>
 A majority of open-source projects today use a distributed versioning system called [Git](https://en.wikipedia.org/wiki/Git), including all the projects hosted on prominent platforms such as GitHub and GitLab. Git is a handy tool with many features that facilitate efficient collaboration among the contributors of a software project. A developer can submit changes to a project incrementally via __commits__, which are atomic units of contribution in the Git workflow. Git is an essential prerequisite to understanding and contributing to open-source projects. Many excellent resources exist online that introduce its foundations, as well as more advanced usage (see references [2](#ref_2) and [3](#ref_3)).
 
 Git itself resides in a [GitHub repository](https://github.com/git/git), where we can observe the project, including the [latest commits](https://github.com/git/git/commits/master) to its main development branch. As a rule of thumb, more actively developed and maintained open-source projects have more frequent and recent commits.
 
-## Licenses and agreements    
+## <a name="licenses">Licenses and agreements</a>
 Most open-source projects include a license, which is a legal document that defines the terms in which the software may be used. The license is usually specified in a file called `LICENSE`, as in the case of the [NASA worldview](https://github.com/nasa-gibs/worldview/blob/main/LICENSE.md) project.
 
 Common open-source licenses include - TODO: see
@@ -43,15 +43,15 @@ Common open-source licenses include - TODO: see
 - [Open-source license](https://en.wikipedia.org/wiki/Open-source_license)
 - [FOSS licenses](https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses)
 
-## Versioning    
+## <a name="versioning">Versioning</a>    
 In order to keep track of incremental changes in a software project repository, Git assigns unique identifiers to a snapshot of the state of the project at each commit. For example, [astropy](https://github.com/astropy/astropy) is a library that provides tools to work with astronomical data in the [Python language](https://en.wikipedia.org/wiki/Python_(programming_language)). Each [commit](https://github.com/astropy/astropy/commits/main) in astropy has its own __commit id__, as well as a brief description, or __commit message__, of the changes it includes.
 
 Developers mark important milestones in their software project as it evolves with time. This is achieved by assigning __versions__ to the state of the project at a certain point in time. If a developer fixes an important [bug](https://en.wikipedia.org/wiki/Software_bug) or implements a new feature, a new [version](https://semver.org/) of the software is released. A new version is the culmination of smaller changes, such as multiple commits. It is good practice to [document the changes](https://keepachangelog.com/en/1.0.0/) included within a new version, so that users of the software are aware of them.
 
-## Industry Use Cases    
+## <a name="use_cases">Industry Use Cases</a>
 Software projects [depend](https://en.wikipedia.org/wiki/Turtles_all_the_way_down) on other software projects to achieve their goals. Open-source software projects can be likened to building blocks: they play a crucial role in both open- and closed-source, or commercial, software systems. For example, a commercial software application may rely on the features provided by open-source [PDF](https://github.com/apache/pdfbox) manipulation libraries to generate invoices. Most [database](https://db-engines.com/en/ranking_osvsc) solutions powering commercial software systems are open-source. Open-source tools may also be used for real-time [monitoring](https://prometheus.io/) of commercial software systems in production. The open-source [software supply chain](https://en.wikipedia.org/wiki/Software_supply_chain) powers billions of dollars in financial transactions (see reference [4](#ref_4)). Learning about open-soure software projects, and how they can be used, is therefore very relevant for all industrial domains and enterprises.
 
-## DIY
+## <a name="diy">DIY</a>
 Find two open-source projects, and report the following data for them:
 ### _Novice_ 👾
 - Name
@@ -73,7 +73,7 @@ Find two open-source projects, and report the following data for them:
 - Mentions on Wikipedia / in the press
 - Project website
 
-## References
+## <a name="references">References</a>
 1. <a name="ref_1">[Pots of Gold at the End of the Rainbow: What is Success for Open Source Contributors?](https://ieeexplore.ieee.org/document/9524493)</a>
 2. <a name="ref_2">[The Git Book](https://git-scm.com/book/en/v2)</a>
 3. <a name="ref_3">[Learn Git Branching](https://learngitbranching.js.org/)</a>
