@@ -53,9 +53,8 @@ Find two open-source projects, and report the following data for them:
 - Link to the project repository
 - Main programming language(s)
 - Number of commits
-- Latest release
-- License
 - Link to the most recent commit
+- License
 - Other interesting statistics / information (recent activity, contributors, stars, ...)
 ### _Expert_ 💯
 - A bug report
