@@ -40,7 +40,9 @@ In order to keep track of incremental changes in a software project repository, 
 Developers mark important milestones in their software project as it evolves with time. This is achieved by assigning __versions__ to the state of the project at a certain point in time. If a developer fixes an important [bug](https://en.wikipedia.org/wiki/Software_bug) or implements a new feature, a new [version](https://semver.org/) of the software is released. A new version is the culmination of smaller changes, such as multiple commits. It is good practice to [document the changes](https://keepachangelog.com/en/1.0.0/) included within a new version, so that users of the software are aware of them.
 
 ## Beginner, Normal, Expert Level    
+
 ## Industry Use Cases    
+Software projects [depend](https://en.wikipedia.org/wiki/Turtles_all_the_way_down) on other software projects to achieve their goals. Open-source software projects can be likened to building blocks: they play a crucial role in both open- and closed-source, or commercial, software systems. For example, a commercial software application may rely on the features provided by open-source [PDF](https://github.com/apache/pdfbox) manipulation libraries to generate invoices. Most [database](https://github.com/topics/database) solutions powering commercial software systems are open-source. Open-source tools may also be used for real-time [monitoring](https://prometheus.io/) of commercial software systems in production. The open-source [software supply chain](https://en.wikipedia.org/wiki/Software_supply_chain) powers billions of dollars in financial transactions (see reference [4](#ref_4)). Learning about open-soure software projects, and how they can be used, is therefore very relevant for all industrial domains and enterprises.
 
 ## Test Questions / Areas / Learning Goal   
 Find two open-source projects, and report the following data for them:
@@ -53,12 +55,14 @@ Find two open-source projects, and report the following data for them:
 - Number of commits
 - Latest release
 - License
+- Link to the most recent commit
 - Other interesting statistics / information (recent activity, contributors, stars, ...)
 ### _Expert_ 💯
 - A bug report
 - A contribution accepted into the project
 - A file with source code
 - A file with test code
+- Latest release
 - Personal experiences using / working with the project
 - Mentions on Wikipedia / in the press
 - Project website
@@ -67,3 +71,4 @@ Find two open-source projects, and report the following data for them:
 1. <a name="ref_1">[Pots of Gold at the End of the Rainbow: What is Success for Open Source Contributors?](https://ieeexplore.ieee.org/document/9524493)</a>
 2. <a name="ref_2">[The Git Book](https://git-scm.com/book/en/v2)</a>
 3. <a name="ref_3">[Learn Git Branching](https://learngitbranching.js.org/)</a>
+4. <a name="ref_4">[The Multibillion Dollar Software Supply Chain of Ethereum](https://arxiv.org/abs/2202.07029)</a>
