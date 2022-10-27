@@ -6,7 +6,7 @@ layout: default
 title: Open-source Software Repositories
 nav_order: 2
 description: ""
-permalink: /repo
+permalink: /open-source-repositories
 ---
 
 # Open-source software repositories
