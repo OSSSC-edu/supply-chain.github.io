@@ -38,13 +38,8 @@ A majority of open-source projects today use a distributed versioning system cal
 
 __TODO: add some metrics for popularity__
 
-## <a name="licenses">Licenses and agreements</a>
-Most open-source projects include a license, which is a legal document that defines the terms in which the software may be used. The license is usually specified in a file called `LICENSE`, as in the case of the [NASA worldview](https://github.com/nasa-gibs/worldview/blob/main/LICENSE.md) project.
-
-Common open-source licenses include - __TODO__: see
-- [Software license](https://en.wikipedia.org/wiki/Software_license)
-- [Open-source license](https://en.wikipedia.org/wiki/Open-source_license)
-- [FOSS licenses](https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses)
+## <a name="licenses">Licenses</a>
+Most open-source projects include a [license](https://en.wikipedia.org/wiki/Open-source_license), which is a legal document that defines the terms in which the use of the software is permitted. It also tells the users of the software what their rights are, with respect to the software. For example, the license dictates if a software project may be incorporated only in non-commercial contexts or even in commercial products, used directly without being modified, or may be customized before being used, etc. It is useful to [compare](https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses) between the many available open-source licenses and [choose](https://choosealicense.com/) one that is right for a project. The license is usually specified in a file called `LICENSE`, as in the case of the [NASA worldview](https://github.com/nasa-gibs/worldview/blob/main/LICENSE.md) project.
 
 ## <a name="versioning">Versioning</a>    
 In order to keep track of incremental changes in a software project repository, Git assigns unique identifiers to a snapshot of the state of the project at each commit. For example, [astropy](https://github.com/astropy/astropy) is a library that provides tools to work with astronomical data in the [Python language](https://en.wikipedia.org/wiki/Python_(programming_language)). Each [commit](https://github.com/astropy/astropy/commits/main) in astropy has its own __commit id__, as well as a brief description, or __commit message__, of the changes it includes.
