@@ -38,6 +38,10 @@ A majority of open-source projects today use a distributed versioning system cal
 
 In addition to the commits, some more metrics can indicate the popularity of an open-source project. For example, a user can follow the updates made to a project on GitHub by starring its repository, and receive notifications by watching it. Users may also create a copy, or fork, of the project in order to implement some of their own extensions to it, and optionally contribute them back to the original project through pull requests.
 
+![](./img/popularity-metrics.png)
+
+In the figure above, we see the GitLab repository of the [Tezos](https://gitlab.com/tezos/tezos) blockchain, and the GitHub repository of the [MongoDB](https://github.com/mongodb/mongo) database. For both projects, we see the number of times it has been starred and forked by users. 
+
 ## <a name="licenses">Licenses</a>
 Most open-source projects include a [license](https://en.wikipedia.org/wiki/Open-source_license), which is a legal document that defines the terms in which the use of the software is permitted. It also tells the users of the software what their rights are, with respect to the software. For example, the license dictates if a software project may be incorporated only in non-commercial contexts or even in commercial products, used directly without being modified, or may be customized before being used, etc. It is useful to [compare](https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses) between the many available open-source licenses and [choose](https://choosealicense.com/) one that is right for a project. The license is usually specified in a file called `LICENSE`, as in the case of the [NASA worldview](https://github.com/nasa-gibs/worldview/blob/main/LICENSE.md) project.
 
