@@ -33,10 +33,11 @@ The following figure shows the Linux packaging system:
 For example, the Debian packages repository for the Vim editor is available [here](https://packages.debian.org/stable/editors/vim).
 System-level package managers include metadata for each package about what functionalities it provides, who created it but most importantly what packages it depends on.
 
-The APT cache is used in order to provide offline information about current packages installed on your system. It essentially guarantees that you are able to access package information without having to be connected to Internet.
+The APT cache is used in order to provide offline information about current packages installed on your system. 
+It essentially guarantees that you are able to access package information without having to be connected to Internet.
 
 ![](https://devconnected.com/wp-content/uploads/2019/11/dependencies.png)
-**Image source: [https://www.edureka.co/blog/docker-networking/](https://www.edureka.co/blog/docker-networking/)**
+**Image source: [https://devconnected.com/apt-package-manager-on-linux-explained/](https://devconnected.com/apt-package-manager-on-linux-explained/)**
 
 Below is a list with some of the most popular package managers for different operating systems:
 
@@ -58,6 +59,7 @@ These images are uploaded onto the Docker Hub(Git repository for Docker Images) 
 
 The following figure illustrates how the Docker packaging system operates on a network:
 ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/07/Picture1-1.png)
+**Image source: [https://www.edureka.co/blog/docker-networking/](https://www.edureka.co/blog/docker-networking/)**
 
 So, from public repositories, you can pull your image as well and you can upload your own images onto the Docker Hub.
 Then, from Docker Hub, various teams such as Quality Assurance or Production teams will pull that image and prepare their own containers.
@@ -126,23 +128,45 @@ Dependency resolution mechanisms and dependency updates are important aspects to
 
 Dependency versioning is a mechanism that allows to specify the version of a dependency that is required by a software project.
 This is important because it allows to handle the case where a dependency is updated and the software project is not compatible with the new version of the dependency.
-[Semantic versioning](https://semver.org/) is a popular versioning scheme that is used by many package managers.
+The Semantic Versioning Specification ([SemVer](https://semver.org/)) is a popular versioning scheme that is used by many package managers.
 
 ## Dependency trees
 
+Dependency trees are a way to represent the dependencies of a software project.
+A dependency tree is a graph where the nodes are the dependencies of a software project and the edges are the dependencies between the nodes.
+Package managers typically use dependency trees to manage the dependencies of a software project.
 
+In a dependency tree there are three main types of nodes:
 
-Transitive dependencies are dependencies of your dependencies.
-They are not directly used by your project but they are used by your dependencies.
+1. The root node is the software project itself.
+2. Direct dependencies are the dependencies of the root node that are declared in .
+3. Transitive dependencies are dependencies of the direct dependencies.
 
-Direct dependencies are dependencies of your project.
-They are directly used by your project.
+Transitive dependencies deserve special attention as they are not directly used by your project but they are used by your dependencies.
 For example, if you use a library that uses another library, the first library is a direct dependency and the second library is a transitive dependency.
+
+The following figure shows the dependency tree of the project `com.github.ferstl` as resolved by the Maven package manager:
+
+![](https://github.com/ferstl/depgraph-maven-plugin/raw/master/src/doc/by-group-id.png)
+**Image source: [https://github.com/ferstl/depgraph-maven-plugin/raw/master/src/doc/by-group-id.png](https://github.com/ferstl/depgraph-maven-plugin/raw/master/src/doc/by-group-id.png)**
+
+As you observe, the root node is the project `com.github.ferstl`.
+The direct dependencies are the projects `commons-codec`, `org.apache.commons`, `junit`, `com.google.guava`, `org.springframework`, and `com.mysema.querydsl`.
+The transitive dependencies are `org.hamcrest`, `com.google.code.findbugs`, `com.mysema.commons`, and `com.infradna.tool`.
 
 ## Dependency resolution mechanisms
 
+Dependency resolution mechanisms are protocols that package managers use to determine which are the dependencies in the dependency tree of a software project.
+Different package managers use different dependency resolution mechanisms.
+In particular, these mechanism allows to resolve conflicts between dependency versions.
+This is because, in most package managers, only one version of any particular package can be installed at a time.
+In that sense, one of the package manager’s primary responsibilities is to figure out a set of package versions that will satisfy every version constraint simultaneously.
 
-https://www.freecodecamp.org/news/javascript-package-managers-101-9afd926add0a#.hu6knvct3
+> “Dependency hell” is a colloquial term denoting the frustration resulting from the inability to install software due to complicated dependencies.[^3] 
+
+For example, the Maven package manager relies on a [dependency resolution mechanism](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html) that determines which version of a dependency to use based on the proximity of the dependency to the root node.
+On the other hand, the npm package manager uses a [dependency resolution mechanism](https://medium.com/learnwithrahul/understanding-npm-dependency-resolution-84a24180901b) that attempts to flatten the dependency tree as much as possible whereas picking the version as based on the installation order expressed in the `package.json` file.
+
 
 # Software repositories
 
@@ -170,8 +194,6 @@ Package managers are immutable, which leads to natural software diversity.[^1]
 
 Software ecosystems are...[^2]
 
-# Beginner, Normal, Expert Level
-
 # Industry Use Cases
 
 Package managers are designed to eliminate the need for manual installs and updates. 
@@ -194,5 +216,53 @@ This can be particularly useful for large enterprises whose operating systems ty
 
 [^1]: Soto-Valero, César, et al. "The emergence of software diversity in maven central." 2019 IEEE/ACM 16th International Conference on Mining Software Repositories (MSR). IEEE, 2019.
 [^2]: Decan, Alexandre, Tom Mens, and Philippe Grosjean. "An empirical comparison of dependency network evolution in seven software packaging ecosystems." Empirical Software Engineering 24.1 (2019): 381-416.
+[^3]: Abate, Pietro, et al. "Dependency solving is still hard, but we are getting better at it." 2020 IEEE 27th International Conference on Software Analysis, Evolution and Reengineering (SANER). IEEE, 2020.
 
 
+
+[//]: # (Pipreqs is a tool that can generate a requirements.txt file containing the list of a project’s dependencies and their versions based on imports that it detects in the source code.)
+
+[//]: # ()
+[//]: # (```shell)
+
+[//]: # ($ pip install <packagename>)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (Pipreqs)
+
+[//]: # ()
+[//]: # (Pipreqs is a tool that can generate a requirements.txt file containing the list of a project’s dependencies and their versions based on imports that it detects in the source code.)
+
+[//]: # (Pipreqs Usage)
+
+[//]: # ()
+[//]: # (To install pipreqs, enter:)
+
+[//]: # ()
+[//]: # (```shell)
+
+[//]: # ($ pip install pipreqs )
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (To generate a requirements.txt file, enter:)
+
+[//]: # ()
+[//]: # (```shell)
+
+[//]: # ($ pipreqs /<projectlocation>)
+
+[//]: # (  # requirements.txt)
+
+[//]: # (  pkginfo==1.5.0.1)
+
+[//]: # (  tabulate==0.8.7)
+
+[//]: # (  structlog==20.1.0 )
+
+[//]: # (  ...)
+
+[//]: # (```)
