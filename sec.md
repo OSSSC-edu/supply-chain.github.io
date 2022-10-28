@@ -56,18 +56,22 @@ The simplest steps for credential management can be summarized as:
 - Keys should be used for one protocol only (this stops cross-protocol attacks, e.g., [SSL attack](https://www.controlcase.com/cross-protocol-attack-on-tls-using-sslv2-drown-vulnerability-cve-2016-0800-mar-2016/)).
 
 ## Access control - 2FA - on the repo
-In a typical sense, `git` does not provide access control; git after all is a source-code management tool. A repository can be private or public but the repositories themselves do not implement any authentication. This can be tackled with other solutions: some [examples](https://wincent.com/wiki/Git_repository_access_control) of this include the use of `git-daemon` to provide read-only (anonymous) access and the requirement of using SSH keys to `push`; users without the appropriate SSH key cannot `push` to the repository.
+In a typical sense, git does not provide access control; git after all is a source-code management tool. A repository can be private or public but the repositories themselves do not implement any authentication. This can be tackled with other solutions: some [examples](https://wincent.com/wiki/Git_repository_access_control) of this include the use of `git-daemon` to provide read-only (anonymous) access and the requirement of using SSH keys to `push`; users without the appropriate SSH key cannot `push` to the repository.
 
 However, a simple step for improving the security of a repository is to introduce Two-Factor Authentication (2FA) when logging-in into a git account. 2FA effectively requires the user to present two pieces of information to authenticate themselves (e.g., knowledge - a password, and possession - a phone that receives an one-time password). This raises the difficulty of compromising an account and gaining access to critical code. Github provides a detailed guide on how to configure [2FA](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication) and its [account-recovery](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication-recovery-methods). Accessing the account can be [straightforward](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/accessing-github-using-two-factor-authentication) through the web, or through the command line using [SSH](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github).
 
-Apart from restricting access to the code base, github also provides protection rules that can be applied in order to restrict the possible actions, e.g., pull request, merge, etc. For example, it allows repository administrators to require pull requests for all branches that contain the word `release` in their name; or, that pull requests that affect other peoples' code must be first approved by the code owner. More information about this proccess can be found in  [branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
-
-
 ### Commit signing
 
-Another usefull service that `git` allows through the use of `SSH` keys, is the possibility to `sign` code that is `pushed` to a repository. This ensures that all commits are authenticated and the person responsible for the code can be attributed.
+Another usefull service that git allows through the use of `SSH` keys, is the possibility to `sign` code that is `pushed` to a repository. This ensures that all commits are authenticated and the person responsible for the code can be attributed.
 
-The following lines enable code signing from the command line ([instructions](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key)) and assumes that `SSH` keys have already been created, e.g., for accessing the repository ([SSH key generation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), [SSH access](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)) and the key is added as a `signing key` in the user's account.
+In order for a commit to be signed, the `signing` key must be added to the user's account; the procedure is similar to adding a key for authenticating to github.
+
+![](./img/add-ssh.png)
+
+
+
+The following lines enable code signing from the command line ([instructions](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key)) and assumes that `SSH` keys have already been created, e.g., for accessing the repository ([SSH key generation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), [SSH access](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)).
+
 ```
 git config commit.gpgsign true
 git config gpg.format ssh //when using SSH key instead of GPG
