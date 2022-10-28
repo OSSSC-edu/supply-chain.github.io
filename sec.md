@@ -46,6 +46,15 @@ This, however, does not link the public key with an individual; when PKI is not 
 |:--:|
 | *Image source: https://en.wikipedia.org/wiki/Web_of_trust*
 
+### Credential handling
+Due to its nature, improper handling of credentials can lead to serious damage; moreso, when the credentials ensure the security and integrity of a supply chain.
+
+The simplest steps for credential management can be summarized as:
+- Private keys must always remain secret.
+- When possible, 2FA should be used.
+- Keys and credentials should be changed in due time and not be permanent. Similarily, certificates, should have an expiration date.
+- Keys should be used for one protocol only (this stops cross-protocol attacks, e.g., [SSL attack](https://www.controlcase.com/cross-protocol-attack-on-tls-using-sslv2-drown-vulnerability-cve-2016-0800-mar-2016/)).
+
 ## Access control - 2FA - on the repo
 In a typical sense, `git` does not provide access control; git after all is a source-code management tool. A repository can be private or public but the repositories themselves do not implement any authentication. This can be tackled with other solutions: some [examples](https://wincent.com/wiki/Git_repository_access_control) of this include the use of `git-daemon` to provide read-only (anonymous) access and the requirement of using SSH keys to `push`; users without the appropriate SSH key cannot `push` to the repository.
 
