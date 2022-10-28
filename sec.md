@@ -155,3 +155,12 @@ The following lists outline the general knowledge that a user should have from a
 
 
 <!-- [hide email](https://stackoverflow.com/questions/43863522/error-your-push-would-publish-a-private-email-address) -->
+<!-- (KK, PP)
+     - open question: different users with different repos - 
+        - is there a connection? 
+        - can I convince you? 
+        - What infrastructure is needed? 
+        - What if I loose the keys? Someone has my password and introduces his own keys?
+     -(KK,PP)
+
+-->
