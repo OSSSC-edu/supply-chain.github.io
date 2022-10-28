@@ -110,6 +110,11 @@ Static analysis does not aim to eliminate all the security problems; it aims to 
 - Basic lexical analysis tools (e.g., [Flawfinder](https://dwheeler.com/flawfinder/)) that can tokenize source files and match them against allready-known vulnerabilities.
 - Tools that take into account the semantics of the language, e.g., the relationships between the functions and the classes ([list of tools](https://www.nist.gov/itl/ssd/software-quality-group/source-code-security-analyzers)). These tools usually require from the developer to define safety properties, expected function behavior and unsafe operations (e.g., global variable modification).
 
+## Binary analysis
+Vulnerable or malicious code can be inserted in various stages of the supply chain, possibly circumventing some of the implemented security checks. Contrary to the previous methodology, binary analysis acts directly on the compiled program, the executable; which includes the whole suit of libraries and code needed for it to run. It is possible for example for a compromised compiler to introduce malicious code into the executable without any modification to the source code.
+
+Binary analysis can tackle these problems. Tools such as [angr](https://angr.io/) can produce control flow graphs from the executable making it easier to detect bugs and unitended behavior. Others (e.g., [Black Duck](https://www.synopsys.com/software-integrity/security-testing/software-composition-analysis/binary-analysis.html)) can detect outdated libraries, previously-known vulnerabilities, unwanted leakage of tokens and personal information (e.g., hardcoded emails). Moreso, it can tackle the problem of compromised compilers. For example, the resulting executable from the supply chain can be compared with an executable produced
+in a safe and "trusted" environment. Differences between the two executables could mean the insertion of malicious code.
 
 
 ## Beginner, Normal, Expert Level
