@@ -80,16 +80,18 @@ git config user.signingkey "public_key"
 
 More information on the proccess of signing commits can be found in the [signing commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits) section in github.
 
+### Verify Commits
+There are two ways to verify that a commit was signed with a valid key. The most straightfoward option is to visually inspect if the commit has a `Verified' icon next to it in the web interface as shown below.
 
-## Credential Management
-We already touched upon it in the first section, but improper credential management can lead to serious damage.
+![](./img/verified2.png)
 
-The simplest steps for credential management can be summarized as:
-- Private keys must always remain secret
-- When possible 2FA should be used
-- 
+For a command-line option, git needs to be configured in order to check against the provided public keys. The file must contain at least one principal (e.g., user1@example.com), followed by the associated public key in a single line.
+The following commands show the steps required to achieve this.
 
-`TODO: Finish Credential Management`
+```
+git config gpg.ssh.allowedSignersFile <file>
+git verify-commit -v <commit>
+```
 
 ### Web of Trust
 PKI is not necessarily needed  for attesting code and infrastructure. A user can distribute its public key and sign his code/work with a private key. The public key can then be used to verify that the code was submitted using the corresponding private key.
