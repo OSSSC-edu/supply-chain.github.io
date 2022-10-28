@@ -37,6 +37,7 @@ The APT cache is used in order to provide offline information about current pack
 It essentially guarantees that you are able to access package information without having to be connected to Internet.
 
 ![](https://devconnected.com/wp-content/uploads/2019/11/dependencies.png)
+
 **Image source: [https://devconnected.com/apt-package-manager-on-linux-explained/](https://devconnected.com/apt-package-manager-on-linux-explained/)**
 
 Below is a list with some of the most popular package managers for different operating systems:
@@ -90,6 +91,14 @@ There are three key elements in the figure: the local repository and the remote 
 The local repository is the local cache of the package manager.
 The remote repository is a remote address on the internet where the dependencies are hosted.
 The software project is the software project that uses the package manager to manage its dependencies.
+
+If authors are allowed to remove their packages from the ecosystem, this increases the risk of breaking (transitive) dependents upon package removal.
+Therefore, most development-level package managers today are immutable, which means that dependencies cannot be changed once they are deployed.[^1]
+This means that if a dependency is found to have a bug, the only way to fix it is to release a new version of the dependency.
+The immutable nature of package managers is a key feature that allows for reproducible builds.
+
+> A famous example of the problem with mutable package managers is the left-pad incident for the npm package manager. 
+> Despite its small size (just a few lines of source code), the sudden and unexpected removal of the left-pad package caused thousands of direct and indirect dependent projects to break, including very popular ones such as `Atom` and `Babel`.
 
 Below is a list with some of the most popular package managers for different programming languages:
 
@@ -162,22 +171,25 @@ In particular, these mechanism allows to resolve conflicts between dependency ve
 This is because, in most package managers, only one version of any particular package can be installed at a time.
 In that sense, one of the package manager’s primary responsibilities is to figure out a set of package versions that will satisfy every version constraint simultaneously.
 
-> “Dependency hell” is a colloquial term denoting the frustration resulting from the inability to install software due to complicated dependencies.[^3] 
+> “**Dependency hell**” is a colloquial term denoting the frustration resulting from the inability to install software due to complicated dependencies.[^3] 
 
 For example, the Maven package manager relies on a [dependency resolution mechanism](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html) that determines which version of a dependency to use based on the proximity of the dependency to the root node.
-On the other hand, the npm package manager uses a [dependency resolution mechanism](https://medium.com/learnwithrahul/understanding-npm-dependency-resolution-84a24180901b) that attempts to flatten the dependency tree as much as possible whereas picking the version as based on the installation order expressed in the `package.json` file.
-
+On the other hand, the npm package manager uses a [dependency resolution mechanism](https://medium.com/learnwithrahul/understanding-npm-dependency-resolution-84a24180901b) that attempts to flatten the dependency tree as much as possible whereas picking the version based on the installation order expressed in the `package.json` file.
 
 # Software repositories
 
-On Linux, software is distributed through software repositories.
-[Software repositories](https://en.wikipedia.org/wiki/Software_repository) are used in order to aggregate free software provided by the community.
+[Software repositories](https://en.wikipedia.org/wiki/Software_repository) is a storage location for software packages.
+They are used in order to aggregate free software provided by the community.
+
+For example, on Linux, software is distributed through software repositories.
 Repositories may be tied to a specific distribution.
 Ubuntu, Debian, CentOS or RHEL have their own repositories that are updated daily.
 As a consequence, when you want to install a new program, you are querying those base repositories in order to retrieve packages from them.
 If you wanted to install packages that are not located on distribution based repositories, you would add your own trusted repositories to your system in order to install new packages.
 
-As part of the development lifecycle, source code is continuously being built into binary artifacts using continuous integration. This may interact with a binary repository manager much like a developer would by getting artifacts from the repositories and pushing builds there. Tight integration with CI servers enables the storage of important metadata such as:
+As part of the development lifecycle, source code is continuously being built into binary artifacts using continuous integration. 
+This may interact with a binary repository manager much like a developer would by getting artifacts from the repositories and pushing builds there. 
+Tight integration with CI servers enables the storage of important metadata such as:
 
 - Which user triggered the build (whether manually or by committing to revision control)
 - Which modules were built
@@ -186,18 +198,37 @@ As part of the development lifecycle, source code is continuously being built in
 - Environment variables
 - Packages installed
 
-# Software ecosystem
+# Software ecosystems
 
-[Software repositories](https://en.wikipedia.org/wiki/Software_repository) is a storage location for software packages.
+Software ecosystems are Large collections of interdependent software components, including package managers, that are maintained by large and geographically distributed communities of collaborating contributors.[^2]
+Typical examples of open source software ecosystems are distributions for Linux operating systems and packaging ecosystems for specific programming languages.
+Each package manager has its own polices related to package updates or package dependencies
+While packaging ecosystems are extremely useful for their respective communities of developers, they face challenges related to their scale, complexity, and rate of evolution. 
+Typical problems are backward incompatible package updates, and the risk of (transitively) depending on packages that have become obsolete or inactive.
+Assessing the quality of package dependency networks, and supporting it through proper dependency management tools, better policies, and ecosystem health analysis dashboards is becoming of utmost importance.
 
-Package managers are immutable, which leads to natural software diversity.[^1]
-
-Software ecosystems are...[^2]
+To address this issue, the “[software bill of materials](https://www.cisa.gov/sbom)” (SBOM) has emerged as a key building block in software security and software supply chain risk management. 
+A SBOM is a nested inventory, a list of ingredients that make up software components.
+In a nutshell, a SBOM is formal and machine-readable metadata that uniquely identifies a software package and its contents.
+It may include other information about its contents, including copyrights and license data.
+SBOMs are designed to be shared across organizations and are particularly helpful at providing transparency of components delivered by participants in a software supply chain. 
+Many organizations concerned about software security are making SBOMs a cornerstone of their cyber-security strategy.[^4]
 
 # Industry Use Cases
 
 Package managers are designed to eliminate the need for manual installs and updates. 
 This can be particularly useful for large enterprises whose operating systems typically consist of hundreds or even tens of thousands of distinct software packages.
+For example, consider a bank that has a large number of servers running Linux and that needs to install a new package on all of them.
+Without a package manager, the bank would need to manually download the package, install it, and then repeat the process for every server.
+With a package manager, the bank can simply run a single command to install the package on all of its servers.
+
+On the other hand, there is a lot of interest from companies in learning about the “health” of open-source components.[^2]
+This implies learning about the components of their direct and transitive dependencies.
+Companies know that the health of a single component depends on the health of the ecosystem in which it is produced and used.
+From the point of view of people producing software, they want to track everything around them. 
+Just as a single example, they need to know if modules on which their software depend are healthy or not.
+From the point of view of users, that happens as well.
+For example, to understand the security problems of a product, they need to understand the security problems of all its dependencies, and in many cases, of their transitives developed by the same community.
 
 # Test your knowledge
 
@@ -210,14 +241,14 @@ This can be particularly useful for large enterprises whose operating systems ty
 ## Expert 💯
 - Upload a software package to an external repository.
 - Upload a Docker image to Docker Hub.
-- Create SBOM
+- Create SBOM.
 
 # References
 
 [^1]: Soto-Valero, César, et al. "The emergence of software diversity in maven central." 2019 IEEE/ACM 16th International Conference on Mining Software Repositories (MSR). IEEE, 2019.
 [^2]: Decan, Alexandre, Tom Mens, and Philippe Grosjean. "An empirical comparison of dependency network evolution in seven software packaging ecosystems." Empirical Software Engineering 24.1 (2019): 381-416.
 [^3]: Abate, Pietro, et al. "Dependency solving is still hard, but we are getting better at it." 2020 IEEE 27th International Conference on Software Analysis, Evolution and Reengineering (SANER). IEEE, 2020.
-
+[^4]: [Software Bill of Materials (SBOM) and Cybersecurity Readiness](https://www.linuxfoundation.org/research/the-state-of-software-bill-of-materials-sbom-and-cybersecurity-readiness)
 
 
 [//]: # (Pipreqs is a tool that can generate a requirements.txt file containing the list of a project’s dependencies and their versions based on imports that it detects in the source code.)
