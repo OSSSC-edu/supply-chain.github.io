@@ -118,8 +118,30 @@ in a safe and "trusted" environment. Differences between the two executables cou
 
 
 ## Beginner, Normal, Expert Level
-## Industry Use Cases
-## Test Questions / Areas / Learning Goal
+The following lists outline the general knowledge that a user should have from a security perspective.
+
+### _Novice_ 👾
+- General git functions: clone, commit, merge, push, pull request.
+- Create access `SSH` keys and assign them to the account.
+- Create signing `SSH` or `gpg` keys and attach them to the account.
+- Sign commits.
+
+### _Normal_ 🗸
+- All of the above.
+- Configure branch rules to restrict access.
+- Setup and enable 2FA functionality to the git account.
+- Understand the difference between using HTTPS and SSH for accessing the repository.
+- Understand how to store and manage credentials.
+- What problems can static and binary analysis solve.
+### _Expert_ 💯
+- All of the above.
+- Has the capability to argue about properties of the cryptographic keys, e.g., the size and the cipher used.
+- Understands the implications and potential vulnerabilities that emerge from the choice of key properties, and storage, and 2FA options.
+- What type of analysis to use and when. 
+- What guarantees does static and binary analysis provide.
+
+<!-- ## Industry Use Cases
+## Test Questions / Areas / Learning Goal -->
 ## References
 
 1. [Static analysis for security. Brian Chess, Gary McGraw](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1366126)
