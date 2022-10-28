@@ -11,14 +11,10 @@ permalink: /package-managers
 [Package managers](https://en.wikipedia.org/wiki/Package_manager) are software tools that allow to handle software dependencies in a consistent manner.
 Most package managers are used to automate the process of installing, upgrading, configuring, and removing third-party [software dependencies](https://en.wikipedia.org/wiki/Third-party_software_component).
 They also provide a consistent interface for installing software across different operating systems and distributions.
-This chapter describes the use of package managers in software development.
-
-# Categories
-
 Package managers can be divided into three categories: system-level, deployment-level, and development-level.
-This section describes the differences between these categories.
+This chapter describes the role of package managers in software development and discusses their relationship with software ecosystems.
 
-## System-level package managers
+# System-level package managers
 
 System-level package managers are used to install software on the operating system level.
 They are used to install software that is not part of the operating system, but is required for the operating system to function.
@@ -50,7 +46,7 @@ Below is a list with some of the most popular package managers for different ope
 | [Google Play](https://en.wikipedia.org/wiki/Google_Play)                                                    | The package manager for Android applications.                                |
 | [Windows Package Manager](https://en.wikipedia.org/wiki/Windows_Package_Manager)                            | The package manager for Windows.                                             |
 
-## Deployment-level package managers
+# Deployment-level package managers
 
 Deployment-level package managers are used to handle container images and application dependencies. 
 They are used to install software that is required for the application to function in a standalone manner without dependence on the operative system.
@@ -74,7 +70,7 @@ Docker Networking as a communication passage through which all the isolated cont
 | [Quay](https://quay.io/)                                                                                                                     | Quay is a package manager from RedHat that builds, analyzes, and distributes container images                                                                                   |
 | [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry) | A package manager from GitHub that that allows to store and manage Docker and OCI images in the Container registry, which uses the package namespace [ghcr.io](https://ghcr.io) |
 
-## Development-level package managers
+# Development-level package managers
 
 Development-level package managers run on top of the operative system and operate on top of the programming language tools that developers use to build software applications.
 In contrast with system-level package managers, development-level package managers focus on a small part of the software system, such as a programming language or a framework.
@@ -180,23 +176,11 @@ On the other hand, the npm package manager uses a [dependency resolution mechani
 
 [Software repositories](https://en.wikipedia.org/wiki/Software_repository) is a storage location for software packages.
 They are used in order to aggregate free software provided by the community.
-
 For example, on Linux, software is distributed through software repositories.
 Repositories may be tied to a specific distribution.
 Ubuntu, Debian, CentOS or RHEL have their own repositories that are updated daily.
 As a consequence, when you want to install a new program, you are querying those base repositories in order to retrieve packages from them.
 If you wanted to install packages that are not located on distribution based repositories, you would add your own trusted repositories to your system in order to install new packages.
-
-As part of the development lifecycle, source code is continuously being built into binary artifacts using continuous integration. 
-This may interact with a binary repository manager much like a developer would by getting artifacts from the repositories and pushing builds there. 
-Tight integration with CI servers enables the storage of important metadata such as:
-
-- Which user triggered the build (whether manually or by committing to revision control)
-- Which modules were built
-- Which sources were used (commit id, revision, branch)
-- Dependencies used
-- Environment variables
-- Packages installed
 
 # Software ecosystems
 
@@ -222,7 +206,18 @@ For example, consider a bank that has a large number of servers running Linux an
 Without a package manager, the bank would need to manually download the package, install it, and then repeat the process for every server.
 With a package manager, the bank can simply run a single command to install the package on all of its servers.
 
-On the other hand, there is a lot of interest from companies in learning about the “health” of open-source components.[^2]
+As part of the development lifecycle, source code is continuously being built into binary artifacts using [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) (CI).
+This may interact with a binary repository manager much like a developer would by getting artifacts from the repositories and pushing builds there.
+Tight integration with remote repositories package managers enables the storage of important metadata such as:
+
+- Which user triggered the build (whether manually or by committing to revision control)
+- Which modules were built
+- Which sources were used (commit id, revision, branch)
+- Dependencies used
+- Environment variables
+- Packages installed
+
+There is a lot of interest from companies in learning about the “health” of open-source components.[^2]
 This implies learning about the components of their direct and transitive dependencies.
 Companies know that the health of a single component depends on the health of the ecosystem in which it is produced and used.
 From the point of view of people producing software, they want to track everything around them. 
@@ -246,54 +241,6 @@ For example, to understand the security problems of a product, they need to unde
 # References
 
 [^1]: Soto-Valero, César, et al. "The emergence of software diversity in maven central." 2019 IEEE/ACM 16th International Conference on Mining Software Repositories (MSR). IEEE, 2019.
-[^2]: Decan, Alexandre, Tom Mens, and Philippe Grosjean. "An empirical comparison of dependency network evolution in seven software packaging ecosystems." Empirical Software Engineering 24.1 (2019): 381-416.
 [^3]: Abate, Pietro, et al. "Dependency solving is still hard, but we are getting better at it." 2020 IEEE 27th International Conference on Software Analysis, Evolution and Reengineering (SANER). IEEE, 2020.
+[^2]: Decan, Alexandre, Tom Mens, and Philippe Grosjean. "An empirical comparison of dependency network evolution in seven software packaging ecosystems." Empirical Software Engineering 24.1 (2019): 381-416.
 [^4]: [Software Bill of Materials (SBOM) and Cybersecurity Readiness](https://www.linuxfoundation.org/research/the-state-of-software-bill-of-materials-sbom-and-cybersecurity-readiness)
-
-
-[//]: # (Pipreqs is a tool that can generate a requirements.txt file containing the list of a project’s dependencies and their versions based on imports that it detects in the source code.)
-
-[//]: # ()
-[//]: # (```shell)
-
-[//]: # ($ pip install <packagename>)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (Pipreqs)
-
-[//]: # ()
-[//]: # (Pipreqs is a tool that can generate a requirements.txt file containing the list of a project’s dependencies and their versions based on imports that it detects in the source code.)
-
-[//]: # (Pipreqs Usage)
-
-[//]: # ()
-[//]: # (To install pipreqs, enter:)
-
-[//]: # ()
-[//]: # (```shell)
-
-[//]: # ($ pip install pipreqs )
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (To generate a requirements.txt file, enter:)
-
-[//]: # ()
-[//]: # (```shell)
-
-[//]: # ($ pipreqs /<projectlocation>)
-
-[//]: # (  # requirements.txt)
-
-[//]: # (  pkginfo==1.5.0.1)
-
-[//]: # (  tabulate==0.8.7)
-
-[//]: # (  structlog==20.1.0 )
-
-[//]: # (  ...)
-
-[//]: # (```)
