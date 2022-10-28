@@ -11,27 +11,41 @@ permalink: /security
 
 # Security in code infrastructure
 
-## Public Key infrastructure
+## Credential Management
+
+### Public Key infrastructure
+
 Before delving into the finer details of securing the code infrastructure, we need to first discuss one of the basics components of access control and code attestation, among other things. Public Key Infrastructure (PKI) is a set of entities, with distinct roles, responsible for 
-managing digital certificates; this includes, their generation, storage, distribution and most importantly revocation.
+managing digital certificates; this includes, their generation, storage, distribution and most importantly revocation. These certificates can then be used to authenticate a user, or a machine, to a service.
 
-The following is a schematic of the PKI when a webpage needs to be accessed from the user's browser:
+The following is a simple illustration of the role of the PKI. The goal is to tie the keys used to encrypt the transmitted data to the sender and the receiver.
 
- ![](./figures/how-pki-works-overview.png)|
+ ![](./img/PKI1.png)|
 |:--:|
-| *Image source: https://www.thesslstore.com/blog/how-pki-works/*
+| *Image source: https://www.technologyies.com/what-is-pki-infrastructure-and-how-does-it-work/*
 
-PKI ensures that the `public` keys used to communicate with a server, a company, or an individual, belongs to the actual owner. As long as the certificate authority is trusted, a user can be sure that the communication happens with the intended recipient. To bring it to the context of supply chains: PKI helps ensure that the downloaded software was produced by a specific entity; it can also ensure that the code has not been changed during the lifetime of the supply chain (if signing/verification happens at each step); it can also be used to connect published code to a specific individual.  
+PKI ensures that the `public` keys used to communicate with a server, a company, or an individual, belongs to the actual owner. As long as the certificate authority is trusted, a user can be sure that the communication happens with the intended recipient. 
+
+To bring it to the context of supply chains: PKI helps ensure that the downloaded software was produced by a specific entity; it can also ensure that the code has not been changed during the lifetime of the supply chain (if signing/verification happens at each step); it can also be used to connect published code to a specific individual.   We can see in the following picture the need for an infrastructure that takes care of authentication. In the real world, the driver would provide an ID to the factory and the store. In the software supply chain, this is accomplished with the use of credentials.
+
+ ![](./img/supply-chain.png)|
+|:--:|
+| *Image source: https://www.docker.com/blog/*
 
 ### Public Key Encryption
 The PKI also facilitates the use of assymetric encryption, known also as public key encryption (PKE). In this scheme, each user has two distinct keys; one is `public`, the other must always remain `private`. The public key can be freely distributed to the world and is required to `verify` that a piece of software was `signed` (or encrypted) by the corresponding private key. This, highlights the importance of keeping the private key secure; leaking this key would allow anyone to impersonate its actual holder. 
 
 In the context of code infrastructure security, a compromised `private` key would allow anyone to `push` to a specific branch, `sign` the code to appear to originate from someone else, e.g., Linus Torvald, and ultimately introduce malicious code into the supply chain.
 
-## Static analysis
-`TODO: add static analysis`
-## Binary analysis
-`TODO: add binary analysis`
+### Web of Trust
+Yet, PKI is not necessarily needed for attesting code and infrastructure. A user can distribute its public key and sign his code/work with a private key. The public key can then be used to verify that the code was submitted using the corresponding private key.
+
+This, however, does not link the public key with an individual; when PKI is not used, the alternative is to create a `web of trust`. In simple words, in this `decentralized` model, each user can endorse the association between a public key and a person; this way indirect trust can be achieved. The following image illustrates this:
+
+![](./img/Web_of_Trust.png)|
+|:--:|
+| *Image source: https://en.wikipedia.org/wiki/Web_of_trust*
+
 ## Access control - 2FA - on the repo
 In a typical sense, `git` does not provide access control; git after all is a source-code management tool. A repository can be private or public but the repositories themselves do not implement any authentication. This can be tackled with other solutions: some [examples](https://wincent.com/wiki/Git_repository_access_control) of this include the use of `git-daemon` to provide read-only (anonymous) access and the requirement of using SSH keys to `push`; users without the appropriate SSH key cannot `push` to the repository.
 
