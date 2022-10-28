@@ -14,6 +14,16 @@ They also provide a consistent interface for installing software across differen
 Package managers can be divided into three categories: system-level, deployment-level, and development-level.
 This chapter describes the role of package managers in software development and discusses their relationship with software ecosystems.
 
+# Outline 📋
+
+In this chapter, we learn about:
+- The characteristics of [system-level package managers](#system-level-package-managers), [deployment-level package managers](#deployment-level-package-managers), and [development-level package managers](#development-level-package-managers) 
+- How package managers handle [software dependencies](#software-dependencies) and their role in software development.
+- The impact of [software ecosystems](#software-ecosystems) in modern software development.
+- [Use cases](#industry-use-cases) for open-source software in the industry
+
+We also encourage you to explore the links throughout the text, the [do-it-yourself](#diy) tasks, as well as the resources listed in the [references](#references).
+
 # System-level package managers
 
 System-level package managers are used to install software on the operating system level.
@@ -225,7 +235,7 @@ Just as a single example, they need to know if modules on which their software d
 From the point of view of users, that happens as well.
 For example, to understand the security problems of a product, they need to understand the security problems of all its dependencies, and in many cases, of their transitives developed by the same community.
 
-# Test your knowledge
+# DIY
 
 ## Beginner 👾
 - Create a `pom.xml`,  `requirements.txt`, or `packages.json`.
