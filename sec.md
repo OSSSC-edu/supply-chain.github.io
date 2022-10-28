@@ -96,11 +96,19 @@ git verify-commit -v <commit>
 ### Branch protection rules
 Apart from restricting access to the code base, github also provides protection rules that can be applied in order to restrict the possible actions, e.g., pull request, merge, etc. For example, it allows repository administrators to require pull requests for all branches that contain the word *release* in their name; or, that pull requests that affect other peoples' code must be first approved by the code owner. More information about this proccess can be found in  [branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule).
 
-This, however, does not link the public key with an individual; when PKI is not used, the alternative is to create a `web of trust`. In simple words, in this `decentralized` model, each user can endorse the association between a public key and a person; this way indirect trust can be achieved. The following image illustrates this:
+## Static analysis
+However, securing the code repository and any access to it does not guarantee that the code itself is free of vulnerabilities. Any vulnerability at this point can be easily fixed if found. On the contrary, if they are allowed to propagate through the supply chain, they can pose a risk downstream (in any part of the chain). 
 
- ![](./figures/Web_of_Trust.png)|
+The following image illustrates at which step of the programming proccess should this type of analysis be used.
+![](./img/static-analysis.png)|
 |:--:|
-| *Image source: https://en.wikipedia.org/wiki/Web_of_trust*
+| *Image source: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1366126*
+
+Static analysis does not aim to eliminate all the security problems; it aims to make the code 'good enough'. It achieves this by utilizing rules and patterns to detect unsafe operations (e.g., *gets(&buf)* ) without actually running the code in question. There are several ways to perform this analysis, from simple to more advanced and accurate ones:
+
+- A simple solution is the use of the Unix `grep` command in order to find lines of code that can be problematic.
+- Basic lexical analysis tools (e.g., [Flawfinder](https://dwheeler.com/flawfinder/)) that can tokenize source files and match them against allready-known vulnerabilities.
+- Tools that take into account the semantics of the language, e.g., the relationships between the functions and the classes ([list of tools](https://www.nist.gov/itl/ssd/software-quality-group/source-code-security-analyzers)). These tools usually require from the developer to define safety properties, expected function behavior and unsafe operations (e.g., global variable modification).
 
 
 
