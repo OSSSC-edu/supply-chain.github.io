@@ -93,8 +93,8 @@ git config gpg.ssh.allowedSignersFile <file>
 git verify-commit -v <commit>
 ```
 
-### Web of Trust
-PKI is not necessarily needed  for attesting code and infrastructure. A user can distribute its public key and sign his code/work with a private key. The public key can then be used to verify that the code was submitted using the corresponding private key.
+### Branch protection rules
+Apart from restricting access to the code base, github also provides protection rules that can be applied in order to restrict the possible actions, e.g., pull request, merge, etc. For example, it allows repository administrators to require pull requests for all branches that contain the word *release* in their name; or, that pull requests that affect other peoples' code must be first approved by the code owner. More information about this proccess can be found in  [branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule).
 
 This, however, does not link the public key with an individual; when PKI is not used, the alternative is to create a `web of trust`. In simple words, in this `decentralized` model, each user can endorse the association between a public key and a person; this way indirect trust can be achieved. The following image illustrates this:
 
