@@ -148,7 +148,10 @@ The following lists outline the general knowledge that a user should have from a
 2. [Countering trusting trust through diverse double-compiling. David A. Wheeler, 2005.](https://ieeexplore.ieee.org/document/1565233)
 3. [Github docs](https://docs.github.com/en)
 4. [How PKI works](https://www.thesslstore.com/blog/how-pki-works/)
-5. [Git access control examples](https://wincent.com/wiki/Git_repository_access_control)
+5. [What is PKI](https://www.technologyies.com/what-is-pki-infrastructure-and-how-does-it-work/)
+6. [Git access control examples](https://wincent.com/wiki/Git_repository_access_control)
+7. [NIST Executive Order 14028](https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-security-supply-chains)
+8. [NIST list of code analyzers](https://www.nist.gov/itl/ssd/software-quality-group/source-code-security-analyzers)
 
 
 <!-- [hide email](https://stackoverflow.com/questions/43863522/error-your-push-would-publish-a-private-email-address) -->
