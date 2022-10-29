@@ -41,15 +41,14 @@ $ sudo apt install vim
 To understand how the [APT package manager](https://devconnected.com/apt-package-manager-on-linux-explained/) works, we need to understand the Linux packaging system.
 The following figure illustrates a typical Linux system configured to fetch software from three different repositories: 
 
-![](https://devconnected.com/wp-content/uploads/2019/11/linux-packaging-system.png)
+![](./img/linux-packaging-system.svg)
 
 The most important element in the figure is the “default” official repository (remote) that contains third-party packages.
-For example, the Debian packages repository for the Vim editor is available [here](https://packages.debian.org/stable/editors/vim).
-
 The APT cache is used in order to provide offline information about current packages installed on your system.
 It essentially guarantees that you are able to access package information without having to be connected to Internet.
+For example, the Debian packages repository for the Vim editor is available [here](https://packages.debian.org/stable/editors/vim).
 
-![](https://devconnected.com/wp-content/uploads/2019/11/dependencies.png)
+![](./img/vim-packages.png){:height="50%" width="50%"}
 
 As you can see from the figure, system-level package managers include metadata for each package.
 This metadata includes the functionalities it provides, who created it but most importantly what packages it depends on.
@@ -91,7 +90,7 @@ $ docker push my_image
 Now that a Docker image is available on Docker Hub, we can reuse the image from a cloud server provider.
 The following figure illustrates how the Docker packaging system operates on a network:
 
-![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/07/Picture1-1.png)
+![](./img/docker-networking.svg)
 
 In summary, organizations maintain public and official Docker images in the Docker Hub repository.
 Then, from Docker Hub, various teams such as Quality Assurance or Production teams will pull that image and prepare their own containers.
@@ -118,7 +117,7 @@ A good application-level package development process will help users conform to 
 
 The following figure illustrates the typical use of a package managers to build a software project:
 
-![](./img/package-managers.png)
+![](./img/dev-level-package-managers.svg)
 
 There are two key elements in the above figure:
 1. The software project: is the software project that uses the package manager to manage its dependencies.
