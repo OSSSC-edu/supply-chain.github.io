@@ -57,9 +57,9 @@ However, a simple step for improving the security of a repository is to introduc
 
 Another usefull service that git allows through the use of `SSH` keys, is the possibility to `sign` code that is `pushed` to a repository. This ensures that all commits are authenticated and the person responsible for the code can be attributed.
 
-In order for a commit to be signed, the `signing` key must be added to the user's account; the procedure is similar to adding a key for authenticating to github.
+In order for a commit to be signed, the `public` key must be added to the user's account; the procedure is similar to adding a key for authenticating to github.
 
-![](./img/add-ssh.png)
+![](./img/add-ssh2.png)
 
 
 
@@ -87,7 +87,12 @@ git verify-commit -v <commit>
 ```
 
 ### Branch protection rules
-Apart from restricting access to the code base, github also provides protection rules that can be applied in order to restrict the possible actions, e.g., pull request, merge, etc. For example, it allows repository administrators to require pull requests for all branches that contain the word *release* in their name; or, that pull requests that affect other peoples' code must be first approved by the code owner. More information about this proccess can be found in  [branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule).
+Apart from restricting access to the code base, github also provides protection rules that can be applied in order to restrict the possible actions, e.g., pull request, merge, etc. For example, it allows repository administrators to require pull requests for all branches that contain the word *release* in their name; or, that pull requests that affect other peoples' code must be first approved by the code owner. 
+
+The relevant interface is shown below. More information about this proccess can be found in  [branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule).
+
+
+![](./img/branch-protection.png)
 
 ## Static analysis
 However, securing the code repository and any access to it does not guarantee that the code itself is free of vulnerabilities. Any vulnerability at this point can be easily fixed if found. On the contrary, if they are allowed to propagate through the supply chain, they can pose a risk downstream (in any part of the chain). 
@@ -104,7 +109,11 @@ Static analysis does not aim to eliminate all the security problems; it aims to 
 ## Binary analysis
 Vulnerable or malicious code can be inserted in various stages of the supply chain, possibly circumventing some of the implemented security checks. Contrary to the previous methodology, binary analysis acts directly on the compiled program, the executable; which includes the whole suit of libraries and code needed for it to run. It is possible for example for a compromised compiler to introduce malicious code into the executable without any modification to the source code.
 
-Binary analysis can tackle these problems. Tools such as [angr](https://angr.io/) can produce control flow graphs from the executable making it easier to detect bugs and unitended behavior. Others (e.g., [Black Duck](https://www.synopsys.com/software-integrity/security-testing/software-composition-analysis/binary-analysis.html)) can detect outdated libraries, previously-known vulnerabilities, unwanted leakage of tokens and personal information (e.g., hardcoded emails). Moreso, it can tackle the problem of compromised compilers. For example, the resulting executable from the supply chain can be compared with an executable produced
+Binary analysis can tackle these problems. Tools such as [angr](https://angr.io/) can produce control flow graphs from the executable making it easier to detect bugs and unintended behavior. Others (e.g., [Black Duck](https://www.synopsys.com/software-integrity/security-testing/software-composition-analysis/binary-analysis.html)) can detect outdated libraries, previously-known vulnerabilities, unwanted leakage of tokens and personal information (e.g., hardcoded emails). A security analysis of a binary is given below:
+
+![](./img/risk-analysis.png)
+
+Moreso, binary analysis can tackle the problem of compromised compilers. For example, the resulting executable from the supply chain can be compared with an executable produced
 in a safe and "trusted" environment. Differences between the two executables could mean the insertion of malicious code.
 
 
