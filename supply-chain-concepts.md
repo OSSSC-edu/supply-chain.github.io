@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Key concepts
-parent: OSS-supply-chain
+parent: OSS Supply Chain
 nav_order: 1
 ---
 
