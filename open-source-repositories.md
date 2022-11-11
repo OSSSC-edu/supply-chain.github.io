@@ -1,12 +1,9 @@
+
 ---
-
-
-
 layout: default
 title: Open-source Software Repositories
-nav_order: 2
-description: ""
-permalink: /open-source-repositories
+parent: Fundamentals
+nav_order: 1
 ---
 
 ## Open-source Software Repositories
