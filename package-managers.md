@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Package managers
+parent: Fundamentals
 nav_order: 2
 description: "This chapter describes the use of package managers in software development"
-permalink: /package-managers
 ---
 
 # Package managers
