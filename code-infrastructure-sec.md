@@ -1,15 +1,24 @@
 ---
-
-
-
 layout: default
 title: Security in code infrastructure
-nav_order: 5
-description: ""
-permalink: /security
+parent: Security
+nav_order: 1
+description: "This chapter describes basic notions of security, git-related security options and code infrastructure analysis"
 ---
 
-# Security in code infrastructure
+## Security in code infrastructure
+
+### _Outline_ 📋
+In this chapter, we learn about
+- The basics of [credential management](#credential-management).
+  - What is [Public Key Infrastructure](#public-key-infrastructure)?
+  - What is [Public Key Encryption](#public-key-encryption)?
+  - What is [Web of Trust](#web-of-trust)? 
+- How to [handle credentials](#credential-handling) and use [2FA](#access-control---2fa---on-the-repo) in git.
+- How to [sign](#commit-signing) and [verify](#verify-commits) commits.
+- How to establish [branch protection rules](#branch-protection-rules).
+- Basics in [static](#static-analysis) and [binary](#binary-analysis) analysis.
+- Required knowledge based on the [skill](#beginner-normal-expert-level) level of the reader.
 
 ## Credential Management
 
