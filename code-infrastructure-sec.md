@@ -1,15 +1,24 @@
 ---
-
-
-
 layout: default
 title: Security in code infrastructure
-nav_order: 5
-description: ""
-permalink: /security
+parent: Security
+nav_order: 1
+description: "This chapter describes basic notions of security, git-related security options and code infrastructure analysis"
 ---
 
-# Security in code infrastructure
+## Security in code infrastructure
+
+### _Outline_ 📋
+In this chapter, we learn about
+- The basics of [credential management](#credential-management).
+  - What is [Public Key Infrastructure](#public-key-infrastructure)?
+  - What is [Public Key Encryption](#public-key-encryption)?
+  - What is [Web of Trust](#web-of-trust)? 
+- How to [handle credentials](#credential-handling) and use [2FA](#access-control---2fa---on-the-repo) in git.
+- How to [sign](#commit-signing) and [verify](#verify-commits) commits.
+- How to establish [branch protection rules](#branch-protection-rules).
+- Basics in [static](#static-analysis) and [binary](#binary-analysis) analysis.
+- Required knowledge based on the [skill](#beginner-normal-expert-level) level of the reader.
 
 ## Credential Management
 
@@ -20,13 +29,17 @@ managing digital certificates; this includes, their generation, storage, distrib
 
 The following is a simple illustration of the role of the PKI. The goal is to tie the keys used to encrypt the transmitted data to the sender and the receiver.
 
- ![](./img/PKI1.png)
+![](./img/PKI1.png) | 
+*Image source: https://www.technologyies.com/what-is-pki-infrastructure-and-how-does-it-work/* | 
+
+ <!-- ![](./img/PKI1.png) -->
 
 PKI ensures that the `public` keys used to communicate with a server, a company, or an individual, belongs to the actual owner. As long as the certificate authority is trusted, a user can be sure that the communication happens with the intended recipient. 
 
 To bring it to the context of supply chains: PKI helps ensure that the downloaded software was produced by a specific entity; it can also ensure that the code has not been changed during the lifetime of the supply chain (if signing/verification happens at each step); it can also be used to connect published code to a specific individual.   We can see in the following picture the need for an infrastructure that takes care of authentication. In the real world, the driver would provide an ID to the factory and the store. In the software supply chain, this is accomplished with the use of credentials.
 
- ![](./img/supply-chain.png)
+ ![](./img/supply-chain.png) |
+ *Image source: https://www.docker.com/blog/* |
 
 ### Public Key Encryption
 The PKI also facilitates the use of assymetric encryption, known also as public key encryption (PKE). In this scheme, each user has two distinct keys; one is `public`, the other must always remain `private`. The public key can be freely distributed to the world and is required to `verify` that a piece of software was `signed` (or encrypted) by the corresponding private key. This, highlights the importance of keeping the private key secure; leaking this key would allow anyone to impersonate its actual holder. 
@@ -38,7 +51,9 @@ Yet, PKI is not necessarily needed for attesting code and infrastructure. A user
 
 This, however, does not link the public key with an individual; when PKI is not used, the alternative is to create a `web of trust`. In simple words, in this `decentralized` model, each user can endorse the association between a public key and a person; this way indirect trust can be achieved. The following image illustrates this:
 
-![](./img/Web_of_Trust.png)
+![](./img/Web_of_Trust.png) |
+*Image source: https://en.wikipedia.org/wiki/Web_of_trust* |
+
 ### Credential handling
 Due to its nature, improper handling of credentials can lead to serious damage; moreso, when the credentials ensure the security and integrity of a supply chain.
 
@@ -98,7 +113,13 @@ The relevant interface is shown below. More information about this proccess can 
 However, securing the code repository and any access to it does not guarantee that the code itself is free of vulnerabilities. Any vulnerability at this point can be easily fixed if found. On the contrary, if they are allowed to propagate through the supply chain, they can pose a risk downstream (in any part of the chain). 
 
 The following image illustrates at which step of the programming proccess should this type of analysis be used.
-![](./img/static-analysis.png)
+
+<!-- ![](./img/PKI1.png) | 
+*Image source: https://www.technologyies.com/what-is-pki-infrastructure-and-how-does-it-work/* |  -->
+
+
+![](./img/static-analysis.png) |
+*Image source: Chess, Brian, and Gary McGraw. "Static analysis for security." IEEE security & privacy 2.6 (2004): 76-79* |
 
 Static analysis does not aim to eliminate all the security problems; it aims to make the code 'good enough'. It achieves this by utilizing rules and patterns to detect unsafe operations (e.g., *gets(&buf)* ) without actually running the code in question. There are several ways to perform this analysis, from simple to more advanced and accurate ones:
 
@@ -111,7 +132,8 @@ Vulnerable or malicious code can be inserted in various stages of the supply cha
 
 Binary analysis can tackle these problems. Tools such as [angr](https://angr.io/) can produce control flow graphs from the executable making it easier to detect bugs and unintended behavior. Others (e.g., [Black Duck](https://www.synopsys.com/software-integrity/security-testing/software-composition-analysis/binary-analysis.html)) can detect outdated libraries, previously-known vulnerabilities, unwanted leakage of tokens and personal information (e.g., hardcoded emails). A security analysis of a binary is given below:
 
-![](./img/risk-analysis.png)
+![](./img/risk-analysis.png) |
+*Image source: https://www.synopsys.com/software-integrity/engage/sca* |
 
 Moreso, binary analysis can tackle the problem of compromised compilers. For example, the resulting executable from the supply chain can be compared with an executable produced
 in a safe and "trusted" environment. Differences between the two executables could mean the insertion of malicious code.
