@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Open-source Software Repositories
+title: Open-Source Software Supply Chain attacks
 parent: OSS Supply Chain
 nav_order: 1
 ---
