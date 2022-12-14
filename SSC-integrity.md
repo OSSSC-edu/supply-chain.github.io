@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Open-source Software Repositories
+title: Open-Source Software Supply Chain Integrity
 parent: OSS Supply Chain
 nav_order: 1
 ---
