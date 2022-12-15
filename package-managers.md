@@ -14,7 +14,7 @@ They also provide a consistent interface for installing software across differen
 Package managers can be divided according to their scope into three categories: system-level, deployment-level, and development-level.
 This chapter describes the role of package managers in software development and discusses their impact on [software ecosystems](https://en.wikipedia.org/wiki/Software_ecosystem).
 
-# Outline 📋
+### _Outline_ 📋
 
 In this chapter, we learn about:
  
@@ -25,7 +25,7 @@ In this chapter, we learn about:
 
 We also encourage you to explore the links throughout the text, the [do-it-yourself](#diy) tasks, as well as the resources listed in the [references](#references).
 
-# System-level package managers
+## System-level package managers
 
 System-level package managers are used to install software on the operating system.
 There is software that is not part of the operating system, but is required for the operating system to perform a specific task.
@@ -65,7 +65,7 @@ Below is a list with some of the most popular package managers for different ope
 | [Google Play](https://en.wikipedia.org/wiki/Google_Play)                                                    | The official package manager for Android applications.                       |
 | [Windows Package Manager](https://en.wikipedia.org/wiki/Windows_Package_Manager)                            | The official package manager for Windows.                                    |
 
-# Deployment-level package managers
+## Deployment-level package managers
 
 Deployment-level package managers are used to handle [container images](https://opensource.com/article/21/8/container-image) and application dependencies.
 They are used to install software that is required for the application to function in a standalone manner without any dependence on the operative system.
@@ -104,7 +104,7 @@ Docker Networking as a communication passage through which all the isolated cont
 | [Quay](https://quay.io/)                                                                                                                     | Quay is a package manager from RedHat that builds, analyzes, and distributes container images                                                                                   |
 | [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry) | A package manager from GitHub that that allows to store and manage Docker and OCI images in the Container registry, which uses the package namespace [ghcr.io](https://ghcr.io) |
 
-# Development-level package managers
+## Development-level package managers
 
 Development-level package managers run on top of the operative system and container images.
 They operate on top of the programming languages and tools that developers use to build software applications.
@@ -156,7 +156,7 @@ Below is a list with some the official package managers for some of the most pop
  | [Cargo](https://crates.io/)          | Cargo is the Rust package manager.                                                                                                                                                                                |
  | [Composer](https://getcomposer.org/) | Dependency Manager for PHP.                                                                                                                                                                                       |
 
-# Software Dependencies
+## Software Dependencies
 
 Software dependencies are the components of a software system that are not part of the system itself, but are required for the system to function.
 In development environments, software dependencies are typically pulled from software repositories at build time.
@@ -176,13 +176,13 @@ For example, some package managers will automatically pull and cache the depende
 Some package managers will automatically update the dependencies of a package, while others will not.
 Dependency resolution mechanisms and dependency updates are important aspects to consider when choosing a package manager.
 
-## Versioning
+### _Versioning_
 
 Dependency versioning is a mechanism that allows to specify the version of a dependency that is required to build a software project.
 Relying on a particular dependency version is important because it allows to handle the case where a dependency is updated, and the software project is not compatible with the new version of the dependency.
 The Semantic Versioning Specification ([SemVer](https://semver.org/)) is a popular versioning scheme that is used by many package managers to determine the impact of the code changes in the new deployed versions.
 
-## Dependency trees
+### _Dependency trees_
 
 Dependency trees are a way to organize the dependencies of a software project.
 In the tree, each node represents a dependencies of the software project (root of the tree) and the edges are the dependencies between the nodes.
@@ -205,7 +205,7 @@ From the figure, the root node is the project `com.github.ferstl`.
 The direct dependencies are the projects `commons-codec`, `org.apache.commons`, `junit`, `com.google.guava`, `org.springframework`, and `com.mysema.querydsl`.
 The transitive dependencies are `org.hamcrest`, `com.google.code.findbugs`, `com.mysema.commons`, and `com.infradna.tool`.
 
-## Dependency resolution mechanisms
+### _Dependency resolution mechanisms_
 
 Dependency resolution mechanisms are protocols that package managers use to determine which are the dependencies in the dependency tree of a software project.
 Different package managers use different dependency resolution mechanisms.
@@ -218,7 +218,7 @@ In that sense, one of the package manager’s primary responsibilities is to fig
 For example, the Maven package manager relies on a [dependency resolution mechanism](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html) that determines which version of a dependency to use based on the proximity of the dependency to the root node.
 On the other hand, the npm package manager uses a [dependency resolution mechanism](https://medium.com/learnwithrahul/understanding-npm-dependency-resolution-84a24180901b) that attempts to flatten the dependency tree as much as possible whereas picking the version based on the installation order expressed in the `package.json` file.
 
-# Software repositories
+## Software repositories
 
 [Software repositories](https://en.wikipedia.org/wiki/Software_repository) is a storage location for software packages.
 Package managers interact with software repositories to build software projects by querying those base repositories in order to retrieve packages from them.
@@ -231,7 +231,7 @@ Public repositories are used in order to aggregate free software provided by the
 For example, on Linux, software is distributed through public repositories that are tied to a specific distribution (e.g., Ubuntu, Debian, CentOS or RHEL have their own repositories that are updated daily).
 If you wanted to install packages that are not located on distribution based repositories, you would add your own trusted repositories to your system in order to install new packages.
 
-# Software ecosystems
+## Software ecosystems
 
 Software ecosystems are large collections of interdependent software components, including package managers, that are maintained by large and geographically distributed communities of collaborating contributors.[^2]
 Typical examples of open source software ecosystems are distributions for Linux operating systems and packaging ecosystems for specific programming languages.
@@ -247,7 +247,7 @@ It may include other information about its contents, including copyrights and li
 SBOMs are designed to be shared across organizations and are particularly helpful at providing transparency of components delivered by participants in a software supply chain. 
 Many organizations concerned about software security are making SBOMs a cornerstone of their cyber-security strategy.[^4]
 
-# Industry use cases
+## Industry use cases
 
 Package managers are designed to eliminate the need for manual installs and updates. 
 This can be particularly useful in the industry for large enterprises whose operating systems typically consist of hundreds or even tens of thousands of distinct software packages.
@@ -275,21 +275,21 @@ Just as a single example, and for security reasons, they need to know if modules
 From the point of view of users, that happens as well.
 For example, to understand the security problems of a product, users need to understand the security problems of all its dependencies, and in many cases, of their transitives developed by the open-source community.
 
-# DIY
+## DIY
 
-## Beginner 👾
+### _Beginner_ 👾
 - Create a `pom.xml` (Maven), `requirements.txt` (pip), or `packages.json` (npm) configuration file.
 - Create  `Dockerfile`.
 - Build a software package from source code.
 - Build a container from a `Dockerfile`.
 
-## Expert 💯
+### _Expert_ 💯
 - All of the above.
 - Upload a software package to an external repository (e.g., Maven Central, pip, or npm).
 - Upload a Docker image to Docker Hub.
 - Create SBOM.
 
-# References
+## References
 
 [^1]: Soto-Valero, César, et al. "The emergence of software diversity in maven central." 2019 IEEE/ACM 16th International Conference on Mining Software Repositories (MSR). IEEE, 2019.
 [^3]: Abate, Pietro, et al. "Dependency solving is still hard, but we are getting better at it." 2020 IEEE 27th International Conference on Software Analysis, Evolution and Reengineering (SANER). IEEE, 2020.
