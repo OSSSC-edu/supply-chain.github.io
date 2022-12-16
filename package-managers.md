@@ -199,7 +199,7 @@ Package managers are an important component in the software supply chain of indu
 
 ## DIY
 
-### _Beginner_ 👾
+### _Novice_ 👾
 - Find a `pom.xml`, a `requirements.txt`, or a `packages.json` file for an open-source project
 - Report the number of dependencies, including their versions, from the file found in the previous exercise
 - Find a `Dockerfile` within an open-source project
