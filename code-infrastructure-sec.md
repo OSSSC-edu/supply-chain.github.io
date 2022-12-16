@@ -14,9 +14,10 @@ In this chapter, we learn about
   - The [Public Key Infrastructure](#public-key-infrastructure)
   - [Public Key Encryption](#public-key-encryption)
   - The [Web of Trust](#web-of-trust)
-- [Handling credentials](#credential-handling)
-- [2FA](#access-control-and-2fa) for Git repositories
-- [Signing](#signing-commits) and [verifying](#verifying-commits) commits
+  - [Handling credentials](#credential-handling)
+- Two-factor Authentication, or [2FA](#access-control-and-2fa), for Git repositories
+- [Signing](#signing-commits) commits
+- [verifying](#verifying-commits) commits
 - Establishing [branch protection rules](#branch-protection-rules)
 - The fundamentals of [static](#static-analysis) and [binary](#binary-analysis) security analysis
 
@@ -70,13 +71,12 @@ Git is an excellent tool for source-code management. However, it does not provid
 
 Moreover, a simple step for improving the security of a repository further is to introduce Two-Factor Authentication (2FA) when logging in to a Git account. 2FA effectively requires the user to present two pieces of information to authenticate themselves (e.g., knowledge, through a password, and possession, through a phone that receives a one-time password). This raises the difficulty of compromising an account and gaining access to critical code. GitHub provides a detailed guide on how to [configure 2FA](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication), or [recover](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication-recovery-methods) an account. Accessing the account can be [straightforward](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/accessing-github-using-two-factor-authentication) through the web, or through the command line using [SSH](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github).
 
-### Signing commits
+## Signing commits
 
 Another useful service that Git allows through the use of `SSH` keys is the possibility to `sign` code that is `pushed` to a repository. This ensures that all commits are authenticated, and the developer responsible for the code can be attributed.
 In order for a commit to be signed, the `public` key must be added to the user's account; the procedure is similar to adding a key for authenticating to GitHub.
 
 ![](./img/add-ssh2.png)
-
 
 
 The following lines enable code signing from the command line ([instructions](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key)), assuming that `SSH` keys have already been created, e.g., for accessing the repository ([SSH key generation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), [SSH access](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)).
@@ -89,7 +89,7 @@ git config user.signingkey "public_key"
 
 More information on the proccess of signing commits can be found in the [signing commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits) section on GitHub.
 
-### Verifying commits
+## Verifying commits
 
 There are two ways to verify that a commit was signed with a valid key. The most straightfoward option is to visually inspect if the commit has a `Verified` icon next to it in the web interface as shown below.
 
@@ -102,7 +102,7 @@ git config gpg.ssh.allowedSignersFile <file>
 git verify-commit -v <commit>
 ```
 
-### Branch protection rules
+## Branch protection rules
 
 Apart from restricting access to the code base, GitHub also provides protection rules that can be applied in order to restrict possible actions by unauthorized users, such as pull requests or merges. For example, GitHub allows repository administrators to require pull requests for all branches that contain the word *release* in their name; or, that pull requests that affect other developers' code must be first approved by the code owner.
 
