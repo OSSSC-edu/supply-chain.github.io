@@ -200,15 +200,16 @@ Package managers are an important component in the software supply chain of indu
 ## DIY
 
 ### _Beginner_ 👾
-- Create a `pom.xml` (Maven), `requirements.txt` (pip), or `packages.json` (npm) configuration file
-- Create  `Dockerfile`
-- Build a software package from source code
-- Build a container from a `Dockerfile`
+- Find a `pom.xml`, a `requirements.txt`, or a `packages.json` file for an open-source project
+- Report the number of dependencies, including their versions, from the file found in the previous exercise
+- Find a `Dockerfile` within an open-source project
 
 ### _Expert_ 💯
+- Follow the instructions in the `README` of an open-source project to build it
 - Upload a software package to an external repository (e.g., Maven Central, pip, or npm)
-- Upload a Docker image to Docker Hub
-- Create an SBOM
+- Build a Docker image from the `Dockerfile` found within an open-source project
+- Upload the Docker image generated from the previous exercise to Docker Hub
+- Generate the SBOM for a popular open-source project
 
 ## References
 
