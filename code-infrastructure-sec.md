@@ -6,7 +6,7 @@ nav_order: 1
 description: "This chapter describes basic notions of security, git-related security options and code infrastructure analysis"
 ---
 
-## Security in code infrastructure
+# Security in code infrastructure
 
 ### _Outline_ 📋
 In this chapter, we learn about

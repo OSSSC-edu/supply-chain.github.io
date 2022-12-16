@@ -6,4 +6,4 @@ has_children: true
 permalink: /legal-aspects
 ---
 
-## Legal Aspects
+# Legal Aspects
