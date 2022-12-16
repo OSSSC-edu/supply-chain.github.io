@@ -5,4 +5,4 @@ parent: Industry Perspective
 nav_order: 1
 ---
 
-## Standards and Definitions
+# Standards and Definitions

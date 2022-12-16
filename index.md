@@ -23,7 +23,7 @@ The content of this site is intended for software developers, architects, site r
 
 ## Structure
 
-The current version of the covers three topics
+The current version of the course covers three topics
 - [Open-source Software Repositories](https://osssc-edu.github.io/supply-chain.github.io/open-source-repositories#open-source-software-repositories)
 - [Package managers](https://osssc-edu.github.io/supply-chain.github.io/package-managers)
 - [Security in code infrastructure](https://osssc-edu.github.io/supply-chain.github.io/security)

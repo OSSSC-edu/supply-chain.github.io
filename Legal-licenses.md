@@ -5,5 +5,4 @@ parent: Legal Aspects
 nav_order: 2
 ---
 
-
-## Basics of FOSS Licensing
+# Basics of FOSS Licensing

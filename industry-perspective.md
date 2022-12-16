@@ -6,4 +6,4 @@ has_children: true
 permalink: /industry-perspective
 ---
 
-## Industry Perspective
+# Industry Perspective

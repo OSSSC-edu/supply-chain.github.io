@@ -5,5 +5,4 @@ parent: Legal Aspects
 nav_order: 3
 ---
 
-
-## Basics of Export Control
+# Basics of Export Control

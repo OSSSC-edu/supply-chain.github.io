@@ -5,4 +5,4 @@ parent: Industry Perspective
 nav_order: 1
 ---
 
-## Consumption and Compliance
+# Consumption and Compliance

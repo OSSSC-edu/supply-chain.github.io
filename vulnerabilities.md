@@ -6,7 +6,7 @@ nav_order: 2
 description: "This chapter deals with the code vulnerability management"
 ---
 
-## Vulnerabilities
+# Vulnerabilities
 
 A vulnerability is an intentional or unintentional exploitable weakness in the software. When discovered, it is usually reported back to the community and to vulnerability databases for awareness. A preferred consumption behavior is to contribute/report any detected weaknesses.
 
@@ -46,15 +46,14 @@ Depending on the vulnerability severity/CVSS scoring/support context/community s
 - Relying on your supplier for patch/correction
 Part of the vulnerability management should be to update the company database of the detected status to avoid future selection/use of the component.
 
-## Exercise 
-(Multiple choice questions)
-  - Who is responsible for updating a software to avoid vulnerabilies
+## DIY
+  - Who is responsible for updating a software to avoid vulnerabilies?
       - The Developer who wrote the original software 
       - The consumer of the open source software (correct)
       - The end user of the application 
       - The corporate security officer 
-  - When should vulnerability monitoring be performed (more than one can be correct)
-      - Before an open source software is introduced. 
+  - When should vulnerability monitoring be performed?
+      - Before an open source software is introduced
       - While development is ongoing (correct) 
-      - When software is in production (correct). 
-      - All of the above.
+      - When software is in production (correct)
+      - All of the above
