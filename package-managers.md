@@ -8,73 +8,52 @@ description: "This chapter describes the use of package managers in software dev
 
 # Package managers
 
-[Package managers](https://en.wikipedia.org/wiki/Package_manager) are software tools that allow handling software dependencies in a consistent manner.
-Most package managers are used to automate the process of installing, upgrading, configuring, and removing third-party [software dependencies](https://en.wikipedia.org/wiki/Third-party_software_component).
-They also provide a consistent interface for installing software across different operating systems and distributions.
-Package managers can be divided according to their scope into three categories: system-level, deployment-level, and development-level.
-This chapter describes the role of package managers in software development and discusses their impact on [software ecosystems](https://en.wikipedia.org/wiki/Software_ecosystem).
+[Package managers](https://en.wikipedia.org/wiki/Package_manager) are software tools that allow handling software dependencies in a consistent manner. Most package managers are used to automate the process of installing, upgrading, configuring, and removing third-party [software dependencies](https://en.wikipedia.org/wiki/Third-party_software_component). They also provide a consistent interface for installing software across different [operating systems](https://en.wikipedia.org/wiki/Operating_system) and distributions. Package managers can be divided, according to their scope, into three categories: system-level, deployment-level, and development-level. This chapter describes the role of package managers in software development and discusses their impact on [software ecosystems](https://en.wikipedia.org/wiki/Software_ecosystem).
 
 ### _Outline_ 📋
 
 In this chapter, we learn about:
  
 - The principal characteristics of [system-level package managers](#system-level-package-managers), [deployment-level package managers](#deployment-level-package-managers), and [development-level package managers](#development-level-package-managers) 
-- How package managers handle [software dependencies](#software-dependencies) and the role of dependencies in software development.
-- The impact of [software ecosystems](#software-ecosystems) in modern software development.
+- The role of [software dependencies](#software-dependencies) in software development, and how package managers handle them
+- The impact of [software ecosystems](#software-ecosystems) in modern software development
 - [Use cases](#industry-use-cases) for open-source software in the industry
 
-We also encourage you to explore the links throughout the text, the [do-it-yourself](#diy) tasks, as well as the resources listed in the [references](#references).
+We also encourage you to explore the links throughout the text, the [Do-It-Yourself](#diy) tasks, as well as the resources listed in the [references](#references).
 
 ## System-level package managers
 
-System-level package managers are used to install software on the operating system.
-There is software that is not part of the operating system, but is required for the operating system to perform a specific task.
-For example, the [APT](https://en.wikipedia.org/wiki/APT_(software)) package manager is used to install software on Debian-based Linux distributions.
-APT is a command line tool responsible for downloading, installing, updating and removing packages from the local system by communicating with online repositories.
+System-level package managers are used to install software on the operating system, which is the primary software system that runs on a computer. There are many software programs that are not shipped by default with an operating system, but are required for the operating system to perform specific tasks. For instance, [asciiart](https://packages.ubuntu.com/jammy/misc/asciiart), a tool that converts images into [ASCII art](https://www.asciiart.eu/), is not included with a standard installation of [Ubuntu](https://en.wikipedia.org/wiki/Ubuntu), a Debian-based Linux distribution. However, it can be installed using the [APT](https://en.wikipedia.org/wiki/APT_(software)) package manager. APT is a command line tool responsible for downloading, installing, updating, and removing packages from the local system by communicating with online repositories.
 
-For example, to install the Vim editor with run the following command on the terminal:
+APT facilitates the installation a plethora of useful software packages. For example, the [Vim editor](https://en.wikipedia.org/wiki/Vim_(text_editor)) can be installed by running the following command on the [terminal](https://en.wikipedia.org/wiki/Terminal_emulator):
 
 ```bash
 $ sudo apt install vim
 ```
 
-To understand how the [APT package manager](https://devconnected.com/apt-package-manager-on-linux-explained/) works, we need to understand the Linux packaging system.
-The following figure illustrates a typical Linux system configured to fetch software from three different repositories: 
+To understand how the APT package manager [works](https://devconnected.com/apt-package-manager-on-linux-explained/), it is useful to understand the Linux packaging system. The following figure illustrates a typical Linux system configured to fetch software from three different repositories: 
 
 ![](./img/linux-packaging-system.svg)
 
-The most important element in the figure is the “default” official repository (remote) that contains third-party packages.
-The APT cache is used in order to provide offline information about current packages installed on your system.
-It essentially guarantees that you are able to access package information without having to be connected to Internet.
-For example, the Debian packages repository for the Vim editor is available [here](https://packages.debian.org/stable/editors/vim).
+The _default_ official repository in the figure denotes the remote registry that contains third-party packages that are available for installation, such as the Debian packages [repository](https://packages.debian.org/stable/editors/vim) for the Vim editor. The APT _cache_ provides offline information about the packages currently installed on the local system. It guarantees that the user is able to access package information without having to connect to the Internet.
 
 ![](./img/vim-packages.png){:height="50%" width="50%"}
 
-As you can see from the figure, system-level package managers include metadata for each package.
-This metadata includes the functionalities it provides, who created it but most importantly what packages it depends on.
-For example, the Vim editor depends on the [libacl1](https://packages.debian.org/bullseye/libacl1) package.
-We will learn more about dependencies in the next section.
+As can be seen from the figure, system-level package managers also include metadata for each package. This metadata includes the functionalities provided by the package, information about its developers, and perhaps most importantly, the list of other packages it depends on, i.e., its **dependencies**. For example, the Vim editor depends on the [libacl1](https://packages.debian.org/bullseye/libacl1) package. We will learn more about dependencies in the next section.
 
 Below is a list with some of the most popular package managers for different operating systems:
 
 | Package Manager                                                                                             | Description                                                                  |
 |-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| [apt](https://wiki.debian.org/Apt)                                                                          | The package manager for Debian, Ubuntu and related free Linux distributions. |
-| [yum](https://en.wikipedia.org/wiki/Yum_(software)) and [dnf](https://en.wikipedia.org/wiki/DNF_(software)) | The package manager for Fedora and Red Hat Enterprise Linux distributions.   |
-| [Mac App Store](https://en.wikipedia.org/wiki/Mac_App_Store)                                                | The official package manager for macOS applications.                         |
-| [Google Play](https://en.wikipedia.org/wiki/Google_Play)                                                    | The official package manager for Android applications.                       |
-| [Windows Package Manager](https://en.wikipedia.org/wiki/Windows_Package_Manager)                            | The official package manager for Windows.                                    |
+| [apt](https://wiki.debian.org/Apt)                                                                          | The package manager for Debian, Ubuntu, and other free Linux distributions   |
+| [yum](https://en.wikipedia.org/wiki/Yum_(software)) and [dnf](https://en.wikipedia.org/wiki/DNF_(software)) | The package manager for Fedora and Red Hat Enterprise Linux distributions    |
+| [Mac App Store](https://en.wikipedia.org/wiki/Mac_App_Store)                                                | The official package manager for macOS applications                          |
+| [Google Play](https://en.wikipedia.org/wiki/Google_Play)                                                    | The official package manager for Android applications                        |
+| [Windows Package Manager](https://en.wikipedia.org/wiki/Windows_Package_Manager)                            | The official package manager for Windows                                     |
 
 ## Deployment-level package managers
 
-Deployment-level package managers are used to handle [container images](https://opensource.com/article/21/8/container-image) and application dependencies.
-They are used to install software that is required for the application to function in a standalone manner without any dependence on the operative system.
-For example, the [Docker](https://en.wikipedia.org/wiki/Docker_(software)) package manager is used to install software in a containerized environment.
-[Docker Hub](https://hub.docker.com/) (Git repository for Docker images) is a cloud-based repository that allows users to create, manage, and store these container images.
-Docker provides an interface to communicat with Docker Hub and deploy images there.
-
-These images are uploaded onto the Docker Hub, which contains public and private repositories.
-For example, to create a Dockerfile, build a Docker image, and upload it to Docker Hub (assuming that you have created an account there), run the following commands on the terminal:
+Deployment-level package managers are used to handle [container images](https://opensource.com/article/21/8/container-image) and application dependencies. They are used to install software that is required for an application to function in a standalone manner, without any dependence on the operative system, solving the _"But it works on my machine!"_ problem. For example, the [Docker](https://en.wikipedia.org/wiki/Docker_(software)) package manager is used to install and run software, called _images_, in an isolated, containerized environment. [Docker Hub](https://hub.docker.com/), which can be likened to a Git repository for Docker images, is a cloud-based repository that allows users to create, manage, and store these images. Docker provides an interface to communicate with Docker Hub and deploy images there, in public or private repositories. For example, we can create a Dockerfile, build a Docker image, and upload it to our account on Docker Hub, by executing the following commands on the terminal:
 
 ```bash
 # Create a Dockerfile
@@ -87,20 +66,18 @@ $ docker build -t my_image .
 $ docker push my_image
 ```  
 
-Now that a Docker image is available on Docker Hub, we can reuse the image from a cloud server provider.
-The following figure illustrates how the Docker packaging system operates on a network:
+The following figure illustrates how the Docker packaging system operates on a network.
 
 ![](./img/docker-networking.svg)
 
-In summary, organizations maintain public and official Docker images in the Docker Hub repository.
-Then, from Docker Hub, various teams such as Quality Assurance or Production teams will pull that image and prepare their own containers.
-These individual containers, communicate with each other through a network to perform the required actions, and this is nothing but [Docker Networking](https://www.edureka.co/blog/docker-networking/).
-Docker Networking as a communication passage through which all the isolated containers communicate with each other in various situations to perform the required actions.
+Organizations maintain [public and official](https://hub.docker.com/search?q=) Docker images in their Docker Hub repository. A Docker image that is available on Docker Hub can be reused within other applications, and spin up new containers. Individual containers can communicate with each other a [network](https://www.edureka.co/blog/docker-networking/) to perform the required actions as applications execute.
+
+The following table presents some popular online repositories for container images.
 
 | Package Manager                                                                                                                              | Description                                                                                                                                                                     |
 |----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Docker Hub](https://hub.docker.com/)                                                                                                        | Docker Hub is the world's largest library and community for container images                                                                                                    |
-| [Docker Registry](https://docs.docker.com/registry/)                                                                                         | The Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images.                                                         |
+| [Docker Registry](https://docs.docker.com/registry/)                                                                                         | The Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images                                                         |
 | [Quay](https://quay.io/)                                                                                                                     | Quay is a package manager from RedHat that builds, analyzes, and distributes container images                                                                                   |
 | [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry) | A package manager from GitHub that that allows to store and manage Docker and OCI images in the Container registry, which uses the package namespace [ghcr.io](https://ghcr.io) |
 
