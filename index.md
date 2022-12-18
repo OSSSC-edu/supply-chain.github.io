@@ -28,6 +28,6 @@ The current version of the course covers three topics
 - [Package managers](https://osssc-edu.github.io/supply-chain.github.io/package-managers)
 - [Security in code infrastructure](https://osssc-edu.github.io/supply-chain.github.io/security)
 
-## Open source
+## Open-source
 
-As this educational material is meant to be a part of company's training and education supply chain, it is open source, under a [CC-BY-NC-SA](https://github.com/OSSSC-edu/supply-chain.github.io/blob/main/license.md) license. It is available on [github](https://github.com/) at [https://github.com/OSSSC-edu/supply-chain.github.io](https://github.com/OSSSC-edu/supply-chain.github.io)
+As this educational material is meant to be a part of company's training and education supply chain, it is open-source, under a [CC-BY-NC-SA](https://github.com/OSSSC-edu/supply-chain.github.io/blob/main/license.md) license. It is available on [GitHub](https://github.com/) at [https://github.com/OSSSC-edu/supply-chain.github.io](https://github.com/OSSSC-edu/supply-chain.github.io)

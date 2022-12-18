@@ -5,4 +5,4 @@ parent: OSS Supply Chain
 nav_order: 1
 ---
 
-# Open-Source Software Supply Chain attacks
+# Open-source Software Supply Chain attacks

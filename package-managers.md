@@ -6,7 +6,7 @@ nav_order: 2
 description: "This chapter describes the use of package managers in software development"
 ---
 
-# Package managers
+# Package Managers
 
 [Package managers](https://en.wikipedia.org/wiki/Package_manager) are software tools that allow handling software dependencies in a consistent manner. Most package managers are used to automate the process of installing, upgrading, configuring, and removing third-party [software dependencies](https://en.wikipedia.org/wiki/Third-party_software_component). They also provide a consistent interface for installing software across different [operating systems](https://en.wikipedia.org/wiki/Operating_system) and distributions. Package managers can be divided, according to their scope, into three categories: system-level, deployment-level, and development-level. This chapter describes the role of package managers in software development and discusses their impact on [software ecosystems](https://en.wikipedia.org/wiki/Software_ecosystem).
 
@@ -21,7 +21,7 @@ In this chapter, we learn about:
 
 We also encourage you to explore the links throughout the text, the [Do-It-Yourself](#diy) tasks, as well as the resources listed in the [references](#references).
 
-## System-level package managers
+## System-level Package Managers
 
 System-level package managers are used to install software on the operating system, which is the primary software system that runs on a computer. There are many software programs that are not shipped by default with an operating system, but are required for the operating system to perform specific tasks. For instance, [asciiart](https://packages.ubuntu.com/jammy/misc/asciiart), a tool that converts images into [ASCII art](https://www.asciiart.eu/), is not included with a standard installation of [Ubuntu](https://en.wikipedia.org/wiki/Ubuntu), a Debian-based Linux distribution. However, it can be installed using the [APT](https://en.wikipedia.org/wiki/APT_(software)) package manager. APT is a command line tool responsible for downloading, installing, updating, and removing packages from the local system by communicating with online repositories.
 
@@ -51,7 +51,7 @@ Below is a list with some of the most popular package managers for different ope
 | [Google Play](https://en.wikipedia.org/wiki/Google_Play)                                                    | The official package manager for Android applications                        |
 | [Windows Package Manager](https://en.wikipedia.org/wiki/Windows_Package_Manager)                            | The official package manager for Windows                                     |
 
-## Deployment-level package managers
+## Deployment-level Package Managers
 
 Deployment-level package managers are used to handle [container images](https://opensource.com/article/21/8/container-image) and application dependencies. They are used to install software that is required for an application to function in a standalone manner, without any dependence on the operative system, solving the _"But it works on my machine!"_ problem. For example, the [Docker](https://en.wikipedia.org/wiki/Docker_(software)) package manager is used to install and run software, called _images_, in an isolated, containerized environment. [Docker Hub](https://hub.docker.com/), which can be likened to a Git repository for Docker images, is a cloud-based repository that allows users to create, manage, and store these images. Docker provides an interface to communicate with Docker Hub and deploy images there, in public or private repositories. For example, we can create a Dockerfile, build a Docker image, and upload it to our account on Docker Hub, by executing the following commands on the terminal:
 
@@ -81,7 +81,7 @@ The following table presents some popular online repositories for container imag
 | [Quay](https://quay.io/)                                                                                                                     | Quay is a package manager from RedHat that builds, analyzes, and distributes container images                                                                                   |
 | [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry) | A package manager from GitHub that that allows to store and manage Docker and OCI images in the Container registry, which uses the package namespace [ghcr.io](https://ghcr.io) |
 
-## Development-level package managers
+## Development-level Package Managers
 
 Development-level package managers run on top of the operative system and container images. They operate on top of the programming languages and tools that developers use to build software applications. In contrast with the system- and deployment-level package managers, development-level package managers focus on smaller parts of the software system, such as a programming language or a framework. They are used to manage the co-development of code and documentation for a collection of functions or routines with a common theme. The output is, thereby, a package with software functions that typically will not be complete and usable in a standalone fashion. For example, most modern applications need to work with [JSON](https://en.wikipedia.org/wiki/JSON) data. A development-level package manager, such as [Maven](https://maven.apache.org/) or [Gradle](https://gradle.org/) for Java, [pip](https://pypi.org/project/pip/) for Python, or [npm](https://www.npmjs.com/) for JavaScript, allows developers to integrate pre-existing JSON parsing libraries within their application, without having to implement their own. A good application-level package development process helps developers conform to good documentation and coding practices, integrating some level of [unit testing](https://en.wikipedia.org/wiki/Unit_testing).
 
@@ -138,7 +138,7 @@ Software dependencies are an important part of software development. A key aspec
 
 Dependency versioning is a mechanism that allows developers to specify the exact version of a dependency that is required to build a software project. Relying on a particular version of a dependency is important because it allows to handle the case where a dependency is updated, and the software project is not compatible with the new version of the dependency. The Semantic Versioning Specification ([SemVer](https://semver.org/)) is a popular versioning scheme that is used by many package managers to determine the impact of the code changes in the new deployed versions.
 
-### _Dependency trees_
+### _Dependency Trees_
 
 Dependency trees are a way to organize the dependencies of a software project. The software project is the root of the tree, while each node in the tree represents one of its dependencies. The edges in the tree signify the relationship between the nodes, i.e., how each dependency depends on others. Package managers typically use dependency trees to visually represent the dependencies of a software project.
 
@@ -157,7 +157,7 @@ The following figure shows the dependency tree of the project [`com.github.ferst
 
 From the figure, we see that the root node is the project `com.github.ferstl` itself. The direct dependencies of the project are `commons-codec`, `org.apache.commons`, `junit`, `com.google.guava`, `org.springframework`, and `com.mysema.querydsl`, whereas the transitive dependencies are `org.hamcrest`, `com.google.code.findbugs`, `com.mysema.commons`, and `com.infradna.tool`. Moreover, direct dependency `junit` depends on `org.hamcrest`, which makes the latter a transitive dependency in `com.github.ferstl`, and so on.
 
-### _Dependency resolution mechanisms_
+### _Dependency Resolution Mechanisms_
 
 Dependency resolution mechanisms are protocols that package managers use to determine the dependencies in the dependency tree of a software project. Different package managers use different dependency resolution mechanisms. In particular, these mechanisms facilitates the resolution of conflicts between dependency versions [^5]. This is because, in most package managers, only one version of any particular dependency can be installed at a time. In that sense, one of the primary responsibilities of the package manager is to figure out a set of dependendency versions that will satisfy every version constraint simultaneously.
 
@@ -165,7 +165,7 @@ Dependency resolution mechanisms are protocols that package managers use to dete
 
 For example, the [Maven](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html) package manager relies on a comprehensive dependency resolution mechanism that determines which version of a dependency to use, based on the proximity of the dependency to the root node. On the other hand, the dependency resolution mechanism of [npm](https://medium.com/learnwithrahul/understanding-npm-dependency-resolution-84a24180901b) attempts to flatten the dependency tree as much as possible, while picking the version based on the installation order expressed in the `package.json` file.
 
-## Software repositories
+## Software Repositories
 
 [Software repositories](https://en.wikipedia.org/wiki/Software_repository) are storage locations for software packages. Package managers interact with software repositories in order to build software projects by querying the repositories with the goal of retrieving packages from them.
 
@@ -175,14 +175,14 @@ There are two types of software repositories:
 
 Public repositories are used in order to aggregate free software provided by the community. For example, on Linux, software is distributed through public repositories that are tied to a specific distribution (e.g., Ubuntu, Debian, CentOS, or RHEL have their own repositories that are updated daily). Additionally. trusted repositories can also be configured on the local system, so that packages can be installed from them.
 
-## Software ecosystems
+## Software Ecosystems
 
 Software ecosystems are large collections of interdependent software components, including package managers, that are maintained by large and geographically distributed communities of collaborating contributors [^2]. Typical examples of open-source software ecosystems are distributions for Linux operating systems, and packaging ecosystems for specific programming languages. Each package manager has its own policies related to package updates or package dependencies. While packaging ecosystems are extremely useful for their respective communities of developers, they face challenges related to their scale, complexity, and rate of evolution. Typical problems are backward incompatible package updates, and the risk of (transitively) depending on packages that have become obsolete or inactive. Assessing the quality of package dependency networks, and supporting it through proper dependency management tools, better policies, and ecosystem health analysis dashboards is of utmost importance.
 
 For this purpose, the __Software Bill of Materials__, or [SBOM](https://www.cisa.gov/sbom), has emerged as a key building block in software security and software supply chain risk management.  An SBOM is a nested inventory, a list of ingredients that make up software components. In a nutshell, an SBOM is formal and machine-readable metadata that uniquely identifies a software package and its contents. It may include other information about its contents, including copyrights and license data.
 SBOMs are designed to be shared across organizations and are particularly helpful at providing transparency of components delivered by participants in a software supply chain. Many organizations concerned about software security are making SBOMs a cornerstone of their cyber-security strategy [^4].
 
-## Industry use cases
+## Industry Use Cases
 
 Package managers are designed to eliminate the need for manual installations, updates, and version resolution. This can be particularly useful in the industry for large enterprises, where development systems typically consist of hundreds or even tens of thousands of distinct software packages. For example, consider a bank that has a large number of servers running Linux, that needs to install a new software package on all of them. Without a package manager, the bank would need to manually download the package, install it, and then repeat the process for every server. With a package manager, the bank can simply run a single command to install the package on all of its servers.
 

@@ -6,4 +6,4 @@ has_children: true
 permalink: /oss-supply-chain
 ---
 
-# Open-Source Software Supply Chain
+# Open-source Software Supply Chain

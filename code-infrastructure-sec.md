@@ -6,7 +6,7 @@ nav_order: 1
 description: "This chapter describes basic notions of security, git-related security options and code infrastructure analysis"
 ---
 
-# Security in code infrastructure
+# Security in Code Infrastructure
 
 ### _Outline_ 📋
 In this chapter, we learn about
@@ -56,7 +56,7 @@ PKI is not necessarily needed for attesting code and infrastructure. A user can 
 ![](./img/Web_of_Trust.png) |
 *Image source: https://en.wikipedia.org/wiki/Web_of_trust* |
 
-### Credential handling
+### Credential Handling
 
 Due to its nature, improper handling of credentials can lead to serious damage, especially since credentials ensure the security and integrity of a supply chain. The following steps are recommended for propoer management of credentials:
 - Private keys must always remain secret
@@ -65,13 +65,13 @@ Due to its nature, improper handling of credentials can lead to serious damage, 
 - Certificates should have an expiration date
 - Keys should be used for one protocol only; this prevents cross-protocol attacks, e.g., [SSL attack](https://www.controlcase.com/cross-protocol-attack-on-tls-using-sslv2-drown-vulnerability-cve-2016-0800-mar-2016/))
 
-## Access control and 2FA
+## Access Control and 2FA
 
 Git is an excellent tool for source-code management. However, it does not provide access control by default. A repository may have private or public visibility, but it does not implement any authentication on its own. Access control is done to ensure that only assigned developers can read and write to it. Some [examples](https://wincent.com/wiki/Git_repository_access_control) of this include the use of `git-daemon` to provide read-only (anonymous) access, or the requirement of using SSH keys to `push` code into the repository. Users without the appropriate SSH key do not have `push` access to the repository.
 
 Moreover, a simple step for improving the security of a repository further is to introduce Two-Factor Authentication (2FA) when logging in to a Git account. 2FA effectively requires the user to present two pieces of information to authenticate themselves (e.g., knowledge, through a password, and possession, through a phone that receives a one-time password). This raises the difficulty of compromising an account and gaining access to critical code. GitHub provides a detailed guide on how to [configure 2FA](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication), or [recover](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication-recovery-methods) an account. Accessing the account can be [straightforward](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/accessing-github-using-two-factor-authentication) through the web, or through the command line using [SSH](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github).
 
-## Signing commits
+## Signing Commits
 
 Another useful service that Git allows through the use of `SSH` keys is the possibility to `sign` code that is `pushed` to a repository. This ensures that all commits are authenticated, and the developer responsible for the code can be attributed.
 In order for a commit to be signed, the `public` key must be added to the user's account; the procedure is similar to adding a key for authenticating to GitHub.
@@ -89,7 +89,7 @@ git config user.signingkey "public_key"
 
 More information on the proccess of signing commits can be found in the [signing commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits) section on GitHub.
 
-## Verifying commits
+## Verifying Commits
 
 There are two ways to verify that a commit was signed with a valid key. The most straightfoward option is to visually inspect if the commit has a `Verified` icon next to it in the web interface as shown below.
 
@@ -102,7 +102,7 @@ git config gpg.ssh.allowedSignersFile <file>
 git verify-commit -v <commit>
 ```
 
-## Branch protection rules
+## Branch Protection Rules
 
 Apart from restricting access to the code base, GitHub also provides protection rules that can be applied in order to restrict possible actions by unauthorized users, such as pull requests or merges. For example, GitHub allows repository administrators to require pull requests for all branches that contain the word *release* in their name; or, that pull requests that affect other developers' code must be first approved by the code owner.
 
@@ -111,7 +111,7 @@ The relevant interface is shown below. More information about this proccess can 
 
 ![](./img/branch-protection.png)
 
-## Static analysis
+## Static Analysis
 
 Securing code repositories and any access to them does not guarantee that the code itself is free of vulnerabilities. Vulnerabilities in code may be detected statically, and subsequently fixed. On the contrary, if they are allowed to propagate through the supply chain, they can pose a risk downstream.
 
@@ -130,7 +130,7 @@ Static analysis does not aim to eliminate all the security problems; it aims to 
 - Basic lexical analysis tools (e.g., [Flawfinder](https://dwheeler.com/flawfinder/)) can tokenize source files and match them against already-known vulnerabilities
 - There are tools that take into account the semantics of the language, e.g., the relationships between the functions and the classes ([list of tools](https://www.nist.gov/itl/ssd/software-quality-group/source-code-security-analyzers)). Such tools usually require the developer to define safety properties, expected function behavior, and unsafe operations (e.g., global variable modification)
 
-## Binary analysis
+## Binary Analysis
 
 Vulnerable or malicious code can be inserted in various stages of the supply chain, potentially circumventing some of the implemented security checks. Contrary to the previous methodology, binary analysis acts directly on the compiled program, the executable; which includes the whole suite of libraries and code needed for the software to run. It is possible, for example, for a compromised compiler to introduce malicious code into the executable without any modification to the source code.
 Binary analysis can tackle such problems. Tools like [angr](https://angr.io/) can produce control flow graphs from the executable, making it easier to detect bugs and unintended behavior. Others tools, such as [Black Duck](https://www.synopsys.com/software-integrity/security-testing/software-composition-analysis/binary-analysis.html), can detect outdated libraries, previously-known vulnerabilities, unwanted leakage of tokens and personal information (e.g., hardcoded email addresses). A security analysis of a binary is illustrated below:
