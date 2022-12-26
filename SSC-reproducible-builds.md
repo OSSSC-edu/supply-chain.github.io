@@ -7,6 +7,18 @@ nav_order: 1
 
 # Reproducible Builds
 
+[Reproducible builds](https://reproducible-builds.org/docs/) are a set of software development practices that create an independently verifiable path from
+source to binary code.
+A build is reproducible if given the same source code, build environment and build instructions, any party can recreate bit-by-bit identical copies of all
+specified artifacts.
+This build methodology allows verifying that no vulnerabilities or backdoors have been introduced in the supply chain.
+Notice that to achieve reproducible builds, the CI/CD system needs to be made entirely deterministic: modifying a given source must always create the same
+result.
+For example, the current date and time must not be recorded and outputs always have to be written in the same order.
+Furthermore, the set of tools used to perform the build and, more generally, the building environment should either be recorded or pre-defined.
+Developers should have a way to recreate a close enough build environment, perform the build process, and validate that the output matches the original build.
+
+
 Reproducible builds in software development refer to the practice of creating software builds that can be independently reproduced and verified by other parties
 This is important because it allows developers to ensure the integrity and security of their software, and it allows users to verify that the software they are using has not been tampered with.
 
