@@ -31,6 +31,17 @@ For example, code reviews, secure development practices, and [reproducible build
 deploying mechanisms within the CI/CD pipeline.
 Users of OSS should also be vigilant and only download software from trusted sources.
 
+### _Outline_ 📋
+
+In this chapter, we learn about:
+
+- A real-world example of a [software supply chain attack](#example--the-solarwinds-supply-chain-attack)
+- A taxonomy of the principal [attack vectors in OSS supply chain attacks](#attack-vectors-in-oss-supply-chain-attacks)
+- Techniques, methodologies, and tools to [detect and prevent OSS supply chain attacks](#safeguarding-against-oss-supply-chain-attacks)
+
+We also encourage you to explore the links throughout the text, the [Do-It-Yourself](#diy) tasks, as well as the resources listed in the [references](#references).
+
+
 # Example: The SolarWinds Supply Chain Attack
 
 The SolarWinds attack was a major software supply chain attack that occurred in 2020.
