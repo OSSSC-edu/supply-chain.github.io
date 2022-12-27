@@ -1,14 +1,25 @@
 h1 {
   color: #300462;
+  font-family: IBM Plex Serif, sans-serif;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+
+.main-content > h1:first-child {
+  margin-top: 2rem;
 }
 
 h2, h3, h4, h5, h6 {
   color: #300462;
-  font-weight: 400;
+  font-weight: 600;
+  font-family: IBM Plex Serif, sans-serif;
+  margin-bottom: 15px;
 }
 
 .site-title {
   color: #300462;
+  font-family: IBM Plex Serif, sans-serif;
 }
 
 a {
@@ -25,9 +36,15 @@ a:hover {
 }
 
 p {
+  font-size: 17px;
+  line-height: 1.7;
+  font-family: IBM Plex Serif, sans-serif;
   color: #000;
 }
 
 li {
   color: #000;
+  font-family: IBM Plex Serif, sans-serif;
 }
+
+
