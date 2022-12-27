@@ -6,4 +6,4 @@ has_children: true
 permalink: /fundamentals
 ---
 
-# Fundamentals of Open-source Software
+# Fundamentals of OSS
