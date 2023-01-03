@@ -15,7 +15,6 @@ description: "This chapter describes the use of package managers in software dev
 In this chapter, we learn about:
  
 - The principal characteristics of [system-level package managers](#system-level-package-managers), [deployment-level package managers](#deployment-level-package-managers), and [development-level package managers](#development-level-package-managers) 
-- The role of [software dependencies](#software-dependencies) in software development, and how package managers handle them
 - The impact of [software ecosystems](#software-ecosystems) in modern software development
 - [Use cases](#industry-use-cases) for open-source software in the industry
 
@@ -39,7 +38,7 @@ The _default_ official repository in the figure denotes the remote registry that
 
 ![](./img/vim-packages.png){:height="50%" width="50%"}
 
-As can be seen from the figure, system-level package managers also include metadata for each package. This metadata includes the functionalities provided by the package, information about its developers, and perhaps most importantly, the list of other packages it depends on, i.e., its **dependencies**. For example, the Vim editor depends on the [libacl1](https://packages.debian.org/bullseye/libacl1) package. We will learn more about dependencies in the next section.
+As can be seen from the figure, system-level package managers also include metadata for each package. This metadata includes the functionalities provided by the package, information about its developers, and perhaps most importantly, the list of other packages it depends on, i.e., its **dependencies**. For example, the Vim editor depends on the [libacl1](https://packages.debian.org/bullseye/libacl1) package.
 
 Below is a list with some of the most popular package managers for different operating systems:
 
@@ -137,7 +136,7 @@ Public repositories are used in order to aggregate free software provided by the
 Software ecosystems are large collections of interdependent software components, including package managers, that are maintained by large and geographically distributed communities of collaborating contributors [^2]. Typical examples of open-source software ecosystems are distributions for Linux operating systems, and packaging ecosystems for specific programming languages. Each package manager has its own policies related to package updates or package dependencies. While packaging ecosystems are extremely useful for their respective communities of developers, they face challenges related to their scale, complexity, and rate of evolution. Typical problems are backward incompatible package updates, and the risk of (transitively) depending on packages that have become obsolete or inactive. Assessing the quality of package dependency networks, and supporting it through proper dependency management tools, better policies, and ecosystem health analysis dashboards is of utmost importance.
 
 For this purpose, the __Software Bill of Materials__, or [SBOM](https://www.cisa.gov/sbom), has emerged as a key building block in software security and software supply chain risk management.  An SBOM is a nested inventory, a list of ingredients that make up software components. In a nutshell, an SBOM is formal and machine-readable metadata that uniquely identifies a software package and its contents. It may include other information about its contents, including copyrights and license data.
-SBOMs are designed to be shared across organizations and are particularly helpful at providing transparency of components delivered by participants in a software supply chain. Many organizations concerned about software security are making SBOMs a cornerstone of their cyber-security strategy [^4].
+SBOMs are designed to be shared across organizations and are particularly helpful at providing transparency of components delivered by participants in a software supply chain. Many organizations concerned about software security are making SBOMs a cornerstone of their cyber-security strategy [^3].
 
 ## Industry Use Cases
 
@@ -171,7 +170,5 @@ Package managers are an important component in the software supply chain of indu
 ## References
 
 [^1]: Soto-Valero, César, et al. "The emergence of software diversity in maven central." 2019 IEEE/ACM 16th International Conference on Mining Software Repositories (MSR). IEEE, 2019.
-[^3]: Abate, Pietro, et al. "Dependency solving is still hard, but we are getting better at it." 2020 IEEE 27th International Conference on Software Analysis, Evolution and Reengineering (SANER). IEEE, 2020.
 [^2]: Decan, Alexandre, Tom Mens, and Philippe Grosjean. "An empirical comparison of dependency network evolution in seven software packaging ecosystems." Empirical Software Engineering 24.1 (2019): 381-416.
-[^4]: [Software Bill of Materials (SBOM) and Cybersecurity Readiness](https://www.linuxfoundation.org/research/the-state-of-software-bill-of-materials-sbom-and-cybersecurity-readiness)
-[^5]: Wang, Ying, et al. "Will Dependency Conflicts Affect My Program's Semantics?." IEEE Transactions on Software Engineering 48.7 (2021): 2295-2316.
+[^3]: [Software Bill of Materials (SBOM) and Cybersecurity Readiness](https://www.linuxfoundation.org/research/the-state-of-software-bill-of-materials-sbom-and-cybersecurity-readiness)
