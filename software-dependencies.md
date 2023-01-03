@@ -8,7 +8,7 @@ description: "This chapter describes the significance of software dependencies i
 
 # Software Dependencies
 
-[Software dependencies](https://en.wikipedia.org/wiki/Third-party_software_component) are the components of a software system that are not part of the system itself, but are required for the system to function. Software dependencies are available on online or offline repositories, and must be included within a software project. They provide ready-made solutions to specific problems within the project. This means that developers can use them with little or no modification, without reinventing the wheel.
+[Software dependencies](https://en.wikipedia.org/wiki/Third-party_software_component) are the components of a software system that are not part of the system itself, but are required for the system to function. They are available on online or offline repositories, and must be included within a software project. Dependencies provide ready-made solutions to specific problems within the project. This means that developers can use them with little to no modification, without [reinventing the wheel](https://www.goodreads.com/quotes/32952-if-you-wish-to-make-an-apple-pie-from-scratch). For instance, in order to solve the problem of connecting to a database to read and modify data, a developer can choose among the many [pre-existing solutions](https://mvnrepository.com/open-source/jdbc-drivers) that do so.
 
 ### _Outline_ 📋
 
