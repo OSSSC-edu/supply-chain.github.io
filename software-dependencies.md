@@ -2,7 +2,7 @@
 layout: default
 title: Software dependencies
 parent: Fundamentals
-nav_order: 3
+nav_order: 2
 description: "This chapter describes the significance of software dependencies in software development"
 ---
 
