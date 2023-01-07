@@ -8,7 +8,7 @@ description: "This chapter describes the significance of software dependencies i
 
 # Software Dependencies
 
-[Software dependencies](https://en.wikipedia.org/wiki/Third-party_software_component) are the components of a software system that are not part of the system itself, but are required for the system to function. They are available on online or offline repositories, and must be included within a software project. Dependencies provide ready-made solutions to specific problems within the project. This means that developers can use them with little to no modification, without [reinventing the wheel](https://www.goodreads.com/quotes/32952-if-you-wish-to-make-an-apple-pie-from-scratch). For instance, in order to solve the problem of connecting to a database to read and modify data, a developer can choose among the many [pre-existing solutions](https://mvnrepository.com/open-source/jdbc-drivers) that do so.
+[Software dependencies](https://en.wikipedia.org/wiki/Third-party_software_component) are the components of a software system that are not part of the system itself, but are required for the system to function. They are available on online or offline repositories or registries, and must be included within a software project. Dependencies provide ready-made solutions to specific problems within the project. This means that developers can use them with little to no modification, without [reinventing the wheel](https://www.goodreads.com/quotes/32952-if-you-wish-to-make-an-apple-pie-from-scratch). For instance, in order to solve the problem of connecting to a database to read and modify data, a developer can choose among the many [pre-existing solutions](https://mvnrepository.com/open-source/jdbc-drivers) that do so.
 
 ### _Outline_ 📋
 
@@ -31,7 +31,7 @@ In development environments, software dependencies are typically pulled from sof
 4. They are typically managed by a **package manager**
 5. They are typically versioned
 
-Software dependencies are an important part of software development. A key aspect to understand is how they are handled by package managers. Every package manager has a different way of handling dependencies. For example, some package managers, such as Maven, will automatically pull and cache the dependencies of a package to the local filesystem, while others will download the latest version of the dependencies from the remote repository every time the application is built. Some package managers will automatically update the dependencies of a package, while others will not. Dependency resolution mechanisms and dependency updates are important aspects to consider when choosing a package manager during software development. We will learn more about package managers in the next subsection.
+Software dependencies are an important part of software development. A key aspect to understand is how they are handled by tools called package managers. Every package manager has a different way of handling dependencies. For example, some package managers, such as [Maven](https://maven.apache.org/), will automatically pull and cache the dependencies of a package to the local filesystem, while others will download the latest version of the dependencies from the remote repository every time the application is built. Some package managers will automatically update the dependencies of a package, while others will not. Dependency resolution mechanisms and dependency updates are important aspects to consider when choosing a package manager during software development. We will learn more about package managers in the next subsection.
 
 ## Versioning
 
@@ -72,7 +72,8 @@ For example, the [Maven](https://maven.apache.org/guides/introduction/introducti
 - Report the number of dependencies, including their versions, from the file found in the previous exercise
 
 ### _Expert_ 💯
-- (todo)
+- Find the top 5 most popular dependencies for JSON parsing for Java, JavaScript, and Python
+- List the dependencies of one of the dependencies found in the previous exercise
 
 ## References
 
