@@ -26,21 +26,29 @@ In the previous section, we utilized the PKI to bind public keys to a physical e
 
 ## Basic differences to PKI
 
-Instead of requiring a central authority to sign the user's `public` key (thus creating the certificate), the users take up the role of the Certificate Authority (CA). Because, several endorsements for a specific key needs to happen for it to be trusted (for openPGP-compliant implementations), web of trust avoids the single point of failure that exists in the PKI system; compromising a single CA would allow for the creation of bogus keys in the whole domain under this CA (including other CAs). On the other hand, it may be difficult for new users to find endorsements for their (self-signed) certificates and ultimately be able to comminicate, e.g., because they cannot physically meat other users.
+Instead of requiring a central authority to sign the user's `public` key (thus creating the certificate), the users take up the role of the Certificate Authority (CA). Because, several endorsements for a specific key needs to happen for it to be trusted (for openPGP-compliant implementations), web of trust avoids the single point of failure that exists in the PKI system; compromising a single CA would allow for the creation of trusted keys in the whole domain under this CA (including other CAs). On the other hand, it may be difficult for new users to find endorsements for their (self-signed) certificates and ultimately be able to comminicate, e.g., because they cannot physically meat other users.
 
 ## Entering the world of trust using GPG
 
-- `gpg --gen-key` will generate a new key pair and add it into our system
-- `gpg --list-keys` will list all the keys in our keyring
-- `gpg --fingerprint <key>` will give us all the information for the provided key
-- `gpg --import <key>` will import a key into our keyring
-- `gpg --lsign-key <key>` will sign, i.e., endorse, the given key
-- `gpg --check-sig <key>` will check the key against our keyring
+Our keys need to be trusted by other entities in the web of trust; a task not trivial or without pitfalls. After we have generated a key (`gpg --gen-key`), we need to start distributing our key to remote parties.
+- We can see all the keys in our keyring by running: `gpg --list-keys`.
+- To export a key, gpg allows to do `gpg --export <id>`; when we want to email this key we can also add the option `--armor` to output the key in ASCII-armored format.
+- When we receive a `public` key from someone else, we need to perform a few actions:
+  - `gpg --fingerprint <key>` will give us all the information for the provided key
+  - `gpg --import <key>` will import a key into our keyring
+- So far, we have not trusted any key in our keyring. When we want to endorse a key because we know it comes from a specific person we execute: `gpg --lsign-key <key>`. 
+- In case we want to check the signature of a key we can perform: `gpg --check-sig <key>`. This command gives us some very usefull insights:
+  - We can see the number of endorsments the key has!
+  - We can see in the form of `!` or `-` if the key is verified or not respectively
+
 
 ## DIY
 
 ### _Novice_ 👾
-- 
+- Generate a key pair and send your `public` key to a friend - or create two pairs in the same machine
+- Import a key to your keyring
+- Why do we need to check the fingerprint of a key before importing it?
+- What happens when we endorse a key? How does this operation confers trust?
 
 ### _Expert_ 💯
 - 
