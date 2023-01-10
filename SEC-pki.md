@@ -11,6 +11,7 @@ description: "This chapter describes basic notions of the Public Key Infrastruct
 ### _Outline_ 📋
 In this chapter, we learn about
 - The use of [Public Key Cryptography](#public-key-encryption)
+  - A brief [Introduction to GPG](#intro-to-gpg)
 - The concepts of [Public Key Infrastructure](#public-key-infrastructure)
 - Some basic, but important, steps for [Handling credentials](#credential-handling)
 
@@ -36,6 +37,18 @@ The second bullet highlights the importance of keeping the private key secure; l
 
 In the context of code infrastructure security, a compromised `private` key would allow anyone to `push` to a specific branch, `sign` the code such that it appears to originate from someone else, such as [Linus Torvalds](https://github.com/torvalds); thus, hiding potential malicious code. Similarily, an update for one of the packages in our supply chain can be the point of entry for malicious code. If the `private` key of the package provider is compromised, the update will be downloaded and incorporated automatically. In both cases, malicious code is introduced into the supply chain due to the inherent trust to the user and the cryptosystem.
 
+### Introduction to GPG
+
+A valuable tool to test the above is [GPG](https://en.wikipedia.org/wiki/GNU_Privacy_Guard); which is compliant with the [openPGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP) specification. For this section of the course we will only use some basic commands:
+
+- To generate a key, we can simply run: `gpg --gen-key`. This will create an 3072-bit length RSA key. For a complete parameterized key generation, one can execute `gpg --full-generate-key`.
+- To encrypt a file we can run the following command `gpg -er <recipient_key_id> <file>`. This will use the `public` key of the intended recipient (`-r`) to encrypt.
+- Similarily, to decrypt a file we can use: `gpg --decrypt <file>`. Notice here that we do not need to specify which key we want to use, gpg will do it automatically.
+- To sign or verify some piece of data we can use: `gpg --sign <file>` or `gpg --verify <file>`. 
+  - It should be noted that, in cases where we both enrypt and sign, e.g., `gpg -se <file>`, we do not need to execute `--verify` on the receiving end, only `--decrypt`, which will also perform the verification.
+  - The reason for this is simple: we first sign the data and then encrypt them. Thus, verifying the resulting blob results in an error; we first need to decrypt and then verify the sender.
+
+A complete man page for gpg can be found [here](https://manpages.org/gpg)
 
 ## Public Key Infrastructure
 
@@ -55,7 +68,7 @@ To bring it to the context of supply chains: The PKI helps ensure that the downl
  ![](./img/supply-chain.png) |
  *Image source: https://www.docker.com/blog/* |
 
-### Credential Handling
+## Credential Handling
 
 Due to its nature, improper handling of credentials can lead to serious damage, especially since credentials ensure the security and integrity of a supply chain. The following steps are recommended for proper management of credentials:
 - Private keys must always remain secret. Losing this key, allows anyone to impersonate us!
