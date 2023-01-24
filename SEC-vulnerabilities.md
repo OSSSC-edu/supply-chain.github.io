@@ -24,7 +24,7 @@ We also encourage you to explore the links throughout the text, and the [Do-It-Y
 
 ## Status
 
-Checking for vulnerabilities in an open-source software program, or dependency, can be done by scanning well-known vulnerability databases, such as Common Vulnerabilities and Exposures, or [CVE](https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures), or the National Vulnerability Database, or [NVD](https://nvd.nist.gov/), provided by the National Institute of Standards and Technology ([NIST](https://www.nist.gov/)). Commercial tool providers like [synopsys](https://www.synopsys.com/), [MEND](https://www.mend.io/), [synk](https://snyk.io/), and others also provide vulnerability status, and are often trusted reporters to the vulnerability databases.
+Checking for vulnerabilities in an open-source software program, or dependency, can be done by scanning well-known vulnerability databases, such as Common Vulnerabilities and Exposures, or [CVE](https://cve.mitre.org/), or the National Vulnerability Database, or [NVD](https://nvd.nist.gov/), provided by the National Institute of Standards and Technology ([NIST](https://www.nist.gov/)). Commercial tool providers like [synopsys](https://www.synopsys.com/), [MEND](https://www.mend.io/), [synk](https://snyk.io/), and others also provide vulnerability status, and are often trusted reporters to the vulnerability databases.
 
 ### Static Analysis
 
@@ -78,20 +78,20 @@ An important aspect of vulnerability management should also be to update the dat
 
 ## DIY
 
-- Who is responsible for updating a software to avoid vulnerabilies
-  - The Developer who wrote the original software
-  - The consumer of the open source software
-  - The end user of the application
-  - The corporate security officer
-- When should vulnerability monitoring be performed
-  - Before an open-source software is introduced
-  - While development is ongoing
-  - When software is in production
-  - All of the above
+### _Novice_ 👾
+- Vulnerability analysis needs to happen only once?
+- Static and binary analysis is enough to capture all vulnerabilities?
+- Who is responsible for checking the correctness of updates?
+
+### _Expert_ 💯
 
 ## References
 
+
 1. [Static analysis for security. Brian Chess, Gary McGraw](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1366126)
 2. [Countering trusting trust through diverse double-compiling. David A. Wheeler, 2005.](https://ieeexplore.ieee.org/document/1565233)
-3. [NIST Executive Order 14028](https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-security-supply-chains)
-4. [NIST list of code analyzers](https://www.nist.gov/itl/ssd/software-quality-group/source-code-security-analyzers)
+3. [Common Vulnerabilities and Exposures](https://cve.mitre.org/)
+4. [NIST Executive Order 14028](https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-security-supply-chains)
+5. [NIST list of code analyzers](https://www.nist.gov/itl/ssd/software-quality-group/source-code-security-analyzers)
+6. [Common Platform Enumeration dictionary](https://nvd.nist.gov/products/cpe)
+7. [The Common Vulnerability Scanning System](https://www.first.org/cvss/)
