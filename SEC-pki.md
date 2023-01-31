@@ -11,9 +11,9 @@ description: "This chapter describes basic notions of the Public Key Infrastruct
 
 ### _Outline_ 📋
 In this chapter, we learn about
-- The use of [Public Key Cryptography](#public-key-encryption)
-  - A brief [Introduction to GPG](#intro-to-gpg)
-- The concepts of [Public Key Infrastructure](#public-key-infrastructure)
+- The use of [Public Key Cryptography](#public-key-cryptography)
+  - A brief [Introduction to GPG](#introduction-to-gpg)
+- The concepts of [Public Key Infrastructure](#public-key-infrastructure-1)
   - The use of [CA Hierarchy to ensure Trust](#certificate-authority-hierarchy-to-ensure-trust)
   - How can we [Revoke Keys](#revoke-keys)
 - Some basic, but important, steps for [Handling credentials](#credential-handling)
@@ -58,26 +58,23 @@ A complete man page for gpg can be found [here](https://manpages.org/gpg)
 
 However, simply using a pair of keys to encrypt/decrypt and sign/verify some piece of data does not guarantee that the information came from a specific user. Ultimately, a pair of keys is not tied to a person or a system. To solve this problem, an infrastructure is required in order to bind these two aspects together. Public Key Infrastructure, or [PKI](https://en.wikipedia.org/wiki/Public_key_infrastructure), is a set of entities, with distinct roles, responsible for managing digital certificates. This includes their generation, storage, distribution, and revocation. These certificates can then be used to authenticate a user, or a machine, to a service. Simply, a user can provide his `public` key to a [Certificate Authority (CA)](https://en.wikipedia.org/wiki/Certificate_authority), prove his identity to that authority, e.g., by physically going to an office, which will then create a certificate containing the identity of the user and the `public` key. This, guarantees that the `public` key (or certificate) distributed to the web is bound to a specific person or system.
 
-The following is a simple illustration of the role of the PKI when sending an email to a third-party. The user needs to register to an authority; a certificate is created out of the `public` key; the email is signed using the `private` key and send to a third party; the third party can use the public certificate to `verify` that the sender corresponds to the correct entity.
+The following is a simple illustration of the role of the PKI when data need to be sent to a third-party. The user needs to register to a trusted certificate authority, which creates the certificate out of the `public` key of the user and its own `private` key. This key can then be freely distributed and stored to online databases. When some piece of data/email/code is sent to a third party, the third party can use the public certificate to `verify` that the sender corresponds to the correct entity. Thus, trusting their ownership!
 
-![](./img/PKI1.png) | 
-*Image source: https://www.technologyies.com/what-is-pki-infrastructure-and-how-does-it-work/* | 
+![](./img/CA-PKE.png)
 
- <!-- ![](./img/PKI1.png) -->
 
 As long as the certificate authority is trusted by all parties, a user can be sure that the communication happens with the intended recipient.
 
-To bring it to the context of supply chains: The PKI helps ensure that the downloaded software was produced by a specific entity; it can also ensure that the code has not been changed during the lifetime of the supply chain (if signing/verification happens at each step). Moreover, the PKI can also be used to trace published code to a specific individual. We can see in the following picture the need for an infrastructure that takes care of authentication. In the real world, the driver would provide an ID to the factory and the store. In the software supply chain, this is accomplished with the use of credentials.
-
- ![](./img/supply-chain.png) |
- *Image source: https://www.docker.com/blog/* |
+To bring it to the context of supply chains: The PKI helps ensure that the downloaded software was produced by a specific entity; it can also ensure that the code has not been changed during the lifetime of the supply chain (if signing/verification happens at each step). Moreover, the PKI can also be used to trace published code to a specific individual. In a typical supply chain, the truck driver that performs a delivery would provide an ID to the factory and the store; in the software supply chain, this is accomplished with the use of credentials.
 
 ### Certificate Authority Hierarchy to ensure Trust
 In the previous section we discussed the concept of CAs. Different parties in the world need to all trust the same authority for the PKI to function correctly; this is handled by a hierarchy of CAs where each one delegates trust to the CAs that reside underneath it. At the top of the chain reside a selective few root CAs that self sign their own certificates; the rest need to be certified by these authorities in order for them to be trusted. 
 
-However, this does not necessarily solve the mutual trust problem. A certificate issued in the hierarchy of one root CA cannot necessarily be trusted by someone using a different root, i.e., when two devices do not trust the same roots. To solve this problem, CAs can cross validate their certificates, i.e., two CAs mutually sign each other certificates. This cross-certification delegates trust and allows the validation of the credentials of the devices. Present day browsers typically contain all the necessary root authorities for them to function, whereas cross-certification can be used in scenarios were localised CAs may be more preferential, e.g., in an [Intelligent Transportation System (ITS)](https://en.wikipedia.org/wiki/Intelligent_transportation_system).
+However, this does not necessarily solve the mutual trust problem. A certificate issued in the hierarchy of one root CA cannot necessarily be trusted by someone using a different root, i.e., when two devices do not trust the same roots. To solve this problem, CAs can cross validate their certificates, i.e., two CAs mutually sign each other certificates. This cross-certification delegates trust and allows the validation of the credentials of the devices. Present day browsers typically contain all the necessary root authorities for them to function, whereas cross-certification can be used in scenarios were localised CAs may be more preferential, e.g., in an [Intelligent Transportation System (ITS)](https://en.wikipedia.org/wiki/Intelligent_transportation_system). 
 
-![Add an image/tree here with three examples - same parent, same grandfather, different root](./img/trust-gpg-keys.png)
+The following is a group of users, belonging to different CAs, who want to communicate with each other. Users 1 and 2 belong to the same root CA, while User 3 belongs to a different one. In order to mutually authenticate, trust needs to exist in the hierarchy of CAs. For Users 1 and 2, this is easier because they share the same ancestor: the same CA that produced the certificate for User 2 also created the certificate for the CA that handles User 1. This delegation of trust allows them to authenticate each other. In order for User 3 to do the same, the root CAs need to cross-certify each other; i.e., to trust that they perform their duties correctly and the hierarchy underneath them can be trusted!
+
+![](./img/hierarchy.png)
 
 ### Revoke Keys
 It is important that when a `private` key is compromised, all information that is signed using this key is not to be trusted (including certificates issued by CAs). However, how can everyone be aware of this compromise in order to revoke trust? The solution comes in the form of a [Certificate Revocation List](https://www.rfc-editor.org/rfc/rfc5280); these lists are distributed *periodically* by the issuing CAs and contain a list of all the certificates that must be revoked - before their expiration date! For example, when we navigate to an HTTPS web page, the browser will check the certificate for its validity; each certificate contains a URL that can be used to retrieve the CA's CRL list. If the certificate is listed in that list, the used will be alerted. Revokation can happen for multitude of reasons:
