@@ -59,7 +59,7 @@ Our keys need to be trusted by other entities in the web of trust; a task not tr
   - We can see the number of endorsments the key has!
   - We can see in the form of `!` or `-` if the key is verified or not respectively
 - In order to confer trust, we need to edit the key:
-  - `gpg --edit-key <ourkey>` opens an interactive gpg session for the given key. In the picture we can see the keyID, the trust (ultimate, because we created it!) on the key and its validity!
+  - `gpg --edit-key <ourkey>` opens an interactive gpg session for the given key. In the picture we can see the keyID (part of the fingerprint), the trust (ultimate, because we created it!) on the key and its validity!
   - `gpg> trust` command will allows us to specify the trust for this user/key
   
   ![](./img/trust-gpg-keys.png)
