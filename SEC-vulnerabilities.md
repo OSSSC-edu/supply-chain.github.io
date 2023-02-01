@@ -8,14 +8,18 @@ description: "This chapter deals with the code vulnerability management"
 
 # Vulnerabilities
 
-A vulnerability is an intentional or unintentional, exploitable weakness in the software. When discovered, it is usually reported back to the community for fixes, and to vulnerability databases for awareness. A preferred consumption behavior is to contribute/report any detected weaknesses. The responsibility to be aware of the security status of a software program, and to update the affected software, lies with the open-source consumer, whenever a patch or update is made available by the developing open-source community.
+A vulnerability is an intentional or unintentional, exploitable weakness in the software. When discovered, it is usually reported back to the community for fixes, and to vulnerability databases for awareness. Contributing/reporting any detected weaknesses is a crucial step in the ecosystem. However, the responsibility for the security status of a software program, and for any potential updates that solve thems, lies with the open-source consumer.
+
+The example below illustrates this cycle! Knowledge about some software and potential vulnerabilities already exists from previous iterations. The developer can use this knowledge to check his code infrastructure, or use tools that utilize this knowledge to automatically scan for potential weaknesses. In the end, the newly created knowledge is fed back to the public databases and the developing community.
+
+![](/img/vulnerabilities.png)
 
 ### _Outline_ 📋
 In this chapter, we learn about
 - Checking the vulnerability [status](#status) of an open source component
+  - [Identifying](#correct-component-identification) the correct component's vulnerabilities
   - Using [Static Analysis](#static-analysis)
   - Using [Binary Analysis](#binary-analysis)
-- [Identifying](#identification) the vulnerabilities
 - [Monitoring](#monitoring) for vulnerabilities
 - Quantifying the [impact](#impact) of vulnerabilities
 - [Managing](#management) vulnerabilities effectively
@@ -26,15 +30,15 @@ We also encourage you to explore the links throughout the text, and the [Do-It-Y
 
 Checking for vulnerabilities in an open-source software program, or dependency, can be done by scanning well-known vulnerability databases, such as Common Vulnerabilities and Exposures, or [CVE](https://cve.mitre.org/), or the National Vulnerability Database, or [NVD](https://nvd.nist.gov/), provided by the National Institute of Standards and Technology ([NIST](https://www.nist.gov/)). Commercial tool providers like [synopsys](https://www.synopsys.com/), [MEND](https://www.mend.io/), [synk](https://snyk.io/), and others also provide vulnerability status, and are often trusted reporters to the vulnerability databases.
 
+### Correct Component Identification
+
+However, when looking up the vulnerability status of an open-source software package in a vulnerability database, it is vital to check for the correct component. Techniques for assisting this identification do exist, but unfortunately, there is no uniform or standardized way of doing so. Efforts like the Common Platform Enumeration ([CPE](https://nvd.nist.gov/products/cpe)) by NIST, or the Universally Unique Identifier (UUID) by Open Software Foundation (OSF), currently part of [The Open Group](https://www.opengroup.org/) consortium, have their pros and cons, and none is without the risk of misidentification, even if used together.
+
 ### Static Analysis
 
-Securing code repositories and any access to them does not guarantee that the code itself is free of vulnerabilities. Vulnerabilities in code may be detected statically, and subsequently fixed. On the contrary, if they are allowed to propagate through the supply chain, they can pose a risk downstream.
+After the correct identification of the software packages, different forms of analyses can be performed to discover new weaknesses. Despite securing the code repositories and any access to them, the code itself is not guaranteed to be free of vulnerabilities. Vulnerabilities in code may be detected statically, and subsequently fixed. On the contrary, if they are allowed to propagate through the supply chain, they can pose a risk downstream.
 
 The following image illustrates the stage of the programming proccess at which this type of analysis may be used
-
-<!-- ![](./img/PKI1.png) | 
-*Image source: https://www.technologyies.com/what-is-pki-infrastructure-and-how-does-it-work/* |  -->
-
 
 ![](./img/static-analysis.png) |
 *Image source: Chess, Brian, and Gary McGraw. "Static analysis for security." IEEE security & privacy 2.6 (2004): 76-79* |
@@ -53,11 +57,7 @@ Binary analysis can tackle such problems. Tools like [angr](https://angr.io/) ca
 ![](./img/risk-analysis.png) |
 *Image source: https://www.synopsys.com/software-integrity/engage/sca* |
 
-Binary analysis can also tackle the problem of compromised compilers. For example, the resulting executable from a supply chain can be compared with an executable produced in a safe and "trusted" environment, to ensure **software integrity**. Differences between the two executables could be caused due to the insertion of malicious code.
-
-## Identification
-
-When looking up the vulnerability status of an open-source software package in a vulnerability database, it is vital to check for the correct component. Techniques for assisting this identification do exist, but unfortunately, there is no uniform or standardized way of doing so. Efforts like the Common Platform Enumeration ([CPE](https://nvd.nist.gov/products/cpe)) by NIST, or the Universally Unique Identifier (UUID) by Open Software Foundation (OSF) both have their pros and cons, and none is without the risk of misidentification, even if used together.
+Binary analysis can also tackle the problem of compromised compilers. For example, the resulting executable from a supply chain can be compared with an executable produced in a safe and "trusted" environment, to ensure **software integrity**. Differences between the two executables could be caused due to the insertion of malicious code, but also from other non-malicious sources (which is the subject of [Reproducible builds](SSC-reproducible-builds.md)).
 
 ## Monitoring
 
@@ -84,6 +84,8 @@ An important aspect of vulnerability management should also be to update the dat
 - Who is responsible for checking the correctness of updates?
 
 ### _Expert_ 💯
+- Familiarize with the different analysis approaches; where should each one of them be used?
+- Perform a (simple) analysis of a software component in your code infrastructure and report your findings!
 
 ## References
 

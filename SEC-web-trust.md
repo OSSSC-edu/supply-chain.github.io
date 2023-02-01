@@ -51,14 +51,19 @@ Our keys need to be trusted by other entities in the web of trust; a task not tr
 - When we receive a `public` key from someone else, we need to perform a few actions:
   - `gpg --fingerprint <key>` will give us all the information for the provided key - the fingerprints should match!
   - `gpg --import <key>` will import a key into our keyring
-- So far, we have not trusted any key in our keyring. When we want to endorse a key because we know it comes from a specific person we execute: `gpg --lsign-key <key>`. 
+
+  ![](./img/gpg-fingerprint.png)
+
 - So far, we have signed any key in our keyring. When we want to endorse a key because we know it comes from a specific person we execute: `gpg --lsign-key <key>`. 
 - In case we want to check the signature of a key we can perform: `gpg --check-sig <key>`. This command gives us some very usefull insights:
   - We can see the number of endorsments the key has!
   - We can see in the form of `!` or `-` if the key is verified or not respectively
 - In order to confer trust, we need to edit the key:
-  - `gpg --edit-key <ourkey>` opens an interactive gpg session for the given key
+  - `gpg --edit-key <ourkey>` opens an interactive gpg session for the given key. In the picture we can see the keyID (part of the fingerprint), the trust (ultimate, because we created it!) on the key and its validity!
   - `gpg> trust` command will allows us to specify the trust for this user/key
+  
+  ![](./img/trust-gpg-keys.png)
+
 - If our key gets compromised, we need to revoke it to make sure noone can sign documents/data in our name; the following commands achieve this:
   - `gpg --output revoke.asc --gen-revoke <ourKeyID>` creates a revocation certificate
   - `gpg --import revoke.asc` will actually revoke our key in the keyring
