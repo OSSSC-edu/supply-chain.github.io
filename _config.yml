@@ -40,7 +40,8 @@ highlighter: rouge
 permalink: pretty
 # Build settings
 theme: minima
-remote_theme: just-the-docs/just-the-docs
+remote_theme:  pages-themes/slate 
+#just-the-docs/just-the-docs
 plugins:
   - jekyll-feed
 # Enable or disable the site search
