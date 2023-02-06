@@ -21,12 +21,6 @@ This course covers the key concepts related to the reuse of open source software
 
 The content of this site is intended for software developers, architects, site reliability engineers and project managers who care about software quality and resilient supply chains of open source software.
 
-## Structure
-
-The current version of the course covers three topics
-- [Open-source Software Repositories](https://osssc-edu.github.io/supply-chain.github.io/open-source-repositories#open-source-software-repositories)
-- [Package managers](https://osssc-edu.github.io/supply-chain.github.io/package-managers)
-- [Security in code infrastructure](https://osssc-edu.github.io/supply-chain.github.io/security)
 
 ## Open-source
 
