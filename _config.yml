@@ -18,11 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Software supply chain security
-email: your-email@example.com
-description: Introduction to the software supply chain and related security solutions.
+#title: Software supply chain security
+#email: your-email@example.com
+# description: Introduction to the software supply chain and related security solutions.
 # baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://osssc-edu.github.io/supply-chain.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+# url: "https://osssc-edu.github.io/supply-chain.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Output options (more information on Jekyll's site)
@@ -39,9 +39,12 @@ highlighter: rouge
 #github_username:  jekyll
 permalink: pretty
 # Build settings
-theme: minima
-remote_theme:  pages-themes/slate 
+theme: jekyll-theme-slate
+#remote_theme:  pages-themes/slate 
 #just-the-docs/just-the-docs
+show_downloads: False
+
+
 plugins:
   - jekyll-feed
 # Enable or disable the site search
