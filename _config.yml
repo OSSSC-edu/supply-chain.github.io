@@ -39,7 +39,7 @@ highlighter: rouge
 #github_username:  jekyll
 permalink: pretty
 # Build settings
-theme: jekyll-theme-slate
+theme: minima
 #remote_theme:  pages-themes/slate 
 #just-the-docs/just-the-docs
 show_downloads: False
