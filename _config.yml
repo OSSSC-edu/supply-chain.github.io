@@ -45,7 +45,7 @@ theme: minima
 show_downloads: False
 
 header_pages:
-Indus-Consumption.md
+-about.md
 
 # Set to `true` to show excerpts on the homepage.
 #
