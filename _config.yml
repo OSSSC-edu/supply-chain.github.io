@@ -40,8 +40,7 @@ highlighter: rouge
 permalink: pretty
 # Build settings
 theme: minima
-#remote_theme:  pages-themes/slate 
-#just-the-docs/just-the-docs
+
 
 minima:
 
