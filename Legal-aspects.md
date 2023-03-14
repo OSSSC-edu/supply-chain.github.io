@@ -6,7 +6,7 @@ has_children: true
 permalink: /legal-aspects
 ---
 
-# 4.2	Open Source terms and conditions (or Legal Apects of Free Open Source Software) 
+# Open Source terms and conditions  (4.2)
 
 ## Copyright
 
@@ -33,7 +33,7 @@ Moby Dick by Herman Melville was first published on October 18th 1851. The copyr
 ## Professional consideration
 There have been several attempts to prematurely put work in the Public Domain but in legal terms it is uncertain if the Copyright can be avoided. Any professional developer should therefor treat any software with this statement as a very permissive license (e.g. MIT), acknowledging the originator, as no software is yet old enough to be Public Domain.
 
-# Basics of Free Open Source Software Licensing
+# Basics of Free Open Source Software Licensing (4.3)
 
 ## Licenses
 The author of a developed software is by law the copyright holder of the software unless any separate agreement regulates the copyright ownership.
@@ -43,13 +43,13 @@ An open source license can be more or less permissive.
 The SPDX License list is sponsored by the Linux Foundation and provides a thorough list of open source licenses with atomized identifiers. The purpose of the list is to enable efficient and reliable identification of the licenses and the exceptions.
 Once the copyright holder has provided a developed software under a certain license it can’t be retracted or changed, unless a new version of the software is provided when a new license can be selected.
 
-## Permissive vs non-permissive
+### Permissive vs non-permissive
 The most permissive open source license gives you all freedoms more or less without asking for anything in return. On the other hand, there are licenses requesting you to perform an action for the granted freedoms. These actions can be to inform the end user of the existence of the licensed software in your own product or even make your own developed software available under the same terms as the licensed software you are using it with, also called copyleft.
 
 ![image](https://user-images.githubusercontent.com/126161450/224950227-2a8288f9-a6c6-4a9f-8aa1-0907130b53e4.png)
  
 * Permissive licenses allow you to copy, modify, recombine, and redistribute the work with minimal restrictions. Usually, only attribution is required. 
-Weak copyleft licenses require that any derivative work, i.e., changed versions of the original open source software, are to be made available under the same license. This requirement does not apply to third party code which is being combined with this software, i.e., the copyleft property does not spread to commercial software.
+* Weak copyleft licenses require that any derivative work, i.e., changed versions of the original open source software, are to be made available under the same license. This requirement does not apply to third party code which is being combined with this software, i.e., the copyleft property does not spread to commercial software.
 * Strong copyleft licenses require that the copyleft license is applied to the entire derivative work when a strong copyleft license is combined with other software into a larger software composition. This typically means that proprietary code must be made available under the strong copyleft license. This "contagious" effect creates a commercial risk that the company loses Intellectual Property Rights (IPR) and the investment made in software design.
 
 ### Open source license compatibility
@@ -62,7 +62,7 @@ For instance, including open source software under the Apache v2.0 license while
 As stated by the Apache Software Foundation (ASF):
 “This licensing incompatibility applies only when some Apache project software becomes a derivative work of some GPLv3 software, because then the Apache software would have to be distributed under GPLv3. This would be incompatible with ASF's requirement that all Apache software must be distributed under the Apache License 2.0.”
 
-## Dual license
+### Dual license
 The copyright holder may offer the developed software under multiple licenses for the user to choose from when releasing it as an open source software. This is called dual licensing and forces the potential consumer of the open source software to choose which of the offered licenses to comply with. This even includes commercial licensing alternatives which may be more relaxed in terms of obligations and thus possibly more suitable for commercial consumption. 
 
 ## Open source license examples
@@ -113,7 +113,7 @@ A fork of an existing open source software for a specific non-general purpose is
 According to Wikipedia, a snippet is a programming term for a small region of re-usable source code, machine code, or text.
 The snippet needs to be of original content to be considered for copyright protection and doesn’t necessary depend on size, but rather uniqueness and ingenuity. It is not always obvious from the context where you find snippets, that a snippet actually is under copyright protection and was made available under an open source license. For instance, when a snippet is published in a forum like StackOverflow where developers share solutions for various problems with each other.
 
-# Patents
+# Patents (4.4)
 Patents are a separate right that differs from copyright (see sections above), where copyright protects only the specific implementation of an idea, patents could be said to protect the idea itself regardless of its implementation (as long as the specific implementation is covered in the patent claims). As the patent is filed independently from the creation of the code, the copyright owner and the patent owner may well be two different entities. 
 It’s not always the case that the patent owner and copyright owner are different entities, in some cases they are one and the same. Even when the same entity holds the patent and the copyright, it need not be the same person that is the inventor and the author. 
 When companies use and contribute to open source, potential patent grants in the license needs to be considered. One needs to consider that the patent license can only impact contributors to the open source software. Thus, even if an open source license contains a patent license grant, that does not mean that there are not patents by non-contributors that are applicable and where a separate patent license might be needed.
@@ -122,7 +122,7 @@ If using under a license that does not contain an explicit patent license each o
 When contributing to open source software, an organization needs to consider its own patent portfolio, would a contribution to an open source project “necessarily” infringe their own patent? If so, what license are they contributing under, is the organization willing to agree to those terms? It’s also important to dispel the myth that once the patent has been licensed in one open source project it loses “all value”. The license to the patent granted solely applies to the open source in question, proprietary solutions or even other open source software projects and their downstream users remain unlicensed unless they are reusing the code in question. 
 When evaluating if a contribution should be made, it’s important to have a multi stakeholder group to make that decision, IP (such as patents) should be one such consideration, but not the sole consideration, other business aspects need to be considered to form a complete business case to be evaluated.
 
-# Export control
+# Export control (4.5)
 
 ## Introduction
 Export Control is a legal term and concerns regulation for the export of goods, software, and technology. Historically, export control started in 1949, with the CoCom organization that formed after WWII as a means to keep technology within the Western alliance. It was replaced in 1994/95 by the Wassenaar Arrangement (WA).
@@ -158,7 +158,7 @@ With the possible exception of the occasional encryption functionality, open sou
 •	The manufacturer provides a classification that may be from the Munition List or Dual Use List.
 •	The presence of strong encryption code or security protocols classifies it as Dual Use software (5D002).
 
-# Professional implementation examples
+# Professional implementation examples (4.6)
 
 ## Conveying open source code to third party
 Conveyance is an activity which enables a third party to make or receive copies of the open source code as part of license obligation fulfillment either upstream (back to the community/author) or downstream (your customer/public).
@@ -170,7 +170,7 @@ Some of the conveyance triggers are:
 When developing software which includes open source code under a copyleft license it is important to mark/take not of what part of the proprietary code base will be affected by the copyleft effect of the open source component in order to have the ability to provide the copylefted source code as part of the license compliance.
 There are basically two common approaches to fulfill the license demand of providing the copylefted code base. Either provide the code base as part of your delivery or create an orderable product with an offer, or availability, to download it for free publicly.
 
-### Open source license considerations / general practices
+## Open source license considerations / general practices
 To comply with most of the common open source licenses, a few basic best practices have evolved over the years and is generally recommended: 
 1.	Keep the open source code separate from company source code.
 2.	Include the original copyright notice in all copies or substantial uses of the work.
