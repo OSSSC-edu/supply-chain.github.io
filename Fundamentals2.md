@@ -14,15 +14,16 @@ In any case, consuming free open source software must always be based on a clear
 Additionally, consuming free open source software comes with security considerations needed and possible activities to identify and mitigate potential risks. Examples of these are, awareness of community producing and maintaining as well as the software itself and what it might contain.
 Consumption can be subdivided in mainly two areas such as 1) product development and 2) supporting systems for product development. Different policies can be applied for managing risk exposure and dependencies.
 
-##Strategy/policy
+## Strategy/policy
 The company needs to have a strategy and/or policy in place on how to develop with open source software included in its products. This involves having a structure in place where decisions for what and how such development can take place, but also what free open source software to allow or not and in what type of development.
 Such strategy or policy might also be needed on product or product area level.
 
+![image](https://user-images.githubusercontent.com/126161450/228507586-9dce4555-e6d2-4c40-9f88-359c9a899cfa.png)
  
 The strategy for consuming free open source software should consider the following aspects:
 -	Community and project health: This includes, but isn’t limited to, aspects such as activity of the community, number of contributors and diversity of contributing organizations. The purpose of these aspects is to allow a risk analysis regarding future stability and dependability of the open source component. These aspects should be recurringly reviewed. 
 
-In all cases of consumption of free open source software, the source code shall always be available to be able to take over the "ownership" in the case it becomes necessary. For instance, when the community changes the license to become unusable for the intended purpose, or the community just fades or gets lost.
+-	In all cases of consumption of free open source software, the source code shall always be available to be able to take over the "ownership" in the case it becomes necessary. For instance, when the community changes the license to become unusable for the intended purpose, or the community just fades or gets lost.
 
 -	Security: Free open source software is effectively being developed, hosted, and built by external developers and on external infrastructure. As a result, it is imperative to conduct security scans of all open source software before consumption, targeting malware as well as known vulnerabilities. Additionally, a risk assessment of using a given free open source software as part of a commercial product should be conducted. Finally, once introduced into product development, every free open source software component must be continuously monitored for vulnerabilities. 
 
@@ -68,3 +69,54 @@ Should you go for the latest or second latest as your strategy. Different opinio
 ## Commercial vendors / Mergers & Acquisitions
 Free open source software issues must also be adequately addressed in third party contracts, development agreements, distribution agreements, acquisitions, and other transactions. 
 
+# Basics of Contribution
+
+## Introduction
+A fundamental part of open source software is the contributions from community engagement made possible by the openness and granted freedoms. The reasons for contributing to free open source software projects vary and range from bug reporting/fixing and testing to feature additions and documentation. Building competence ensuring self-support for critical software in a professional context is another reason.
+
+Regardless of your reason, a decision to professionally contribute is needed and shall include how to do it, to what level, and a valid purpose. Done correctly, having a sound contribution culture within the company will further benefit the free open source software consumption, minimize risk and establish the company as an active member of the open source community and an attractive employer for software developers.
+
+## Contribution strategy
+Any organization contributing to open source software development need to have a strategy in place which defines criteria for when to engage, to what level and for what reasons as part of the contribution and decision process. Professional contribution also needs careful consideration of community terms and conditions before a contribution is to be made to protect any IPR.
+
+Contribution should also follow an established process with assigned roles and responsibilities for those involved in the process.
+
+## Decision process
+Consideration of the pros and cons of engaging in an open source community should take place even if the opportunity to contribute is aligned with the defined strategy. Such consideration should cover the benefits such as potential influence on the community development direction, increased competence, shorter response time for bug fixes and reputation but also the terms and conditions for contributing with potential consequences like exposing patents, exposed technological advantages, or cost of resources.
+
+Various roles should be involved in the decision process within a professional software development setup. The roles should cover aspects for the contributor, legal and the business owner. The formal decision shall be documented for future reference and signing of any Contribution License Agreement (CLA).
+# Basics of Export Control 
+
+## Introduction
+Export Control is a legal term and concerns regulation for the export of goods, software, and technology. Historically, export control started in 1949, with the founding of the CoCom organization to keep technology within the Western alliance. It was later replaced by the Wassenaar Arrangement (WA). All member states of the Wassenaar Arrangement must follow the controls in the WA control list but may add other controls through national policies.
+
+US Export controls are Extraterritorial and means that if the product/software is of “US Origin”, US export regulations must be followed where-ever the product is to be exported.
+
+Any technology with the possibility to be used in both civilian and military purposes is considered as dual use technology and are subject to export control.
+
+Software is export controlled in the following aspects: 
+-	Software made exclusively as either component of a listed item;
+or development, production, maintenance, analysis of a listed item;
+or emulation of a listed item;
+or use of a listed item
+-	Software that is weapon in itself (e.g., intrusion software, viruses, etc.)
+-	Software that provides encryption/decryption functionality
+
+In general, most export control focus for software involves cryptographic algorithms which are used to obscure or hide information during transmission through encryption/decryption functionality. The obvious example is the German Enigma machine from WWII which of course isn’t a software implementation due to the lack of computers back then.
+
+  [Copyright?]
+
+Cryptographic algorithms are categorized from very weak to very strong with export classification being more restricted when the encryption is stronger and harder to break.
+
+Export control can be further limited through country declaration of restricted nations. Lists of such restricted nations are for instance maintained by the United States of America, the European Union and the United Nations.
+
+## Free open source software as an export controlled item
+Free open source software is today not export controlled by EU, US, or WA.
+
+Professional development including free open source software for products to be exported must be documented and export control classified if cryptographic functionality is included.
+
+Usually, the export control classification of software results in the following: 
+-	The manufacturer provides a classification that may be from the Munition List or Dual Use List.
+-	The presence of strong encryption code or security protocols classifies it as Dual Use software (5D002). 
+
+![image](https://user-images.githubusercontent.com/126161450/228508585-052940fe-ea53-4df1-9667-919e1be09e31.png)
