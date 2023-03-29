@@ -57,5 +57,3 @@ Distributed open source software development by multiple contributors benefits f
 GitHub along with GitLab, Bitbucket, Gitea and Google Developers are platforms providing such repository service to open source projects. Platforms like these also provide metrics such as number of commits, stars and forks which can help in determining the activity and popularity of a project as illustrated by the examples of Te2zos and MongoDB: 
 
 ![image](https://user-images.githubusercontent.com/126161450/224252960-9245f608-3453-448a-a696-76b82236a42c.png)
-
-End of text
