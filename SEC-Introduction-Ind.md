@@ -17,6 +17,8 @@ Open source security throughout the whole product lifecycle can be seen from sev
 1.	The security in the FOSS itself, meaning the security features built in plus the security assurance performed.
 2.	Secure consumption of it, e.g. making sure the supply chain is secure, the needed support level is sufficient for the intended use and that the FOSS is implemented and used in a correct way.
 3.	Managing vulnerabilities, meaning the capability to detect vulnerabilities and update the code, test, and deliver the correction.
+
+
 These aspects should be addressed through established processes and possibly tool support.
 From a security concern, the benefit in using open source software is transparency since there is a “community of eyes” working with and reviewing the open source code coming from the community. It can be argued that the transparency is only true if the actual reviewing is performed by the community, and not only assumed.
 Proprietary developed software provides less exposure to external bad actors but with less opportunity for reviewing and correction.
