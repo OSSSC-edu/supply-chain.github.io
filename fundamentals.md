@@ -26,7 +26,7 @@ Moby Dick by Herman Melville was first published on October 18th, 1851. The copy
 
 In the context of software development, no open source software copyright has yet expired by age and become public domain. The author of a developed software is the copyright holder, unless any separate agreement regulates the copyright ownership, and can thus decide the terms and conditions of its use, modification, and distribution. These terms and conditions are usually expressed in a license.!
 
-# Basics of Free Open Source Software Licensing!
+# Basics of Free Open Source Software Licensing
 
 ## Licenses
 The declaration of terms and conditions by the copyright holder regulating others right to use, modify and distribute the developed open source component is provided in the license text often named LICENSE. If the terms and conditions fulfill certain criteria of freedom - in brief, they allow software to be freely used, modified, shared anywhere and anytime – it is a free open source software license (FOSS). Open source software under a license not granting all freedoms isn’t a free open source software, but possibly only open source software (OSS) or source available software.
