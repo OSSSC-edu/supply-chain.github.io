@@ -56,4 +56,4 @@ Measuring the community engagement and understanding the future development dire
 Distributed open source software development by multiple contributors benefits from a shared software repository which allows developers to incrementally submit and track enhancements/modifications to the software allowing for controlled versioning and releases of selected commits with documented changes for each release.
 GitHub along with GitLab, Bitbucket, Gitea and Google Developers are platforms providing such repository service to open source projects. Platforms like these also provide metrics such as number of commits, stars and forks which can help in determining the activity and popularity of a project as illustrated by the examples of Te2zos and MongoDB: 
 
-![image](https://user-images.githubusercontent.com/126161450/224252960-9245f608-3453-448a-a696-76b82236a42c.png) 
+![image](https://user-images.githubusercontent.com/126161450/228505171-8b5fb8e0-fbd0-4b96-b132-c7aa3e1ebbac.png) 
