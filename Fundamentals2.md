@@ -6,19 +6,7 @@ has_children: true
 permalink: /fundamentals2
 ---
 
-# Community development
 
-## Forming a community of contributors
-The nature of the open source licensing combined with the availability of the source code for all to explore, modify and use is what enable engagement and contribution from other developers. This is the reason why free open source software projects have multiple contributors, who contribute in various ways, such as by implementing new features, testing, fixing bugs, translation, and documentation.
-The free open source movement stems from engagement and contributions from individuals and organisations with different backgrounds, motivations, reasons, expertise, and geographical locations.
-The size of community for an open source project may vary over time and has typically a core of developers who together drives the project in a certain direction. Sometimes communities split over different opinions of development direction and a spin-off, or fork, appears as a new community serving the alternative development direction.
-Measuring the community engagement and understanding the future development direction is important for successful professional consumption and contribution of a free open source software.
-
-## Software repository, a community collaboration enabler
-Distributed open source software development by multiple contributors benefits from a shared software repository which allows developers to incrementally submit and track enhancements/modifications to the software allowing for controlled versioning and releases of selected commits with documented changes for each release.
-GitHub along with GitLab, Bitbucket, Gitea and Google Developers are platforms providing such repository service to open source projects. Platforms like these also provide metrics such as number of commits, stars and forks which can help in determining the activity and popularity of a project as illustrated by the examples of Te2zos and MongoDB:
-
- 
 # Consumption and Compliance 
 
 Free open source software has become a fundamental building block of commercial software across most industry categories. The business reasons for consuming free open source software range from leveraging common functionality for lowering development costs, via alignment with open APIs, to participation in entire ecosystems based on customer demand.
