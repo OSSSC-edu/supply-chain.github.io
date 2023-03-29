@@ -6,7 +6,7 @@ has_children: true
 permalink: /SEC-supply-chain-Ind
 ---
 
-# Secure supply chain (5.3)  
+# Secure supply chain
 Prior to the launch of the free software movement, by Richard Stallman, the GNU Project and its manifest published in 1985, software was either not considered a commodity and shared freely in the world of academia, or simply considered part of the hardware on which it was supposed to dedicatedly run.
 
 ## Introduction
@@ -27,5 +27,3 @@ The "software bill of materials" (SBOM) has emerged as a key building block in s
 Still, the existence of an SBOM is not sufficient. The SBOM provides a declaration of included open source content and it serves as a foundation for a dialogue and an understanding of the included software components between provider and consumer. This understanding should include how possible weaknesses or risks have been mitigated.
 The final result from a software composition analysis constitutes the external software content of your product, and shall be declared as a part of the SBOM. The SBOM shall be a part of the official delivery and shall be on a specified standardized format, like SPDX or CycloneDX.
 Since the SBOM is an official delivery, it needs to be verifiable and signed which provides trust in the delivery.
-
-End of text
