@@ -80,4 +80,3 @@ Should you go for the latest or second latest as your strategy. Different opinio
 ## Commercial vendors / Mergers & Acquisitions
 Free open source software issues must also be adequately addressed in third party contracts, development agreements, distribution agreements, acquisitions, and other transactions. 
 
-End of chapter
