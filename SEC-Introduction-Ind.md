@@ -6,7 +6,7 @@ has_children: true
 permalink: /SEC-Introduction-Ind
 ---
 
-# Introduction to Open Source Security (5.1)
+# Introduction to Open Source Security
 Cyber security refers to the system's ability to protect against unauthorized access or attacks. Failing to address cyber security can have severe and wide-ranging consequences, including financial losses, damage to reputation, and disruption to business operations.
 
 It is important that everyone doing software development must take cyber security seriously and implement appropriate measures to protect against cyber threats.
