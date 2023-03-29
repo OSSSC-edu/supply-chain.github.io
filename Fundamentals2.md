@@ -104,7 +104,7 @@ or use of a listed item
 
 In general, most export control focus for software involves cryptographic algorithms which are used to obscure or hide information during transmission through encryption/decryption functionality. The obvious example is the German Enigma machine from WWII which of course isn’t a software implementation due to the lack of computers back then.
 
-  [Copyright?]
+![image](https://user-images.githubusercontent.com/126161450/228509791-2e676af4-f3e1-4ef0-9374-7a7fd9a641df.png)
 
 Cryptographic algorithms are categorized from very weak to very strong with export classification being more restricted when the encryption is stronger and harder to break.
 
@@ -119,4 +119,3 @@ Usually, the export control classification of software results in the following:
 -	The manufacturer provides a classification that may be from the Munition List or Dual Use List.
 -	The presence of strong encryption code or security protocols classifies it as Dual Use software (5D002). 
 
-![image](https://user-images.githubusercontent.com/126161450/228508585-052940fe-ea53-4df1-9667-919e1be09e31.png)
