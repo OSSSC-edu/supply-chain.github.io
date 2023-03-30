@@ -21,14 +21,19 @@ Open source security throughout the whole product lifecycle can be seen from sev
 
 These aspects should be addressed through established processes and possibly tool support.
 From a security concern, the benefit in using open source software is transparency since there is a “community of eyes” working with and reviewing the open source code coming from the community. It can be argued that the transparency is only true if the actual reviewing is performed by the community, and not only assumed.
+
 Proprietary developed software provides less exposure to external bad actors but with less opportunity for reviewing and correction.
 In general, open source projects with a large community can have a higher security level, but the majority of open source projects are maintained by small teams of volunteer developers and there is no guarantee that the particular team have time and resources to update their code. Those who create and contribute to open source software are not obligated to maintain it, hence it’s clearly up to the users/consumers to evaluate the security risks related to consuming the code. 
+
 One important difference between proprietary developed code vs open source software is mainly when it comes to reporting (zero days) and the time window for fixing flaws. In general, vulnerabilities in open source software receives more public attention with the expectation for those to be corrected in a faster pace than proprietary software.
+
 Despite the advantages of using open source it will always come with security risks. Hence, it’s important to define, as part of your open source security strategy, who is responsible for the security of the open source including dependencies and define processes and infrastructure to deal with the risks. 
 It’s preferred to use tools that automatically identifies and monitors your open source software for known vulnerabilities, thereby trigger alerts providing remediation guidance. It’s important to understand the limitation of the selected tools and have an approach to handle the limitation gap.
 
 ## Software Composition Analysis (SCA)
 In order to understand your security exposure, you have to know what open source components you have included in your development/product.
 Awareness of such content should be created during development, assuming there is an open source handling process in place for the developers. This also includes transparency of open source content when re-using internally developed components/products.
+
 Still, even with the best intentions and processes, there is a risk for open source content to be included by mistake. This includes significant code snippets to full components, why software composition analysis of the developed code base needs to be performed.
+
 It’s preferred to use tools that automatically provides the software composition analysis for you, also to understand the limitation for the selected tool with a plan to handle the limitation gap.
