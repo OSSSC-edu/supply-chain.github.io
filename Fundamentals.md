@@ -3,7 +3,7 @@ layout: default
 title: Fundamentals
 nav_order: 2
 has_children: true
-permalink: /fundamentals
+permalink: /Fundamentals
 ---
 
 # Introduction to Free Open Source Software  
@@ -26,6 +26,9 @@ The public domain consists of all the creative work to which no exclusive intell
 
 Moby Dick by Herman Melville was first published on October 18th, 1851. The copyright for books published in the United States before 1924 has expired why this classic book is an example of a subject in the public domain.
 
+![image](https://user-images.githubusercontent.com/126161450/228889643-e5e15fa6-4725-4078-93d1-d4e6bbdc2188.png)
+
+Remove
 ![image](https://user-images.githubusercontent.com/126161450/224252288-69dd2644-7a0e-48fe-a1af-e81c101534f0.png)
 
 In the context of software development, no open source software copyright has yet expired by age and become public domain. The author of a developed software is the copyright holder, unless any separate agreement regulates the copyright ownership, and can thus decide the terms and conditions of its use, modification, and distribution. These terms and conditions are usually expressed in a license.!
@@ -39,7 +42,7 @@ There are commonly used licenses, which after review and approval by the Open So
 
 Free open source software licenses vary in the freedoms they grant and the conditions they place on those freedoms. Permissive licenses grant all freedoms with minimal restrictions, usually only requiring attribution. Weak copyleft licenses require derivative works to be made available under the same license, while strong copyleft licenses require the entire derivative work to be released under the same license, creating a risk of loss of IPR and software design investments.
 
-![image](https://user-images.githubusercontent.com/126161450/224252493-9dbe1c9b-4db2-4143-ae21-3d67d8793f9b.png)
+![Table_Freedom](https://user-images.githubusercontent.com/126161450/228892375-0e073afa-558b-44dc-914b-5944aebf2b32.png)
 
 Developing with free open source software requires consideration of the various licenses involved. For instance, combining software under the Apache v2.0 and GPL v3 licenses is not allowed, as the Apache Software Foundation requires all Apache declared software to be distributed under the Apache License v2.0.
 
@@ -66,4 +69,7 @@ Distributed open source software development by multiple contributors benefits f
 
 GitHub along with GitLab, Bitbucket, Gitea and Google Developers are platforms providing such repository service to open source projects. Platforms like these also provide metrics such as number of commits, stars and forks which can help in determining the activity and popularity of a project as illustrated by the examples of Te2zos and MongoDB: 
 
-![image](https://user-images.githubusercontent.com/126161450/228505171-8b5fb8e0-fbd0-4b96-b132-c7aa3e1ebbac.png) 
+
+GitHub along with GitLab, Bitbucket, Gitea and Google Developers are platforms providing such repository service to open source projects. Platforms like these also provide metrics such as number of commits, stars and forks which can help in determining the activity and popularity of a project as illustrated by the examples of Te2zos and MongoDB: 
+
+![Mongo](https://user-images.githubusercontent.com/126161450/228892130-cc61b845-4eab-481f-b3cf-2c908ba66330.png)
