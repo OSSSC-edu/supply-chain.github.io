@@ -6,7 +6,7 @@ has_children: true
 permalink: /legal-aspects
 ---
 
-# Open Source terms and conditions  (4.2)
+# Open Source terms and conditions
 
 ## Copyright
 
@@ -33,7 +33,7 @@ Moby Dick by Herman Melville was first published on October 18th 1851. The copyr
 ## Professional consideration
 There have been several attempts to prematurely put work in the Public Domain but in legal terms it is uncertain if the Copyright can be avoided. Any professional developer should therefor treat any software with this statement as a very permissive license (e.g. MIT), acknowledging the originator, as no software is yet old enough to be Public Domain.
 
-# Basics of Free Open Source Software Licensing (4.3)
+# Basics of Free Open Source Software Licensing
 
 ## Licenses
 The author of a developed software is by law the copyright holder of the software unless any separate agreement regulates the copyright ownership.
@@ -113,7 +113,7 @@ A fork of an existing open source software for a specific non-general purpose is
 According to Wikipedia, a snippet is a programming term for a small region of re-usable source code, machine code, or text.
 The snippet needs to be of original content to be considered for copyright protection and doesn’t necessary depend on size, but rather uniqueness and ingenuity. It is not always obvious from the context where you find snippets, that a snippet actually is under copyright protection and was made available under an open source license. For instance, when a snippet is published in a forum like StackOverflow where developers share solutions for various problems with each other.
 
-# Patents (4.4)
+# Patents
 Patents are a separate right that differs from copyright (see sections above), where copyright protects only the specific implementation of an idea, patents could be said to protect the idea itself regardless of its implementation (as long as the specific implementation is covered in the patent claims). As the patent is filed independently from the creation of the code, the copyright owner and the patent owner may well be two different entities. 
 It’s not always the case that the patent owner and copyright owner are different entities, in some cases they are one and the same. Even when the same entity holds the patent and the copyright, it need not be the same person that is the inventor and the author. 
 When companies use and contribute to open source, potential patent grants in the license needs to be considered. One needs to consider that the patent license can only impact contributors to the open source software. Thus, even if an open source license contains a patent license grant, that does not mean that there are not patents by non-contributors that are applicable and where a separate patent license might be needed.
@@ -122,7 +122,7 @@ If using under a license that does not contain an explicit patent license each o
 When contributing to open source software, an organization needs to consider its own patent portfolio, would a contribution to an open source project “necessarily” infringe their own patent? If so, what license are they contributing under, is the organization willing to agree to those terms? It’s also important to dispel the myth that once the patent has been licensed in one open source project it loses “all value”. The license to the patent granted solely applies to the open source in question, proprietary solutions or even other open source software projects and their downstream users remain unlicensed unless they are reusing the code in question. 
 When evaluating if a contribution should be made, it’s important to have a multi stakeholder group to make that decision, IP (such as patents) should be one such consideration, but not the sole consideration, other business aspects need to be considered to form a complete business case to be evaluated.
 
-# Export control (4.5)
+# Export control
 
 ## Introduction
 Export Control is a legal term and concerns regulation for the export of goods, software, and technology. Historically, export control started in 1949, with the CoCom organization that formed after WWII as a means to keep technology within the Western alliance. It was replaced in 1994/95 by the Wassenaar Arrangement (WA).
@@ -158,7 +158,7 @@ With the possible exception of the occasional encryption functionality, open sou
 •	The manufacturer provides a classification that may be from the Munition List or Dual Use List.
 •	The presence of strong encryption code or security protocols classifies it as Dual Use software (5D002).
 
-# Professional implementation examples (4.6)
+# Professional implementation examples
 
 ## Conveying open source code to third party
 Conveyance is an activity which enables a third party to make or receive copies of the open source code as part of license obligation fulfillment either upstream (back to the community/author) or downstream (your customer/public).
@@ -194,10 +194,3 @@ It should be stated in the company policy documentation if such near-open source
 Similarly, the company policy should state if free open source software licenses that do fulfill all freedom requirements, but isn’t yet approved by OSI/FSF, can be included in the product development. The company policy need also in this case state what’s needed for such decision to be made.
 JSON license (an example of a near-open source software license)
 The JSON license is based on the Expat license which is based on the permissive MIT license. The JSON license is adding a clause that state “The Software shall be used for Good, not Evil.”. This clause conflicts with “the freedom to run the program as you wish, for any purpose” and is because of that not considered a free open source software license.
-
-End of text
-
-
-### Not yet written segments
-Differentiating between upstream and downstream publication
-Acknowledgment/attribution/credit
