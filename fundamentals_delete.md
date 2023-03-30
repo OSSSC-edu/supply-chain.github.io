@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Fundamentals part 2
+title: Fundamentals part - delete
 nav_order: 2
 has_children: true
-permalink: /fundamentals_2
+permalink: /fundamentals_delete
 ---
 
 # Introduction to Free Open Source Software  
