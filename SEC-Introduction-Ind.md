@@ -35,5 +35,5 @@ In order to understand your security exposure, you have to know what open source
 Awareness of such content should be created during development, assuming there is an open source handling process in place for the developers. This also includes transparency of open source content when re-using internally developed components/products.
 
 Still, even with the best intentions and processes, there is a risk for open source content to be included by mistake. This includes significant code snippets to full components, why software composition analysis of the developed code base needs to be performed.
-
-It’s preferred to use tools that automatically provides the software composition analysis for you, also to understand the limitation for the selected tool with a plan to handle the limitation gap.
+    
+It’s preferred to use tools that automatically provides the software composition analysis for you, but it is also important to understand the limitation for the selected tool with a plan to handle the limitation gap.
