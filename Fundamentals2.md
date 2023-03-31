@@ -22,7 +22,7 @@ The company needs to have a strategy and/or policy in place on how to develop wi
 
 Such strategy or policy might also be needed on product or product area level.
 
-![image](https://user-images.githubusercontent.com/126161450/228507586-9dce4555-e6d2-4c40-9f88-359c9a899cfa.png)
+![Infrastructure](https://user-images.githubusercontent.com/126161450/229022861-7c249522-f894-4396-800e-cf71154de84e.png)
  
 The strategy for consuming free open source software should consider the following aspects:
 
@@ -120,7 +120,8 @@ or use of a listed item
 
 In general, most export control focus for software involves cryptographic algorithms which are used to obscure or hide information during transmission through encryption/decryption functionality. The obvious example is the German Enigma machine from WWII which of course isn’t a software implementation due to the lack of computers back then.
 
-![image](https://user-images.githubusercontent.com/126161450/228509791-2e676af4-f3e1-4ef0-9374-7a7fd9a641df.png)
+![Enigma](https://user-images.githubusercontent.com/126161450/229023432-594f72b8-2120-4bb1-9e6c-45821f55e949.png)
+
 
 Cryptographic algorithms are categorized from very weak to very strong with export classification being more restricted when the encryption is stronger and harder to break.
 
