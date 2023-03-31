@@ -17,7 +17,7 @@ Copyright is a type of intellectual property that gives its owner the exclusive 
 ### Example
 The C Programming Language First Edition by Dennis Ritchie, Brian Kernighan
 
-![image](https://user-images.githubusercontent.com/126161450/224949750-efe8dd63-bd0f-49e8-95c4-efa3d4c0ed42.png)
+![C_Programming](https://user-images.githubusercontent.com/126161450/229024992-5fb7a58c-5bed-4627-b29b-2f793a334d66.png)
  
 ### Professional consideration
 Copyrighted material like excerpts from books or parts of images/songs/software can be published and made available without consent and it’s published copyright and license. This can happen in for instance magazines, web sites or public chat rooms/forums. The absence of a copyright or a license is not equal to it being in the public domain and should be treated as a red flag for usage.
@@ -28,7 +28,7 @@ The public domain consists of all the creative work to which no exclusive intell
 ### Example
 Moby Dick by Herman Melville was first published on October 18th 1851. The copyright for books published in the United States before 1924 has expired why this classic book is in the public domain.
 
-![image](https://user-images.githubusercontent.com/126161450/224949952-4eda7ca1-a9fd-4006-bbae-13c08d8a6781.png)
+![MobyDick](https://user-images.githubusercontent.com/126161450/229024105-e2bbc16c-ce51-4fab-afdb-3cbfe5158af7.png)
 	 
 
 ## Professional consideration
@@ -51,7 +51,7 @@ Once the copyright holder has provided a developed software under a certain lice
 ### Permissive vs non-permissive
 The most permissive open source license gives you all freedoms more or less without asking for anything in return. On the other hand, there are licenses requesting you to perform an action for the granted freedoms. These actions can be to inform the end user of the existence of the licensed software in your own product or even make your own developed software available under the same terms as the licensed software you are using it with, also called copyleft.
 
-![image](https://user-images.githubusercontent.com/126161450/224950227-2a8288f9-a6c6-4a9f-8aa1-0907130b53e4.png)
+![Table_Freedom](https://user-images.githubusercontent.com/126161450/229024273-34719e67-9581-40ea-894c-4888ba479ed2.png)
  
 * Permissive licenses allow you to copy, modify, recombine, and redistribute the work with minimal restrictions. Usually, only attribution is required. 
 * Weak copyleft licenses require that any derivative work, i.e., changed versions of the original open source software, are to be made available under the same license. This requirement does not apply to third party code which is being combined with this software, i.e., the copyleft property does not spread to commercial software.
@@ -62,7 +62,7 @@ The intentions and conditions of different open source licenses can collide, thu
 
 For instance, including open source software under the Apache v2.0 license while developing under the GPL v3 license is perfectly fine, as long as the end result is released under the GPL v3 license. But, the other way around is not possible. Developing under the Apache v2.0 and including GPL v3 licensed source code if the developed software is to be released under the Apache v2.0 license.
 
- ![image](https://user-images.githubusercontent.com/126161450/224950604-c5b43183-d907-48bb-ac33-f1bb2f86634f.png)
+![TargetSoftware](https://user-images.githubusercontent.com/126161450/229024703-d928117a-2147-4461-971b-52307b997e55.png)
 
 
 As stated by the Apache Software Foundation (ASF):
