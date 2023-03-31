@@ -49,9 +49,13 @@ Developing with free open source software requires consideration of the various 
 When a license declaration for free open source software has been released it can’t be retroactively changed why any license change requires a new release/version of the software for which the new license can be declared. The copyright holder may offer the developed software under dual/multiple licenses for the user to choose from when releasing it.
 
 ## License resources online!
-_ _ Insert table with texts and links here _ _ 
 
-![image](https://user-images.githubusercontent.com/126161450/224931550-53fd419e-c9a8-40e8-b7a6-25bbdc6881d0.png)
+| Resource | Description |
+| --- | --- | 
+| Tl;drLegal | Tl;dr means “Too long; didn’t read” and the forum provides explanations of software licenses in plain English |
+| Free Software Foundation (FSF) | A non-profit organization with a worldwide mission to promote computer user freedom |
+| Open Source Initiative (OSI) | A non-profit corporation with global scope formed to educate about and advocate for the benefits of open source and to build bridges among different constituencies in the open source community |
+| SPDX | A Linux Foundation sponsored project with the purpose to enable efficient and reliable identification of open source licenses |
 
 
 # Community development
