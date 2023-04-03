@@ -28,9 +28,6 @@ Moby Dick by Herman Melville was first published on October 18th, 1851. The copy
 
 ![image](https://user-images.githubusercontent.com/126161450/228889643-e5e15fa6-4725-4078-93d1-d4e6bbdc2188.png)
 
-Remove
-![image](https://user-images.githubusercontent.com/126161450/224252288-69dd2644-7a0e-48fe-a1af-e81c101534f0.png)
-
 In the context of software development, no open source software copyright has yet expired by age and become public domain. The author of a developed software is the copyright holder, unless any separate agreement regulates the copyright ownership, and can thus decide the terms and conditions of its use, modification, and distribution. These terms and conditions are usually expressed in a license.!
 
 # Basics of Free Open Source Software Licensing
