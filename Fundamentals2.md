@@ -131,7 +131,7 @@ Cryptographic algorithms are categorized from very weak to very strong with expo
 Export control can be further limited through country declaration of restricted nations. Lists of such restricted nations are for instance maintained by the United States of America, the European Union and the United Nations.
 
 ## Free open source software as an export controlled item
-Free open source software is today not export controlled by EU, US, or WA.
+Free open source software is today not export controlled by EU, US, or [the Wassenaar Arrangement, WA >>](https://www.wassenaar.org/)  
 
 Professional development including free open source software for products to be exported must be documented and export control classified if cryptographic functionality is included.
 
