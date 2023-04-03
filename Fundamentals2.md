@@ -76,7 +76,10 @@ Documentation to declare included free open source software components as either
 
 Suggested formats are being developed both for general consumption and for industry niches like automotive, health and telecom. There is a standard for the data format (SPDX) for this in place. ISO/IEC 5962:2021
 
-NTIA requirements on SBOMs: https://www.ntia.doc.gov/report/2021/minimum-elements-software-bill-materials-sbom
+[Link to NTIA requirements on SBOMs >>](https://www.ntia.doc.gov/report/2021/minimum-elements-software-bill-materials-sbom) 
+
+<a href="https://www.ntia.doc.gov/report/2021/minimum-elements-software-bill-materials-sbom" target"_blank"> Link to NTIA requirements on SBOMs >> </a>  
+
 
 ## Security strategy when selecting open source components
 The expectation that a lively and active community will provide patches/security fixes quicker is one of the drivers when selecting components.
