@@ -23,16 +23,18 @@ The company needs to have a strategy and/or policy in place on how to develop wi
 Such strategy or policy might also be needed on product or product area level.
 
 ![Infrastructure](https://user-images.githubusercontent.com/126161450/229022861-7c249522-f894-4396-800e-cf71154de84e.png)
- 
+
+*Image by Randall Munroe (https://xkcd.com/2347/)*
+
 The strategy for consuming free open source software should consider the following aspects:
 
--	Community and project health: This includes, but isn’t limited to, aspects such as activity of the community, number of contributors and diversity of contributing organizations. The purpose of these aspects is to allow a risk analysis regarding future stability and dependability of the open source component. These aspects should be recurringly reviewed. 
+-	**Community and project health:** This includes, but isn’t limited to, aspects such as activity of the community, number of contributors and diversity of contributing organizations. The purpose of these aspects is to allow a risk analysis regarding future stability and dependability of the open source component. These aspects should be recurringly reviewed. 
 
--	In all cases of consumption of free open source software, the source code shall always be available to be able to take over the "ownership" in the case it becomes necessary. For instance, when the community changes the license to become unusable for the intended purpose, or the community just fades or gets lost.
+-	**Consumption:** The source code shall always be available to be able to take over the "ownership" in the case it becomes necessary. For instance, when the community changes the license to become unusable for the intended purpose, or the community just fades or gets lost.
 
--	Security: Free open source software is effectively being developed, hosted, and built by external developers and on external infrastructure. As a result, it is imperative to conduct security scans of all open source software before consumption, targeting malware as well as known vulnerabilities. Additionally, a risk assessment of using a given free open source software as part of a commercial product should be conducted. Finally, once introduced into product development, every free open source software component must be continuously monitored for vulnerabilities. 
+-	**Security:** Free open source software is effectively being developed, hosted, and built by external developers and on external infrastructure. As a result, it is imperative to conduct security scans of all open source software before consumption, targeting malware as well as known vulnerabilities. Additionally, a risk assessment of using a given free open source software as part of a commercial product should be conducted. Finally, once introduced into product development, every free open source software component must be continuously monitored for vulnerabilities. 
 
--	License and compliancewith IPR (Inteelectual Property Rights): All usage of free open source software, internally and in products shipped to customers, must be compliant to all obligations declared in the respective open source licenses. 
+-	**License and compliance with IPR (Intellectual Property Rights):** All usage of free open source software, internally and in products shipped to customers, must be compliant to all obligations declared in the respective open source licenses. 
 
 ## Instructions and guidance
 Creation of open source instruction(s) and guidance documentation will help a company to successfully consume free open source software in a uniform, compliant and secure way.
