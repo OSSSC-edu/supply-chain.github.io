@@ -18,7 +18,7 @@ The concept of open source software relies on the legal foundation for artistic 
 
 The copyright is usually stated in the proximity of the work but applies even if not stated, which is important to remember. An example of how to state the copyright protection can be viewed in the book of The C Programming Language First Edition by Dennis Ritchie and Brian Kernighan.
 
-![image](https://user-images.githubusercontent.com/126161450/224252230-24018d42-0031-4e1a-9928-a200523bfa0a.png)
+![FOSS_Fundamentals_1_C_prog](https://user-images.githubusercontent.com/126161450/234530872-a39b2314-6518-4104-bf2d-5cad1aba6bff.png)
 
 Part of a copyright protected work may appear out of context. For instance, with software, a smaller piece of the source code (a.k.a code snippet) like an excellent written algorithm, may be published in a chat forum as “inspiration” for others but shall not be directly copied in a professional development.
 
