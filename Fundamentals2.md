@@ -53,7 +53,11 @@ Other known ways to organize the consumption is by having a centralized policy g
 
 There also seems to be a correlation between the size of the company and the willingness to invest in a dedicated team for open source governance where larger companies (with more employees) more often choose such a setup.
 
-It is however noteworthy that OSPO is an implementation choice where the goals can be reached by other means.  Those goals are typically to 1. Gain a strategic view of, and engagement in open source. 2 Better leverage the free open source software consumed by the organization, 3 Manage legal risks and compliance matters in a uniform manner across the organization. 
+It is however noteworthy that OSPO is an implementation choice where the goals can be reached by other means.  Those goals are typically to 
+
+1. Gain a strategic view of, and engagement in open source. 
+2. Better leverage the free open source software consumed by the organization, 
+3. Manage legal risks and compliance matters in a uniform manner across the organization. 
 
 # Available standards for open source compliance
 
@@ -123,7 +127,7 @@ or use of a listed item
 -	Software that is weapon in itself (e.g., intrusion software, viruses, etc.)
 -	Software that provides encryption/decryption functionality
 
-In general, most export control focus for software involves cryptographic algorithms which are used to obscure or hide information during transmission through encryption/decryption functionality. The obvious example is the German Enigma machine from WWII which of course isn’t a software implementation due to the lack of computers back then.
+In general, most export control focus for software involves cryptographic algorithms which are used to obscure or hide information during transmission through encryption/decryption functionality. The obvious example is the German Enigma machine from the second world war which of course isn’t a software implementation due to the lack of computers back then.
 
 ![Enigma](https://user-images.githubusercontent.com/126161450/229023432-594f72b8-2120-4bb1-9e6c-45821f55e949.png)
 
