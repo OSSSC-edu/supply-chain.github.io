@@ -25,7 +25,7 @@ The concept of open source software relies on the legal foundation for artistic 
 
 The copyright is usually stated in the proximity of the work but applies even if not stated, which is important to remember. An example of how to state the copyright protection can be viewed in the book of The C Programming Language First Edition by Dennis Ritchie and Brian Kernighan.
 
-![FOSS_Fundamentals_1_C_prog](https://user-images.githubusercontent.com/126161450/234530872-a39b2314-6518-4104-bf2d-5cad1aba6bff.png)
+![C_Programming](./img/C_Programming.png)
 
 Part of a copyright protected work may appear out of context. For instance, with software, a smaller piece of the source code (a.k.a code snippet) like an excellent written algorithm, may be published in a chat forum as “inspiration” for others but shall not be directly copied in a professional development.
 
@@ -33,7 +33,7 @@ The public domain consists of all the creative work to which no exclusive intell
 
 Moby Dick by Herman Melville was first published on October 18th, 1851. The copyright for books published in the United States before 1924 has expired why this classic book is an example of a subject in the public domain.
 
-![image](https://user-images.githubusercontent.com/126161450/228889643-e5e15fa6-4725-4078-93d1-d4e6bbdc2188.png)
+![MobyDick](./img/MobyDick.png) 
 
 In the context of software development, no open source software copyright has yet expired by age and become public domain. The author of a developed software is the copyright holder, unless any separate agreement regulates the copyright ownership, and can thus decide the terms and conditions of its use, modification, and distribution. These terms and conditions are usually expressed in a license.!
 
@@ -46,7 +46,7 @@ There are commonly used licenses, which after review and approval by the Open So
 
 Free open source software licenses vary in the freedoms they grant and the conditions they place on those freedoms. Permissive licenses grant all freedoms with minimal restrictions, usually only requiring attribution. Weak copyleft licenses require derivative works to be made available under the same license, while strong copyleft licenses require the entire derivative work to be released under the same license, creating a risk of loss of IPR and software design investments.
 
-![Table_Freedom](https://user-images.githubusercontent.com/126161450/228892375-0e073afa-558b-44dc-914b-5944aebf2b32.png)
+![Table_Freedom](./img/Table_Freedom.png)
 
 Developing with free open source software requires consideration of the various licenses involved. For instance, combining software under the Apache v2.0 and GPL v3 licenses is not allowed, as the Apache Software Foundation requires all Apache declared software to be distributed under the Apache License v2.0.
 
@@ -80,4 +80,4 @@ GitHub along with GitLab, Bitbucket, Gitea and Google Developers are platforms p
 
 GitHub along with GitLab, Bitbucket, Gitea and Google Developers are platforms providing such repository service to open source projects. Platforms like these also provide metrics such as number of commits, stars and forks which can help in determining the activity and popularity of a project as illustrated by the examples of Te2zos and MongoDB: 
 
-![Mongo](https://user-images.githubusercontent.com/126161450/228892130-cc61b845-4eab-481f-b3cf-2c908ba66330.png)
+![activity-popularity](./img/activity-popularity.png) 
