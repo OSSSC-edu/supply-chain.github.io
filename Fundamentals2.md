@@ -22,7 +22,7 @@ The company needs to have a strategy and/or policy in place on how to develop wi
 
 Such strategy or policy might also be needed on product or product area level.
 
-![Infrastructure](https://user-images.githubusercontent.com/126161450/229022861-7c249522-f894-4396-800e-cf71154de84e.png)
+![Infrastructure](./img/Infrastructure.png)
 
 *Image by Randall Munroe (https://xkcd.com/2347/)*
 
@@ -84,9 +84,6 @@ Suggested formats are being developed both for general consumption and for indus
 
 [Link to NTIA requirements on SBOMs >>](https://www.ntia.doc.gov/report/2021/minimum-elements-software-bill-materials-sbom) 
 
-<a href="https://www.ntia.doc.gov/report/2021/minimum-elements-software-bill-materials-sbom" target"_blank"> Link to NTIA requirements on SBOMs >> </a>  
-
-
 ## Security strategy when selecting open source components
 The expectation that a lively and active community will provide patches/security fixes quicker is one of the drivers when selecting components.
 Should you go for the latest or second latest as your strategy. Different opinions exist with pros/cons. Version upgrade compatibility is something to consider.
@@ -129,8 +126,9 @@ or use of a listed item
 
 In general, most export control focus for software involves cryptographic algorithms which are used to obscure or hide information during transmission through encryption/decryption functionality. The obvious example is the German Enigma machine from the second world war which of course isn’t a software implementation due to the lack of computers back then.
 
-![Enigma](https://user-images.githubusercontent.com/126161450/229023432-594f72b8-2120-4bb1-9e6c-45821f55e949.png)
+![Enigma](./img/Enigma.png)
 
+*Image: Wikipedia
 
 Cryptographic algorithms are categorized from very weak to very strong with export classification being more restricted when the encryption is stronger and harder to break.
 
