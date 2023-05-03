@@ -13,6 +13,13 @@ The trigger for Richard Stallman to launch the free software movement was the in
 
 With the success of Linux, which was released by Linus Torvalds in February 1992 under the GNU Public License provided by Richard Stallman, the world is increasingly developing, publishing and consuming free open source software in an unprecedented pace all over the world and thus attracting software developers who are willing to share their efforts in return for the ability to leverage of the competence and efforts of others. Free open source software has forever changed the way we develop and implement software!
 
+
+
+![GNU Logo](./img/heckert_gnu.transp.small.png) 
+![GNU Logo](./img/Tux_small.png)
+
+*GNU image by by Aurélio A. Heckert*, and *Tux image by lewing@isc.tamu.edu Larry Ewing and The GIMP*
+
 # Open source software in a legal context
 The concept of open source software relies on the legal foundation for artistic works and the need to protect these in terms of ownership and the right to use which is covered by the copyright law. Copyright is intended to protect the original expression of an idea in the form of a creative work, but not the idea itself. Copyright is a type of intellectual property that gives its owner the exclusive right to copy, distribute, adapt, display, and perform a creative work, usually for a limited time. The copyright holder can exclusively declare such rights to apply for others.
 

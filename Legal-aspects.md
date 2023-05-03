@@ -147,7 +147,7 @@ When evaluating if a contribution should be made, it’s important to have a mul
 # Export control
 
 ## Introduction
-Export Control is a legal term and concerns regulation for the export of goods, software, and technology. Historically, export control started in 1949, with the CoCom organization that formed after WWII as a means to keep technology within the Western alliance. It was replaced in 1994/95 by the Wassenaar Arrangement (WA).
+Export Control is a legal term and concerns regulation for the export of goods, software, and technology. Historically, export control started in 1949, with the CoCom organization that formed after the second world war as a means to keep technology within the Western alliance. It was replaced in 1994/95 by the Wassenaar Arrangement (WA).
 
 Wassenaar Arrangement is aimed to have a common control of items in the WA control list. All member states must follow these controls. On top of the WA control list, each member state can add other controls through national policies.
 
@@ -185,8 +185,8 @@ Open source software is today not export controlled by EU, US, or WA.
 The most common open source software that software designers use in a product can in most cases be described as a general, non-exclusive and harmless component that saves time for the designer and money for the company.
 
 With the possible exception of the occasional encryption functionality, open source software is not subject to export control. Nevertheless, a serious export control classification must be made of anything entering a product, and be documented for later reference. Usually, the export control classification of an open source software results in the following: 
-•	The manufacturer provides a classification that may be from the Munition List or Dual Use List.
-•	The presence of strong encryption code or security protocols classifies it as Dual Use software (5D002).
+*   The manufacturer provides a classification that may be from the Munition List or Dual Use List.
+*   The presence of strong encryption code or security protocols classifies it as Dual Use software (5D002).
 
 # Professional implementation examples
 
