@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Fundamentals
+title: Fundamentals part 2
 nav_order: 2
 has_children: true
-permalink: /fundamentals2
+permalink: /Fundamentals-2-Ind
 ---
 
 
