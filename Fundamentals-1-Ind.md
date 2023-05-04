@@ -3,7 +3,7 @@ layout: default
 title: Fundamentals
 nav_order: 2
 has_children: true
-permalink: /fundamentals
+permalink: /Fundamentals-1-Ind
 ---
 
 # Introduction to Free Open Source Software  
