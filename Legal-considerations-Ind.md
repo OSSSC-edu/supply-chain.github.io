@@ -3,7 +3,7 @@ layout: default
 title: Legal Aspects
 nav_order: 5
 has_children: true
-permalink: /legal-aspects
+permalink: /Legal-considerations-Ind
 ---
 
 # Open Source terms and conditions
@@ -194,8 +194,8 @@ With the possible exception of the occasional encryption functionality, open sou
 Conveyance is an activity which enables a third party to make or receive copies of the open source code as part of license obligation fulfillment either upstream (back to the community/author) or downstream (your customer/public).
 
 Some of the conveyance triggers are: 
-•	Stand alone – license trigger for non-modified open source software
-•	Derivative work – license trigger for modified open source software
+*   Stand alone – license trigger for non-modified open source software
+*   Derivative work – license trigger for modified open source software
 
 ## Making copylefted source code publicly available
 When developing software which includes open source code under a copyleft license it is important to mark/take not of what part of the proprietary code base will be affected by the copyleft effect of the open source component in order to have the ability to provide the copylefted source code as part of the license compliance.
