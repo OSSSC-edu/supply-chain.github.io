@@ -44,13 +44,13 @@ The declaration of terms and conditions by the copyright holder regulating other
 
 There are commonly used licenses, which after review and approval by the Open Source Initiative, are declared free open source licenses. The SPDX License list provides a comprehensive list of free open source licenses with specific unique and atomized identifiers.
 
-Free open source software licenses vary in the freedoms they grant and the conditions they place on those freedoms. Permissive licenses grant all freedoms with minimal restrictions, usually only requiring attribution. Weak copyleft licenses require derivative works to be made available under the same license, while strong copyleft licenses require the entire derivative work to be released under the same license, creating a risk of loss of IPR and software design investments.
+Free open source software licenses vary in the freedoms they grant and the conditions they place on those freedoms. Permissive licenses grant all freedoms with minimal restrictions, usually only requiring attribution. Other licenses might require your work to be licensed under the same license as the open source software, known as copyleft licenses, and can be weak or strong. Weak copyleft licenses require derivative works of the actual open source software to be made available under the same license, while strong copyleft licenses require the ENTIRE derivative work to be released under the same license, creating a risk of loss of IPR and software design investments.
 
 ![Table_Freedom](./img/Table_Freedom.png)
 
 Developing with free open source software requires consideration of the various licenses involved. For instance, combining software under the Apache v2.0 and GPL v3 licenses is not allowed, as the Apache Software Foundation requires all Apache declared software to be distributed under the Apache License v2.0.
 
-When a license declaration for free open source software has been released it can’t be retroactively changed why any license change requires a new release/version of the software for which the new license can be declared. The copyright holder may offer the developed software under dual/multiple licenses for the user to choose from when releasing it.
+The selected and declared license for any version of a free open source software can't be retroactively changed or retracted, but the copyright holder may change the license for future releases. The copyright holder may also offer the software under dual/multiple licenses for the user of the software to choose from.
 
 ## License resources online!
 
