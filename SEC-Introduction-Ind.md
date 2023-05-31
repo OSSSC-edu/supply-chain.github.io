@@ -28,7 +28,7 @@ In general, open source projects with a large community can have a higher securi
 One important difference between proprietary developed code vs open source software is mainly when it comes to reporting (zero days) and the time window for fixing flaws. In general, vulnerabilities in open source software receives more public attention with the expectation for those to be corrected in a faster pace than proprietary software.
 
 Despite the advantages of using open source it will always come with security risks. Hence, it’s important to define, as part of your open source security strategy, who is responsible for the security of the open source including dependencies and define processes and infrastructure to deal with the risks. 
-It’s preferred to use tools that automatically identifies and monitors your open source software for known vulnerabilities, thereby trigger alerts providing remediation guidance. It’s important to understand the limitation of the selected tools and have an approach to handle the limitation gap.
+It’s preferred to use tools that automatically identify and monitor your open source software for known vulnerabilities, thereby trigger alerts providing remediation guidance. It’s important to understand the limitation of the selected tools and have an approach to handle the limitation gap.
 
 ## Software Composition Analysis (SCA)
 In order to understand your security exposure, you have to know what open source components you have included in your development/product.
@@ -36,4 +36,4 @@ Awareness of such content should be created during development, assuming there i
 
 Still, even with the best intentions and processes, there is a risk for open source content to be included by mistake. This includes significant code snippets to full components, why software composition analysis of the developed code base needs to be performed.
     
-It’s preferred to use tools that automatically provides the software composition analysis for you, but it is also important to understand the limitation for the selected tool with a plan to handle the limitation gap.
+It’s preferred to use tools that automatically provide the software composition analysis for you, but it is also important to understand the limitation for the selected tool with a plan to handle the limitation gap.
