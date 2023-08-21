@@ -85,7 +85,7 @@ Suggested formats are being developed both for general consumption and for indus
 [Link to NTIA requirements on SBOMs >>](https://www.ntia.doc.gov/report/2021/minimum-elements-software-bill-materials-sbom) 
 
 ## Upgrade strategy as a security aspect for open source components
-One of the drivers for selecting open source software to be part of your development is the expectation that a lively and active community might provide patches/security fixes quicker than a commercial vendor. If true, you will need to have a version upgrade strategy in place as part of handling the security aspect. Different options exist with pros/cons for each option. For instance, should you always update to the latest version when available from any source, or only upgrade when a stable version has been released from the original source?
+One of the drivers for selecting open source software to be part of your development is the expectation that a lively and active community might provide patches/security fixes quicker than a commercial vendor. If true, you will need to have a version upgrade strategy in place as part of handling the security aspect. Different approaches exist. For instance, should you always update to the latest version when available from any source, or only upgrade when a stable version has been released from the original source?
 
 The decision of the security strategy may be impacted by your own development process, your customers need, hardware compatibility, or the criticality of the software you are developing.
 
