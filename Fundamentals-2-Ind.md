@@ -84,12 +84,15 @@ Suggested formats are being developed both for general consumption and for indus
 
 [Link to NTIA requirements on SBOMs >>](https://www.ntia.doc.gov/report/2021/minimum-elements-software-bill-materials-sbom) 
 
-## Security strategy when selecting open source components
-The expectation that a lively and active community will provide patches/security fixes quicker is one of the drivers when selecting components.
-Should you go for the latest or second latest as your strategy. Different opinions exist with pros/cons. Version upgrade compatibility is something to consider.
+## Upgrade strategy as a security aspect for open source components
+One of the drivers for selecting open source software to be part of your development is the expectation that a lively and active community might provide patches/security fixes quicker than a commercial vendor. If true, you will need to have a version upgrade strategy in place as part of handling the security aspect. Different options exist with pros/cons for each option. For instance, should you always update to the latest version when available from any source, or only upgrade when a stable version has been released from the original source?
+
+The decision of the security strategy may be impacted by your own development process, your customers need, hardware compatibility, or the criticality of the software you are developing.
 
 ## Commercial vendors / Mergers & Acquisitions
-Free open source software issues must also be adequately addressed in third party contracts, development agreements, distribution agreements, acquisitions, and other transactions. 
+Mergers and acquisitions (M&A) combine two business entities into one. A merger occurs when the two businesses form a new, third entity. In an acquisition, one company purchases and absorbs the other into its operations.
+
+Entering an M&A process, it’s necessary to have a full understanding of the free open source software content of the subject(s). The subject can be an available commercial product, a development or distribution agreement for the codebase or a development base of a company. The understanding includes awareness of included open source licenses and how these fit the intended purpose as well as the security status and possibility to remedy any security issues. The concluded understanding might have an impact on the decision to proceed with the M&A process or not, and if so possibly how. 
 
 # Basics of Contribution
 
