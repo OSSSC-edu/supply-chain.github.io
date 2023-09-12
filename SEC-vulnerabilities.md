@@ -12,7 +12,7 @@ A vulnerability is an intentional or unintentional, exploitable weakness in the 
 
 The example below illustrates this cycle! Knowledge about some software and potential vulnerabilities already exists from previous iterations. The developer can use this knowledge to check his code infrastructure, or use tools that utilize this knowledge to automatically scan for potential weaknesses. In the end, the newly created knowledge is fed back to the public databases and the developing community.
 
-![](/img/vulnerabilities.png)
+![](./img/vulnerabilities.png)
 
 ### _Outline_ 📋
 In this chapter, we learn about
