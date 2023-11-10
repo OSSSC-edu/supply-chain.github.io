@@ -1,12 +1,14 @@
-# [Open-source Software Supply Chain Security](https://github.com/ExpertLearningLab/foss-learning)
+# [Free and open source software - Learning Journey](https://github.com/ExpertLearningLab/foss-learning)
 
-This book is the first part of [ExpertLearningLab](https://github.com/ExpertLearningLab)
+This text material about free open source software from an industrial perspective has been produced in collaboration between the four industry partners ABB, Ericsson, Saab and Volvo group and the university partner KTH (Royal Institute of Technology) within the projects of Integrated Learning during 2021-2023. 
 
-This is the texts for an online course about FOSS usage from an industrial perspective.
-It is a initial collaboration between KTH, ABB, Ericson and SAAB.
+The material is stored and maintained in GitHub, and available to learners via Learnify e-learning player. In future this learning journey will be transfered to [ExpertLearningLab](https://github.com/ExpertLearningLab) with is planned to be a long-term collaboration between industry and academia. Both Integrated learning projects and Expert Learning Lab are financed by Vinnova and the Advanced Digitalization program.
 
-
-## Rules for collaboration following a "standard" git flow:
-* Do a fork and send a pull request as common.
-* The pull request is to be approved by someone ion the Core-team.
+## Collaboration:
+Please take a look at our contributing guidelines if you're interested in helping!
+1. Fork the repository and write your additions
+2. Decribe your changes clearly in the commit message
+3. Send a pull request as common
+4. The pull request will be reviewed by an appointed team with representatives from ABB, Ericsson, Saab and Volvo group.
+5. If the pull-request is approved then it will be automatically merged into master
  
