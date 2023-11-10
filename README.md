@@ -8,7 +8,7 @@ The material is stored and maintained in GitHub, and available to learners via L
 Please take a look at our contributing guidelines if you're interested in helping!
 1. Fork the repository and write your additions
 2. Decribe your changes clearly in the commit message
-3. Send a pull request as common
+3. Send a pull request
 4. The pull request will be reviewed by an appointed team with representatives from ABB, Ericsson, Saab and Volvo group.
 5. If the pull-request is approved then it will be automatically merged into master
  
