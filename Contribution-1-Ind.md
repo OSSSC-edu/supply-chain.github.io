@@ -67,8 +67,11 @@ Examples of open source foundations include the Linux Foundation, the Eclipse Fo
 ### Developer Roles
 Despite the aforementioned diversity among open source projects, developers within a project typically hold one or more specific roles.
 
+![Contribution_Developer_Roles_1.png](./img/Contribution_Developer_Roles_1.png)
+
+![Contribution_Developer_Roles_2.png](./img/Contribution_Developer_Roles_2.png)
  
-*Hierarchy of roles in an open source project.
+*Hierarchy of roles in an open source project.* 
 
 These roles in fact exhibit a hierarchical structure as shown in Figure 1 and can be categorized as follows from bottom to top:
 
